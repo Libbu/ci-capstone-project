@@ -12,6 +12,54 @@ body {
     background-color: #e5fcc2;
 }
 
+/*--------------------------------------------------------------------------------Navbar*/
+
+div.container-fluid.navalert-container {
+    width: 100%;
+    padding: 0;
+}
+
+.navalert-container {
+    position: fixed;
+    display: inline-flex;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 1;
+}
+
+.navalert-container h1 {
+    font-family: "Roboto", sans-serif;
+    width: 30%;
+    color: #e5fcc2;
+}
+
+.navbar {
+    margin: 0;
+    border: 0;
+    width: 100%;
+    background-color: #45ada8;
+    color: #e5fcc2;
+    z-index: 1000;
+}
+
+.navbar .navbar-toggler {
+    border: 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #e5fcc2;
+}
+
+.active {
+    border-bottom: 1px solid #e5fcc2;
+}
+
 /*--------------------------------------------------------------------------------Footer*/
 
 footer {
@@ -50,4 +98,13 @@ footer {
 .social-links li a i:hover {
     background: #073b4c;
     color: #ffc6d9;
+}
+
+/*--------------------------------------------------------------------------------media query for smaller screens */
+
+@media screen and (max-width: 446px) {
+
+    .navalert-container h1 {
+        font-size: 1.5rem;
+    }
 }
