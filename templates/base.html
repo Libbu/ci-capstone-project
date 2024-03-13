@@ -13,10 +13,35 @@
 
 <body>
 
+    <!--Navigation bar Logo -->
+    <div class="container-fluid navalert-container">
+        <nav class="navbar navbar-dark navbar-expand-sm">
+            <a href="{% url 'home' %}" class="navbar-brand">
+                <h1>Calm Cadence</h1>
+            </a>
+            <!--Navigation bar hamburger menu toggle -->
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Navigation bar navigation links -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ml-2"><a class="nav-link {% if request.path == %}active"
+                            aria-current="page{% endif %}" href="">Home</a></li>
+                    <li class="nav-item ml-2"><a class="nav-link {% if request.path ==  %}active"
+                            aria-current="page{% endif %}" href="">Events</a></li>
+                    <li class="nav-item ml-2"> <a class="nav-link {% if request.path == %}active"
+                            aria-current="page{% endif %}" href="">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
     {% block content %}
     {% endblock %}
 
-    
+
     <!--Footer-->
     <footer>
         <div id="footer-details" class="row">
