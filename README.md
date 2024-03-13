@@ -1,1 +1,3 @@
 Calm Cadence
+
+Welcome to Calm Cadence, a warm and inclusive community tailored for those who find joy in the steady rhythm of a more deliberate pace. Embracing the beauty of the journey over the speed of the destination, Calm Cadence is a haven for slow runners seeking camaraderie and support. Whether you're taking your first steps into the world of running or savoring every moment of a leisurely jog, our community celebrates the diverse cadences that weave through our lives. Join us in fostering a culture of encouragement, where the journey is just as important as the finish line. Let's stride together at our own serene pace in the comforting embrace of Calm Cadence
