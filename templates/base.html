@@ -2,6 +2,7 @@
 
 {% url 'home' as home_url %}
 {% url 'event_list' as event_url %}
+{% url 'create_event' as create_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -38,6 +39,8 @@
                     {% if user.is_authenticated %}
                     <li class="nav-item ml-2"><a class="nav-link {% if request.path == event_url %}active"
                             aria-current="page{% endif %}" href="{% url 'event_list' %}">Events</a></li>
+                    <li class="nav-item ml-2"><a class="nav-link {% if request.path == create_url %}active"
+                        aria-current = "page{% endif %}" href="{% url 'create_event' %}">Create Event</a></li>        
                     <li class="nav-item ml-2"><a class="nav-link {% if request.path == logout_url %}active"
                             aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}
