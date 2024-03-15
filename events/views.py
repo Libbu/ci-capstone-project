@@ -22,11 +22,21 @@ class EventList(generic.ListView):
 
     :template: `events/event_list.html`
     """
-    queryset = Event.objects.filter(approved = True)
+    queryset = Event.objects.filter(approved=True)
     template_name = "events/event_list.html"
     paginate_by = 6
 
-def event_detail(request, )
+def event_detail(request, event_id):
+
+    queryset = Event.objects.filter(approved=True)
+    event = get_object_or_404(queryset, event_id=event_id)
+
+    return render(
+        request,
+        'events/event_detail.html',
+    )
+
+
 
 def create_event(request):
     """
