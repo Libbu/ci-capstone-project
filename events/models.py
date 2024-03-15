@@ -8,7 +8,6 @@ class Event(models.Model):
     organiser = models.ForeignKey(User, on_delete=models.CASCADE, related_name="event_organiser")
     description = models.TextField()
     image = CloudinaryField('image', default='placeholder')
-    event_date_time = models.DateTimeField()
     created_on = models.DateTimeField(auto_now_add=True)
     location = models.CharField(max_length=200)
     max_attendees = models.PositiveIntegerField('Maximum Attendees', default=0)
