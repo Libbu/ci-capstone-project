@@ -44,7 +44,7 @@ def create_event(request):
 
             messages.success(request, "Your run has been submitted and is awaiting admin approval.")
 
-            return redirect('index')
+            return redirect('EventList')
     else:
         event_form = CreateEventForm()
 
