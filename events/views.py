@@ -26,6 +26,7 @@ class EventList(generic.ListView):
     template_name = "events/event_list.html"
     paginate_by = 6
 
+def event_detail(request, )
 
 def create_event(request):
     """
