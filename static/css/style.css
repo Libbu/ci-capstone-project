@@ -20,7 +20,6 @@ div.container-fluid.navalert-container {
 }
 
 .navalert-container {
-    position: fixed;
     display: inline-flex;
     top: 0;
     left: 0;

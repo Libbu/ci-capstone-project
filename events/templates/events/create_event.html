@@ -4,10 +4,11 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+
 <h1 class="page-title">Create Event</h1>
 <form method="POST">
     {% csrf_token %}
-    {{form}}
+    {{form|crispy}}
     <input type="submit" value = "submit">
 </form>
 {% endblock %}
