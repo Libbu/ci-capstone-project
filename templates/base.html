@@ -1,5 +1,9 @@
 {% load static %}
 
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,10 +33,13 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ml-2"><a class="nav-link {% if request.path == %}active"
                             aria-current="page{% endif %}" href="">Home</a></li>
+                    {% if user.is_authenticated %}        
                     <li class="nav-item ml-2"><a class="nav-link {% if request.path ==  %}active"
                             aria-current="page{% endif %}" href="">Events</a></li>
-                    <li class="nav-item ml-2"> <a class="nav-link {% if request.path == %}active"
-                            aria-current="page{% endif %}" href="">About</a></li>
+                    <li class="nav-item ml-2"><a class="nav-link {% if request.path == logout_url %}active" 
+                            aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a></li>
+                    {% else %}
+
                 </ul>
             </div>
         </nav>
