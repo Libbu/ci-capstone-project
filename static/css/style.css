@@ -65,9 +65,8 @@ div.container-fluid.navalert-container {
 footer {
     background-color: #45ada8;
     color: #e5fcc2;
-    margin-top: 75vh;
-    padding: 20px 0;
-    height: auto;
+    min-height: 120px;
+    margin: 0;
 }
 
 #footer-details {
