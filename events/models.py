@@ -4,6 +4,11 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Event(models.Model):
+    """
+    Stores a single event related 
+    to :model: `auth.User` through the use
+    of CreateEventForm in forms.py
+    """
     title = models.CharField(max_length=200)
     distance = models.CharField(max_length = 20)
     organiser = models.ForeignKey(User, on_delete=models.CASCADE, related_name="event_organiser")
