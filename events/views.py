@@ -19,3 +19,7 @@ class EventList(generic.ListView):
 
     :template: `events/event_list.html`
     """
+    queryset = Event.objects.filter(approved = True)
+    template_name = "events/event_list.html"
+    paginate_by = 6
+
