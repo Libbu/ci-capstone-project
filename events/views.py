@@ -33,7 +33,7 @@ def event_detail(request, event_id):
 
     return render(
         request,
-        'events/event_detail.html',
+        'events/event_detail.html', {'events': event},
     )
 
 
