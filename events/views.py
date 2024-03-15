@@ -46,17 +46,6 @@ def create_event(request):
     The event must be approved by a site-admin
     (superuser) before showing in event_list.html
     """
-    if request.method == 'POST':
-        event_form = CreateEventForm(request.POST)
-        if event_form.is_valid():
-            event = event_form.save(commit=False)
-            event.creator = request.organiser
-            event.save()
-
-            messages.success(request, "Your run has been submitted and is awaiting admin approval.")
-
-            return redirect('EventList')
-    else:
-        event_form = CreateEventForm()
-
-    return render(request, 'events/create_event.html', {'event_form': event_form})
+    context = {}
+    context['form'] = CreateEventForm()
+    return render (request, 'events/create_event.html', context)
