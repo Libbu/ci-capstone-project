@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.views import generic
 from django.contrib import messages
 from .models import Event
-from .forms import EventCreateForm
+from .forms import CreateEventForm
 
 
 class EventList(generic.ListView):
