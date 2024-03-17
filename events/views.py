@@ -66,6 +66,24 @@ def create_event(request):
         },
     )
 
+@login_required
+def event_approval_list(request):
+    """
+    For use by site admin who can see 
+    which events need approval
+
+    """
+    if not request.user.is_superuser:
+        return render(request, 'prohibited.html')
+
+    pending_events = Event.objects.filter(approved=False)
+
+    context = {
+        'pending_events': pending_events,
+    }
+
+    return render(request, 'events/admin_event_approval.html', context)
+
 
     
     
