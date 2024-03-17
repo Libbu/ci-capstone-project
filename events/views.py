@@ -58,7 +58,6 @@ def create_event(request):
     
     form = CreateEventForm()
 
-
     return render(
         request, 
         'events/create_event.html',
@@ -102,8 +101,6 @@ def admin_event_approval(request, event_id):
         elif action == 'decline':
             event.delete()
             messages.success(request, 'Event has been declined and deleted.')
-
-        return render(request, 'events/admin_event_approval.html',{})
 
     context = {
         'event': event,
