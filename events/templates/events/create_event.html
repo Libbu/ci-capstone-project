@@ -5,10 +5,14 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
 <h1 class="page-title">Create Event</h1>
 <form method="POST">
-    {% csrf_token %}
     {{form|crispy}}
+    {% csrf_token %}
     <input type="submit" value = "submit">
 </form>
+{% else %}
+<p>Log in to schedule a run</p>
+{% endif %}
 {% endblock %}

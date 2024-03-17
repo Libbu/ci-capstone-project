@@ -37,7 +37,7 @@ def event_detail(request, event_id):
     )
 
 
-
+@login_required
 def create_event(request):
     """
     Users who have registered and logged in
@@ -46,6 +46,32 @@ def create_event(request):
     The event must be approved by a site-admin
     (superuser) before showing in event_list.html
     """
-    context = {}
-    context['form'] = CreateEventForm()
-    return render (request, 'events/create_event.html', context)
+    
+    if request.method == 'POST':
+        event_form = CreateEventForm(request.POST)
+        if event_form.is_valid():
+            event = event_form.save(commit=False)
+            event.organiser = request.user
+            event.save()
+
+            messages.success(request, "Your event has been submitted and is awaiting approval.") 
+    
+    form = CreateEventForm()
+
+
+    return render(
+        request, 
+        'events/create_event.html',
+        {'form': form,
+        },
+    )
+
+
+    
+    
+    
+    
+    
+    #context = {}
+    #context['form'] = CreateEventForm()
+    #return render (request, 'events/create_event.html', context)

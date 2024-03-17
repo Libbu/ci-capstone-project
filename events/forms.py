@@ -12,7 +12,6 @@ class CreateEventForm(forms.ModelForm):
          fields = [
             'title',
             'distance',
-            'organiser',
             'description',
             'image',
             'event_date',
