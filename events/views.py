@@ -67,7 +67,7 @@ def create_event(request):
     )
 
 @login_required
-def event_approval_list(request):
+def admin_event_approval(request):
     """
     For use by site admin who can see 
     which events need approval
