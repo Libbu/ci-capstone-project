@@ -65,31 +65,52 @@ def create_event(request):
         {'form': form,
         },
     )
+#admin event approval page
 
 @login_required
-def admin_event_approval(request):
+def admin_event_approval_list(request):
     """
     For use by site admin who can see 
     which events need approval
 
     """
+    pending_events = Event.objects.filter(approved=False).order_by('-event_date')
+
     if not request.user.is_superuser:
         return render(request, 'prohibited.html')
 
-    pending_events = Event.objects.filter(approved=False)
+ 
+    return render(request, 'events/admin_event_approval.html', {'pending_events': pending_events,})
+
+##soemthing wrong with render/redirect urls config revisit
+@login_required
+def admin_event_approval(request, event_id):
+
+    if not request.user.is_superuser:
+        return render(request, 'prohibited.html')
+
+    event = get_object_or_404(Event, pk=event_id)
+
+    if request.method == 'POST':
+        action = request.POST.get('action', '')
+
+        if action == 'approve':
+            event.approved = True
+            event.save()
+            messages.success(request, f'Event {event.title} has been approved.')
+
+        elif action == 'decline':
+            event.delete()
+            messages.success(request, 'Event has been declined and deleted.')
+
+        return render(request, 'events/admin_event_approval.html',{})
 
     context = {
-        'pending_events': pending_events,
+        'event': event,
     }
-
     return render(request, 'events/admin_event_approval.html', context)
 
 
+
     
     
-    
-    
-    
-    #context = {}
-    #context['form'] = CreateEventForm()
-    #return render (request, 'events/create_event.html', context)

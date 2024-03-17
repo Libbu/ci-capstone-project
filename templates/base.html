@@ -42,20 +42,20 @@
                     <li class="nav-item ml-2"><a class="nav-link {% if request.path == event_url %}active"
                             aria-current="page{% endif %}" href="{% url 'event_list' %}">Events</a></li>
                     <li class="nav-item ml-2"><a class="nav-link {% if request.path == create_url %}active"
-                        aria-current = "page{% endif %}" href="{% url 'create_event' %}">Create Event</a></li>        
-                    <li class="nav-item ml-2"><a class="nav-link {% if request.path == logout_url %}active"
-                            aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a></li>
+                        aria-current = "page{% endif %}" href="{% url 'create_event' %}">Create Event</a></li>
                     {% if user.is_superuser %}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                            aria-expanded="false">Admin</a>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item"> <a class="nav-link {% if request.path == admin_url %}active"
-                                    aria-current="page{% endif %}" href="{% url 'admin_event_approval' %}">Approve
-                                    Events</a>
-                            </li>
-                        </ul>
-                    {% endif %}    
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">Admin</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"> <a class="nav-link {% if request.path == admin_url %}active"
+                                        aria-current="page{% endif %}" href="{% url 'admin_event_approval' %}">Approve
+                                        Events</a>
+                                </li>
+                            </ul>
+                    {% endif %}              
+                    <li class="nav-item ml-2"><a class="nav-link {% if request.path == logout_url %}active"
+                            aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a></li>  
                     {% else %}
                     <li class="nav-item ml-2"><a class="nav-link {% if request.path == signup_url %}active"
                         aria-current="page{% endif %}" href="{% url 'account_signup' %}">Register</a></li>
