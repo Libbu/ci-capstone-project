@@ -59,6 +59,10 @@ div.container-fluid.navalert-container {
     border-bottom: 1px solid #e5fcc2;
 }
 
+.navbar-nav > li > .dropdown-menu { 
+    background-color: #45ada8;
+}
+
 /*--------------------------------------------------------------------------------Footer*/
 
 footer {
