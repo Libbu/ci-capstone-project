@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import MainAbout
 from .forms import MainAboutForm
 
@@ -34,12 +36,12 @@ def admin_update_about(request):
 
             messages.success(request, "Your update to the homepage has been published") 
     
-    about_form = MainAboutForm()
+    form = MainAboutForm()
 
     return render(
         request, 
         'main/update_about.html',
-        {'about_form': about_form,
+        {'form': form,
         },
     )
  

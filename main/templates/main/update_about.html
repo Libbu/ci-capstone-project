@@ -7,11 +7,13 @@
 
 {% if user.is_superuser %}
 <h1 class="page-title">Update About Section</h1>
+<div class="form-container">
 <form method="POST">
     {{form|crispy}}
     {% csrf_token %}
     <input type="submit" value = "submit">
 </form>
+</div>
 {% else %}
 <p>This section is for site admin only</p>
 {% endif %}

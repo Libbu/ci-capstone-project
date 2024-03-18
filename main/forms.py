@@ -9,4 +9,4 @@ class MainAboutForm(forms.ModelForm):
     """
     class Meta:
         model = MainAbout
-        fields = ('content')
+        fields = ['content',]
