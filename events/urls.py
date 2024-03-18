@@ -7,4 +7,5 @@ urlpatterns = [
     path('admin_event_approval<int:event_id>/', views.admin_event_approval, name='admin_approval'),
     path('create_event', views.create_event, name='create_event'),
     path('<int:id>/', views.event_detail, name='event_detail'),
+    path('user_events', views.user_events, name='user_events'),
 ]

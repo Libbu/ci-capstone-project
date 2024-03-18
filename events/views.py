@@ -70,9 +70,9 @@ def create_event(request):
 
 def user_events(request):
 
-    events = Event.objects.filter(creator=request.user) 
+    events = Event.objects.filter(organiser=request.user) 
 
-    return render(request, 'events/user_events.html', {'event':events})
+    return render(request, 'events/user_events.html', {'events':events})
 
 
 
