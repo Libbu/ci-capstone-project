@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{% if user.is_superuser %}
+<h1 class="page-title">Update About Section</h1>
+<form method="POST">
+    {{form|crispy}}
+    {% csrf_token %}
+    <input type="submit" value = "submit">
+</form>
+{% else %}
+<p>This section is for site admin only</p>
+{% endif %}
+{% endblock %}

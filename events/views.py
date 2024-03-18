@@ -119,7 +119,6 @@ def admin_event_approval(request, event_id):
             event.delete()
             messages.success(request, 'Event has been declined and deleted.')
 
-   
     return HttpResponseRedirect(reverse('admin_event_approval'))
 
 

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import MainAbout
+from .forms import MainAboutForm
 
 # Create your views here.
 def home_view(request):
@@ -13,3 +14,32 @@ def home_view(request):
     return render(
         request,
         "main/index.html",{'home': home})
+
+@login_required
+def admin_update_about(request):
+    """
+    For use by site admin to update
+    the about section of the website
+    homepage
+
+    """
+    if not request.user.is_superuser:
+        return render(request, 'prohibited.html')
+    
+    if request.method == 'POST':
+        about_form = MainAboutForm(request.POST)
+        if about_form.is_valid():
+            about = about_form.save(commit=True)
+            about.save()
+
+            messages.success(request, "Your update to the homepage has been published") 
+    
+    about_form = MainAboutForm()
+
+    return render(
+        request, 
+        'main/update_about.html',
+        {'about_form': about_form,
+        },
+    )
+ 
