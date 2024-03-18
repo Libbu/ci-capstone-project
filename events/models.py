@@ -18,6 +18,7 @@ class Event(models.Model):
     event_date = models.DateField()
     event_time = models.TimeField()
     location = models.CharField(max_length=200)
+    attendees  = models.ManyToManyField(User, related_name = 'attendees', blank=True)
     max_attendees = models.PositiveIntegerField('maximum_attendees', default=0)
     approved = models.BooleanField(default=False)
 
