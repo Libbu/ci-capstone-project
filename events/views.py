@@ -95,7 +95,6 @@ def admin_event_approval_list(request):
  
     return render(request, 'events/admin_event_approval.html', {'pending_events': pending_events,})
 
-#view for allowing approval/rejection of event should be merged with above?
 
 @login_required
 def admin_event_approval(request, event_id):
@@ -122,6 +121,17 @@ def admin_event_approval(request, event_id):
     return HttpResponseRedirect(reverse('admin_event_approval'))
 
 
+#view for allowing user to delete own event
+
+@login_required
+def delete_event(request, event_id):
+
+    event = get_object_or_404(Event, pk=event_id, creator=request.user,)
+
+    event.delete()
+    messages.success(request, f"Event {event.title} successfully deleted")
+
+    return redirect('user_events')
 
     
     
