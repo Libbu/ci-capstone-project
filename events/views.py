@@ -126,12 +126,12 @@ def admin_event_approval(request, event_id):
 @login_required
 def delete_event(request, event_id):
 
-    event = get_object_or_404(Event, pk=event_id, creator=request.user,)
+    event = get_object_or_404(Event, pk=event_id,)
+    if request.user == event.organiser:
+        event.delete()
+        messages.success(request, f"Event successfully deleted")
 
-    event.delete()
-    messages.success(request, f"Event {event.title} successfully deleted")
-
-    return redirect('user_events')
+    return HttpResponseRedirect(reverse('user_events'))
 
     
     

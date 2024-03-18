@@ -33,7 +33,13 @@
                 </p>
                 <p> Location: {{ event.location }}</p>
             </div>
+            {% if user.is_authenticated and event.organiser == user %}
+            <form method="post" action="{% url 'delete_event' event.id %}">
+                {% csrf_token %}
+                <button type="submit">Delete Event</button>
+            </form>
+            {% endif %}
         </div>
     </div>
-
+</div>
 {% endblock %}
