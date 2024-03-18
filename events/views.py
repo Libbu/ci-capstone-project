@@ -81,9 +81,11 @@ def admin_event_approval_list(request):
  
     return render(request, 'events/admin_event_approval.html', {'pending_events': pending_events,})
 
-##soemthing wrong with render/redirect urls config revisit
+
 @login_required
 def admin_event_approval(request, event_id):
+
+    pending_events = Event.objects.filter(approved=False).order_by('-event_date')
 
     if not request.user.is_superuser:
         return render(request, 'prohibited.html')
@@ -102,10 +104,7 @@ def admin_event_approval(request, event_id):
             event.delete()
             messages.success(request, 'Event has been declined and deleted.')
 
-    context = {
-        'event': event,
-    }
-    return render(request, 'events/admin_event_approval.html', context)
+    return render(request, 'events/admin_event_approval.html',{'pending_events': pending_events,},)
 
 
 
