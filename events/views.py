@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from django.views import generic
 from django.contrib import messages
 from .models import Event
@@ -68,6 +69,7 @@ def create_event(request):
 
 #view for serving user own created events
 
+@login_required
 def user_events(request):
 
     events = Event.objects.filter(organiser=request.user) 
@@ -117,7 +119,8 @@ def admin_event_approval(request, event_id):
             event.delete()
             messages.success(request, 'Event has been declined and deleted.')
 
-    return render(request, 'events/admin_event_approval.html',{'pending_events': pending_events,},)
+   
+    return HttpResponseRedirect(reverse('admin_event_approval'))
 
 
 
