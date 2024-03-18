@@ -3,6 +3,7 @@
 {% url 'home' as home_url %}
 {% url 'event_list' as event_url %}
 {% url 'create_event' as create_url %}
+{% url 'user_events' as user_events_url %}
 {% url 'admin_event_approval' as admin_url %}
 {% url 'update_about' as about_url %}
 {% url 'account_login' as login_url %}
@@ -40,10 +41,20 @@
                     <li class="nav-item ml-2"><a class="nav-link {% if request.path == home_url %}active"
                             aria-current="page{% endif %}" href="{% url 'home' %}">Home</a></li>
                     {% if user.is_authenticated %}
-                    <li class="nav-item ml-2"><a class="nav-link {% if request.path == event_url %}active"
-                            aria-current="page{% endif %}" href="{% url 'event_list' %}">Events</a></li>
-                    <li class="nav-item ml-2"><a class="nav-link {% if request.path == create_url %}active"
-                        aria-current = "page{% endif %}" href="{% url 'create_event' %}">Create Event</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false">Events</a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item"><a class="nav-link {% if request.path == event_url %}active"
+                            aria-current="page{% endif %}" href="{% url 'event_list' %}">Event List</a>  
+                            </li>  
+                            <li class="nav-item"><a class="nav-link {% if request.path == create_url %}active"
+                            aria-current = "page{% endif %}" href="{% url 'create_event' %}">Create Event</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link {% if request.path == user_events_url %}active"
+                                aria-current = "page{% endif %}" href="{% url 'user_events' %}">My Events</a>
+                            </li>
+                        </ul>    
                     {% if user.is_superuser %}
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
@@ -55,7 +66,7 @@
                                 </li>
                                 <li class="nav-item"> <a class="nav-link {% if request.path == about_url %}active"
                                     aria-current="page{% endif %}" href="{% url 'update_about' %}">Update About</a>
-                            </li>
+                                </li>
                             </ul>
                     {% endif %}              
                     <li class="nav-item ml-2"><a class="nav-link {% if request.path == logout_url %}active"
