@@ -63,6 +63,14 @@ div.container-fluid.navalert-container {
     background-color: #45ada8;
 }
 
+/*--------------------------------------------------------------------------------Event List*/
+
+.event-link {
+    text-decoration: none;
+    color: #45ada8;
+}
+
+
 /*--------------------------------------------------------------------------------Footer*/
 
 footer {

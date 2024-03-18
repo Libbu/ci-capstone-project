@@ -26,10 +26,10 @@ class EventList(generic.ListView):
     template_name = "events/event_list.html"
     paginate_by = 6
 
-def event_detail(request, event_id):
+def event_detail(request, id):
 
     queryset = Event.objects.filter(approved=True)
-    event = get_object_or_404(queryset, event_id=event_id)
+    event = get_object_or_404(queryset, id=id)
 
     return render(
         request,

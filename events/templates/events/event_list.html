@@ -21,8 +21,10 @@
                                     <p class="author">Organiser: {{ event.organiser }}</p>
                                 </div>
                             </div>
+                            <a href="{% url 'event_detail' event.id %}" class="event-link">
                             <h2 class="card-title">{{ event.name }}</h2>
                             <p class="card-text">{{ event.distance }}</p>
+                            </a>
                             <hr />
                             <p class="card-text h6">{{ event.event_date}}
                             </p>
