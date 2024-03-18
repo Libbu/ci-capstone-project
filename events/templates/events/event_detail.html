@@ -39,6 +39,9 @@
                 <button type="submit">Delete Event</button>
             </form>
             {% endif %}
+            {% if user.is_authenticated and event.organiser == user %}
+            <a href="{% url 'update_event' event.id %}">Update Event</a>
+            {% endif %}
         </div>
     </div>
 </div>
