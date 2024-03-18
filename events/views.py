@@ -54,8 +54,13 @@ def create_event(request):
             event = event_form.save(commit=False)
             event.organiser = request.user
             event.save()
+            return redirect('event_detail', event_id=event.id)
 
-            messages.success(request, "Your event has been submitted and is awaiting approval.") 
+            messages.success(request, "Your event has been submitted and is awaiting approval.")
+
+        else:
+            form = CreateEventForm(instance=event)
+        return render(request, 'update_event.html', {'form': form}) 
     
     form = CreateEventForm()
 
@@ -133,5 +138,20 @@ def delete_event(request, event_id):
 
     return HttpResponseRedirect(reverse('user_events'))
 
+@login_required
+def update_event(request, event_id):
+
+    event = get_object_or_404(Event, pk=event_id,)
+    if request.user == event.organiser:
+        if request.method == 'POST':
+            form = CreateEventForm(request.POST, instance=event)
+            if form.is_valid():
+                form.save(commit=False)
+                event.organiser = request.user
+                event.save()
+                return HttpResponseRedirect(reverse('user_events'))
+        else:
+            form = CreateEventForm(instance=event)
+        return render(request, 'events/update_event.html', {'form': form})
     
     
