@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+    <h1>user event list</h1>
+    <div class="row">
+
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for event in events %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-flash">
+                                <p class="author">Organiser: {{ event.organiser }}</p>
+                            </div>
+                            <h2 class="card-title">{{ event.name }}</h2>
+                            <p class="card-text">{{ event.distance }}</p>
+                            <hr />
+                            <p class="card-text h6">{{ event.event_date}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endif %}
+{% endblock %}

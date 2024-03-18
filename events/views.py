@@ -64,6 +64,18 @@ def create_event(request):
         {'form': form,
         },
     )
+
+
+#view for serving user own created events
+
+def user_events(request):
+
+    events = Event.objects.filter(creator=request.user) 
+
+    return render(request, 'events/user_events.html', {'event':events})
+
+
+
 #admin event approval page
 
 @login_required
@@ -81,6 +93,7 @@ def admin_event_approval_list(request):
  
     return render(request, 'events/admin_event_approval.html', {'pending_events': pending_events,})
 
+#view for allowing approval/rejection of event should be merged with above?
 
 @login_required
 def admin_event_approval(request, event_id):
