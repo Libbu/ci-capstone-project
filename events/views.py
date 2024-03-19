@@ -101,8 +101,8 @@ def user_events(request):
 @login_required
 def admin_event_approval_list(request):
     """
-    For use by site admin who can see 
-    which events need approval
+    For use by site admin (superusers)
+    to see events pending approval
 
     """
     pending_events = Event.objects.filter(approved=False).order_by('-event_date')
@@ -116,6 +116,14 @@ def admin_event_approval_list(request):
 
 @login_required
 def admin_event_approval(request, event_id):
+    """
+    updates the database with the decision
+    of the admins, if they push the approved
+    button in admin_event_approval.html then
+    the event will show on the event_list for
+    all logged in users; if they decline the
+    event it will be deleted.
+    """
 
     pending_events = Event.objects.filter(approved=False).order_by('-event_date')
 
