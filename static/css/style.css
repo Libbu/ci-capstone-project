@@ -121,8 +121,8 @@ div.container-fluid.navalert-container {
 }
 
 .block-divider--teagreen {
-    width: 50%;
-    height: 0.5rem;
+    width: 60%;
+    height: 0.4rem;
     border: 0;
     border-radius: 25px;
     background-color: #e5fcc2;
@@ -132,6 +132,8 @@ div.container-fluid.navalert-container {
     margin: 25px 0;
     color: #e5fcc2;
 }
+
+/*------------------------------------------------------------------About Us Homepage section*/
 
 /*--------------------------------------------------------------------------------Event List*/
 
