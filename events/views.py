@@ -147,10 +147,14 @@ def admin_event_approval(request, event_id):
     return HttpResponseRedirect(reverse('admin_event_approval'))
 
 
-#view for allowing user to delete own event
+
 
 @login_required
 def delete_event(request, event_id):
+    """
+    allows a logged in user to delete
+    their own event in the event_detail.
+    """
 
     event = get_object_or_404(Event, pk=event_id,)
     if request.user == event.organiser:
