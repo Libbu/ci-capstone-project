@@ -3,9 +3,31 @@
 
 {% block content %}
 
-<div class = "about-us">
-    <p>{{ home.content | safe}}
-    </p>
+<header>
+    <div class="container-fluid hero-container">
+        <div class="opaque-overlay">&nbsp;</div>
+        <div class="row">
+            <div class="col-12">
+                <section class="jumbotron text-center">
+                    <h1 class="jumbotron-header">Calm Cadence</h1>
+                    <hr class="block-divider block-divider--rose">
+                    <p class="lead">A social running club for runners who like to take their time.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="row">
+    <div class="col-12">
+        <h2 class="p-3">About Us</h2>
+        <p class="p-3">
+            {{ home.content | safe}}
+        </p>
+    </div>
+</div>
+
+
 </div>
 
 

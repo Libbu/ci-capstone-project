@@ -7,9 +7,10 @@ from .forms import MainAboutForm
 # Create your views here.
 def home_view(request):
     """
-    this view returns the most recent instance
-    of :model: MainAbout to the 'about our community'
-    section of the homepage using the template main/index.html
+    this view returns the most recent
+    instance of :model: MainAbout to the
+    'about our community'section of the homepage
+    using the template main/index.html
     """
     home = MainAbout.objects.all().order_by('-updated_on').first()
 
