@@ -128,14 +128,13 @@ div.container-fluid.navalert-container {
 
 .jumbotron-header {
     color: #e5fcc2;
-    font-weight: bold;
     margin-bottom: 30px;
     font-family: "Raleway", sans-serif;
 }
 
 .block-divider--teagreen {
     width: 60%;
-    height: 0.4rem;
+    height: 0.2rem;
     border: 0;
     border-radius: 25px;
     background-color: #e5fcc2;
