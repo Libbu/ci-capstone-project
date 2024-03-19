@@ -136,11 +136,12 @@ div.container-fluid.navalert-container {
 /*------------------------------------------------------------------About Us Homepage section*/
 
 .about-us-container {
+    color: #073b4c;
     border-radius: 25px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(7, 59, 76, 0.3);
     margin: auto;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     width: 90%;
 }
 
