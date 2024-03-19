@@ -219,7 +219,7 @@ div.container-fluid.navalert-container {
     color: #e5fcc2;
 }
 
-/*-------------------------------------------------------------------Registration, login, logout form styling */
+/*-------------------------------------------------------------------general form styling */
 .viewport {
     min-height: 100vh;
 }
@@ -250,6 +250,7 @@ div.container-fluid.navalert-container {
     margin-top: 4rem;
 
 }
+
 /*--------------------------------------------------------------------------------Event List*/
 
 .event-link {

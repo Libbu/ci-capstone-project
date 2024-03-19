@@ -55,14 +55,8 @@ def create_event(request):
             event = event_form.save(commit=False)
             event.organiser = request.user
             event.save()
-            return redirect('event_detail', event_id=event.id)
-
             messages.success(request, "Your event has been submitted and is awaiting approval.")
 
-        else:
-            form = CreateEventForm(instance=event)
-        return render(request, 'update_event.html', {'form': form}) 
-    
     form = CreateEventForm()
 
     return render(
