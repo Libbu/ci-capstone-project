@@ -221,7 +221,7 @@ div.container-fluid.navalert-container {
 
 /*-------------------------------------------------------------------Registration, login, logout form styling */
 .viewport {
-    height: 100%;
+    min-height: 100vh;
 }
 
 .form-container {
