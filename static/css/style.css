@@ -17,6 +17,17 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+.sub-heading {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+}
+
+.text{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
 /*--------------------------------------------------------------------------------Navbar*/
 
 div.container-fluid.navalert-container {
@@ -145,18 +156,7 @@ div.container-fluid.navalert-container {
     width: 90%;
 }
 
-.about-us-heading {
-    font-family: "Raleway", sans-serif;
-    margin: 0;
-}
-
-.about-us {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/*--------------------------------------------------------------------------------destination showcase*/
+/*--------------------------------------------------------------------------------showcase*/
 
 .container-wrapper--green {
     background-color: #e5fcc2;
@@ -241,6 +241,13 @@ div.container-fluid.navalert-container {
 
 .form-container button:hover {
     background-color: #260c1a;
+    color: #ffc6d9;
+    border-color: #ffc6d9;
+}
+
+.short-form {
+    margin-top: 4rem;
+
 }
 /*--------------------------------------------------------------------------------Event List*/
 
