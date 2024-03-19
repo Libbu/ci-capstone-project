@@ -30,7 +30,7 @@ TEMPLATES_DIR = BASE_DIR / 'templates'
 SECRET_KEY = 'django-insecure-19a^##8oev@ov@9=0^&)(=wct-o#t33ba@s1=+%)xm7k3+0^9m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.gitpod.io', '.herokuapp.com']
 CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io', 'https://*.herokuapp.com']
