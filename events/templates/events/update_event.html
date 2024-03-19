@@ -5,11 +5,25 @@
 
 {% block content %}
 
-<h1>Update Event</h1>
-<form method="POST">
-    {{form|crispy}}
-    {% csrf_token %}
-    <button type="submit">Update</button>
-</form>
+{% if user.is_authenticated %}
+<div class="container viewport">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2 text-center;">
+            <h3 class="sub-heading p-2">Update Event</h1>
+        </div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <form class="form-container" method="POST">
+                {{form|crispy}}
+                {% csrf_token %}
+                <button class="btn" type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
 
+{% else %}
+<p class ="text">Log in to schedule a run</p>
+{% endif %}
 {% endblock %}

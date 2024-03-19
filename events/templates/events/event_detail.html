@@ -36,11 +36,11 @@
             {% if user.is_authenticated and event.organiser == user %}
             <form method="post" action="{% url 'delete_event' event.id %}">
                 {% csrf_token %}
-                <button type="submit">Delete Event</button>
+                <button class ="btn custom-button" type="submit">Delete Event</button>
             </form>
             {% endif %}
             {% if user.is_authenticated and event.organiser == user %}
-            <a href="{% url 'update_event' event.id %}">Update Event</a>
+            <a href="{% url 'update_event' event.id %}"><button class ="btn custom-button" type = "submit">Update Event</button></a>
             {% endif %}
         </div>
     </div>
