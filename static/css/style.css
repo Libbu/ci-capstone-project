@@ -45,7 +45,7 @@ div.container-fluid.navalert-container {
     width: 100%;
     background-color: #45ada8;
     color: #e5fcc2;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .navbar .navbar-toggler {
@@ -68,9 +68,23 @@ div.container-fluid.navalert-container {
     background-color: #45ada8;
 }
 
+/*--------------------------------------------------------------------------------Django Messages*/
+
+.message-container {
+    background-color:#45ada8;
+    margin: 0;
+    width: 100vw;
+}
+
+.logged-in-notification {
+    margin-bottom: 0;
+    color: #e5fcc2;
+    background-color:#45ada8;
+}
+
 /*--------------------------------------------------------------------------------Hero Image*/
 .hero-container {
-    height: 70vh;
+    height: 75vh;
     width: 100%;
     background: url("/static/images/hero-image.webp") no-repeat center center/cover;
     -webkit-background-size: cover;

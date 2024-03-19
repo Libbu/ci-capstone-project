@@ -87,9 +87,9 @@
     </div>
 
     <!-- displaying Django messages -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
+    <div class="container message-container">
+        <div class="row message-container">
+            <div class="col-md-8 offset-md-2 message-container">
                 {% for message in messages %}
                 <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                     {{ message | safe }}
@@ -100,15 +100,16 @@
         </div>
     </div>
 
-    <div class="flex-shrink-0">
+    <div class="flex-shrink-0 message-container">
         {% if user.is_authenticated %}
-        <p class="text-right mr-3">You are logged in as {{ user }} </p>
+        <p class="text-right mr-3 logged-in-notification">You are logged in as {{ user }} </p>
         {% endif %}
     </div>
 
 
     {% block content %}
     {% endblock %}
+
 
     <!--Footer-->
     <footer>
