@@ -218,7 +218,30 @@ div.container-fluid.navalert-container {
     color: #e5fcc2;
 }
 
+/*-------------------------------------------------------------------Registration, login, logout form styling */
+.viewport {
+    height: 100%;
+}
 
+.form-container {
+    background-color: #07384c;
+    color: #e5fcc2;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.form-container button {
+    background-color: #07384c;
+    color: #e5fcc2;
+    padding: 12px 20px;
+    border-color: #e5fcc2;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #260c1a;
+}
 /*--------------------------------------------------------------------------------Event List*/
 
 .event-link {

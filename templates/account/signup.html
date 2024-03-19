@@ -1,32 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <h3>Sign Up</h3>
+{% load crispy_forms_tags %}
 
-      <p>
-        Welcome back to Calming Cadence
-        Do you already have an account with us? Then please
-        <a class="link" href="{% url 'account_login' %}">sign in</a>
-        instead.</p>
-    </div>
-  </div>
+{% block content %}
+<div class="container viewport">
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button class="btn btn-signup right" type="submit">
-Register&raquo;</button>
-      </form>
-    </div>
+      <div class="col-md-8 mt-3 offset-md-2 text-center;"> <!-- Center-align the heading -->
+          <h3>Register</h3>
+          <p>Welcome back to Calm Cadence. Already have an account? <a class="" href="{{ login_url }}">Sign in</a> instead.</p>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-8 mt-3 offset-md-2">
+          <form class="form-container" id="signup_form" method="post" action="{% url 'account_signup' %}" enctype="multipart/form-data">
+              {% csrf_token %}
+              {{ form|crispy}}
+              {% if redirect_field_value %}
+              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+              {% endif %}
+              <!-- Submit Button -->
+              <button class="btn btn-signup" type="submit">Register&raquo;</button>
+          </form>
+      </div>
   </div>
 </div>
-
 {% endblock %}
