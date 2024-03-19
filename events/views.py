@@ -77,6 +77,18 @@ def create_event(request):
 
 @login_required
 def user_events(request):
+    """
+    this view serves the user a 
+    list of all events they have created
+    **Context**
+    
+    All instances of :model: `events.Event`
+    created by the request.uer
+    
+    **Template**
+
+    :template: `events/user_events.html`
+    """
 
     events = Event.objects.filter(organiser=request.user) 
 
