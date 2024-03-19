@@ -135,6 +135,14 @@ div.container-fluid.navalert-container {
 
 /*------------------------------------------------------------------About Us Homepage section*/
 
+
+
+.about-us {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
 /*--------------------------------------------------------------------------------Event List*/
 
 .event-link {
