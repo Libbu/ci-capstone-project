@@ -141,13 +141,18 @@ div.container-fluid.navalert-container {
     margin: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    width: 70%;
-  
+    width: 90%;
+}
+
+.about-us-heading {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
 }
 
 .about-us {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
+    margin: 0;
 }
 
 
@@ -246,4 +251,15 @@ footer {
     .navalert-container h1 {
         font-size: 1.5rem;
     }
+
+
+.about-us-container {
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 95%;
+}
+
 }
