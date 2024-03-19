@@ -165,6 +165,14 @@ def delete_event(request, event_id):
 
 @login_required
 def update_event(request, event_id):
+    """
+    allows a logged in user to delete
+    their own event by clicking on update
+    in the event detail. They will be taken
+    to update_event.html which will prepopulate
+    with the details of the event they wish to
+    update
+    """
 
     event = get_object_or_404(Event, pk=event_id,)
     if request.user == event.organiser:
