@@ -31,6 +31,20 @@ class Event(models.Model):
     
     @property
     def days_until (self):
+        """
+        calculates how many days left
+        until the run is due to take place
+        """
         today = date.today()
         days_left = self.event_date - today
-        return days_left
+        days_left_date = str(days_left).split(",",1)[0]
+        return days_left_date
+    
+    @property
+    def is_past (self):
+        today = date.today()
+        if self.event_date < today:
+            timing = "past"
+        else:
+            timing = "future"
+        return timing

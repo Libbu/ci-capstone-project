@@ -17,12 +17,13 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ event.image.url }}" alt="{{ event.title }}">
                                 {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Organiser: {{ event.organiser }}</p>
-                                </div>
+                                <a href="{% url 'event_detail' event.id %}" class="event-link">
+                                    <div class="image-flash">
+                                        <p class="author">Organiser: {{ event.organiser }}</p>
+                                    </div>
+                                </a>
                             </div>
-                            <a href="{% url 'event_detail' event.id %}" class="event-link">
-                            <h2 class="card-title">{{ event.name }}</h2> </a>
+                            <h2 class="card-title">{{ event.name }}</h2>
                             <p class="card-text">{{ event.distance }}</p>
                             <p class="card-text">Days until run: {{event.days_until}}</p>
                             <hr />

@@ -4,29 +4,24 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.views import generic
 from django.contrib import messages
+from django.utils import timezone
 from .models import Event
 from .forms import CreateEventForm
 
 
 class EventList(LoginRequiredMixin, generic.ListView):
-    """
-    Returns all the approved events in
-    :model: `events.Event` and displays
-    them in a page of six posts
-    **Context**
-    
-    ``queryset``
-        All approved instances of :model: `events.Event`
-    ``paginate_by``
-        Number of events per page.
-    
-    **Template**
-
-    :template: `events/event_list.html`
-    """
-    queryset = Event.objects.filter(approved=True)
+    model = Event
     template_name = "events/event_list.html"
     paginate_by = 6
+    
+    def get_queryset(self):
+        queryset = Event.objects.filter(approved=True)
+        
+        today = timezone.now().date()
+        queryset = queryset.filter(event_date__gte=today)
+
+        return queryset
+
 
 def event_detail(request, id):
 
