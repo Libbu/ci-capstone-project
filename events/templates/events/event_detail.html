@@ -33,16 +33,41 @@
                 </p>
                 <p> Location: {{ event.location }}</p>
             </div>
-            {% if user.is_authenticated and event.organiser == user %}
-            <form method="post" action="{% url 'delete_event' event.id %}">
-                {% csrf_token %}
-                <button class ="btn custom-button" type="submit">Delete Event</button>
-            </form>
-            {% endif %}
-            {% if user.is_authenticated and event.organiser == user %}
-            <a href="{% url 'update_event' event.id %}"><button class ="btn custom-button" type = "submit">Update Event</button></a>
-            {% endif %}
+            <div>
+                {% if user.is_authenticated and event.organiser == user %}
+                <a href="{% url 'update_event' event.id %}"><button class="btn custom-button" type="submit">Update
+                        Event</button></a>
+                <button class="btn btn-delete" event_id="{{ event.id }}">Delete</button>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
+
+</div>
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete event?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your event?
+                This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="deleteConfirm" href="#" class="btn
+          btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block extras %}
+<!-- Imports script.js for delete confirmation modal -->
+<script src="{% static 'js/script.js' %}"></script>
 {% endblock %}

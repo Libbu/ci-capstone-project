@@ -89,8 +89,13 @@ div.container-fluid.navalert-container {
 
 .message-container {
     background-color: #45ada8;
+    color: #e5fcc2;
     margin: 0;
     width: 100vw;
+}
+
+.alert {
+    margin-bottom: 0;
 }
 
 .logged-in-notification {
