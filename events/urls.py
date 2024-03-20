@@ -12,6 +12,7 @@ urlpatterns = [
     path('cancel_attendance/<event_id>', views.cancel_attendance, name="cancel-attendance"),
     path('<int:id>/', views.event_detail, name='event_detail'),
     path('<int:event_id>/delete_comment/<int:comment_id>/', views.delete_comment, name='delete_comment'),
+    path('<int:event_id>/edit_comment/<int:comment_id>',views.edit_comment, name='edit_comment'),
     path('user_events', views.user_events, name='user_events'),
     path('attending_events', views.user_attending_events, name='attending_events'),
 ]

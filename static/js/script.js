@@ -6,7 +6,7 @@ const deleteButtonComment = document.getElementsByClassName("btn-delete-comment"
 const deleteConfirm = document.getElementById("deleteConfirm");
 
 const editButtons = document.getElementsByClassName("btn-edit");
-const commentText = document.getElementById("id-text");
+const commentText = document.getElementById("id_text");
 const commentForm = document.getElementById("commentForm");
 const submitButton = document.getElementById("submitButton");
 /**
@@ -23,10 +23,21 @@ for (let button of deleteButtons) {
 * deletion functionality for delete confirmation button and modal for Comments.
 */
 
-  for (let button of deleteButtonComment) {
+for (let button of deleteButtonComment) {
     button.addEventListener("click", (e) => {
-      let commentId = e.target.getAttribute("data-comment_id")
-      deleteConfirm.href = `delete_comment/${commentId}`
-      deleteModalComment.show();
-    });
-  }
+    let commentId = e.target.getAttribute("data-comment_id")
+    deleteConfirm.href = `delete_comment/${commentId}`
+    deleteModalComment.show();
+  });
+}
+
+
+for (let button of editButtons) {
+  button.addEventListener("click", (e) => {
+  let commentId = e.target.getAttribute("data-comment_id");
+  let commentContent = document.getElementById(`comment${commentId}`).innerText;
+  commentText.value = commentContent;
+  submitButton.innerText = "Update";
+  commentForm.setAttribute("action", `edit_comment/${commentId}`);
+  });
+}
