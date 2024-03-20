@@ -6,7 +6,7 @@ from django.views import generic
 from django.contrib import messages
 from django.utils import timezone
 from .models import Event
-from .forms import CreateEventForm
+from .forms import CreateEventForm, CommentForm
 
 
 class EventList(LoginRequiredMixin, generic.ListView):
@@ -42,11 +42,27 @@ def event_detail(request, id):
 
     queryset = Event.objects.filter(approved=True)
     event = get_object_or_404(queryset, id=id)
+    comments = event.comments.all().order_by("-created_on")
+
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.event = event
+            comment.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Comment published"'
+            )
+
+    comment_form = CommentForm()
 
     return render(
         request,
-        'events/event_detail.html', {'event': event},
+        'events/event_detail.html', {'event': event, "comments": comments,"comment_form": comment_form, },
     )
+
 
 
 @login_required

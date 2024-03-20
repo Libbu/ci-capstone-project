@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 
 {% block content %}
 
@@ -69,11 +71,12 @@
     <div class="col-md-8 card mb-4  mt-3 ">
         <h3>Comments:</h3>
         <div class="card-body">
+            {% for comment in comments %}
             <div class="p-2 comments">
                 <span>
                 </span> wrote:
                 <div>
-                    Comment text here
+
                 </div>
             </div>
         </div>
@@ -85,7 +88,7 @@
             <h3>Leave a comment:</h3>
             <p>Posting as: </p>
             <form>
-
+                {{ comment_form | crispy }}
                 <button>Submit</button>
             </form>
         </div>

@@ -31,6 +31,6 @@ class CommentForm(forms.ModelForm):
     users to comment on an event 
     """
     class Meta:
-      
+
         model = Comment
-        fields = ('body',)
+        fields = ('text',)
