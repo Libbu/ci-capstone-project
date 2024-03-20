@@ -70,7 +70,7 @@ def delete_comment(request, event_id, comment_id):
     event = get_object_or_404(queryset, id=event_id)
     comment = get_object_or_404(Comment, pk=comment_id)
 
-    if comment.author == request.user:
+    if comment.author == request.user or request.user.is_superuser:
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:

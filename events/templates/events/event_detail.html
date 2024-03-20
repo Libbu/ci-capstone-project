@@ -77,8 +77,10 @@
                 <div id="comment{{ comment.id }}">
                     {{ comment.text }}
                 </div>
-                {% if user.is_authenticated and comment.author == user %}
+                {% if user.is_authenticated and comment.author == user or user.is_superuser %}
                 <button class="btn btn-delete-comment" data-comment_id="{{ comment.id }}">Delete</button>
+                {% endif %}
+                {% if user.is_authenticated and comment.author == user %}
                 <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
                 {% endif %}
             </div>
