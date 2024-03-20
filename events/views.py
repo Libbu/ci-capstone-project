@@ -37,7 +37,7 @@ class EventList(LoginRequiredMixin, generic.ListView):
 
         return queryset
 
-
+@login_required
 def event_detail(request, id):
 
     queryset = Event.objects.filter(approved=True)
@@ -227,3 +227,7 @@ def cancel_attendance(request, event_id):
 	    event.attendees.remove(request.user)
 	    return redirect('event_list')
     
+def user_attending_events(request):
+    user = request.user
+    events = Event.objects.filter(attendees=user)
+    return render(request, 'events/attending_events.html', {'events': events})

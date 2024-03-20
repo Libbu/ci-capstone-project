@@ -4,6 +4,7 @@
 {% url 'event_list' as event_url %}
 {% url 'create_event' as create_url %}
 {% url 'user_events' as user_events_url %}
+{% url 'attending_events' as attending_events_url %}
 {% url 'attending_events' as attending_url %}
 {% url 'admin_event_approval' as admin_url %}
 {% url 'update_about' as about_url %}
@@ -55,7 +56,8 @@
                             <li class="nav-item"><a class="nav-link {% if request.path == user_events_url %}active"
                                     aria-current="page{% endif %}" href="{% url 'user_events' %}">My Events</a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" aria-current="page" href="">Attending</a>
+                            <li class="nav-item"><a class="nav-link {% if request.path == attending_events_url %}active"
+                                    aria-current="page{% endif%}" href="{% url 'attending_events' %}">Attending</a>
                             </li>
                         </ul>
                         {% if user.is_superuser %}
