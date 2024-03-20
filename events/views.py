@@ -199,5 +199,5 @@ def cancel_attendance(request, event_id):
     event = Event.objects.get(pk=event_id)
     if request.method == 'POST':
 	    event.attendees.remove(request.user)
-	    return redirect('event-list')
+	    return redirect('event_list')
     

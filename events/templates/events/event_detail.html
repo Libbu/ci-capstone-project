@@ -41,15 +41,15 @@
             <div>
                 {% if user.is_authenticated %}
                 {% if user in event.attendees.all %}
-				<form method="post" action="">
+				<form method="post" action="{% url 'cancel-attendance' event.id %}">
 					{% csrf_token %}
 					<button type="submit" class="btn btn-primary">Cancel Run</button>
 				</form>
+                {% endif %}
                 <form method="post" action="{% url 'attend-event' event.id %}">
                     {% csrf_token %}
                     <button type="submit" class="btn">Count me in!</button>
                 </form>
-                {% endif %}
                 {% endif %}
             </div>
             <div>
