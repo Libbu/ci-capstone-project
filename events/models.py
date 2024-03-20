@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import date 
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
@@ -27,3 +28,9 @@ class Event(models.Model):
         
     def __str__(self):
         return f"{self.title} | created by {self.organiser}"
+    
+    @property
+    def days_until (self):
+        today = date.today()
+        days_left = self.event_date - today
+        return days_left

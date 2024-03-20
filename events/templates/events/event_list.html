@@ -22,9 +22,9 @@
                                 </div>
                             </div>
                             <a href="{% url 'event_detail' event.id %}" class="event-link">
-                            <h2 class="card-title">{{ event.name }}</h2>
+                            <h2 class="card-title">{{ event.name }}</h2> </a>
                             <p class="card-text">{{ event.distance }}</p>
-                            </a>
+                            <p class="card-text">Days until run: {{event.days_until}}</p>
                             <hr />
                             <p class="card-text h6">{{ event.event_date}}
                             </p>

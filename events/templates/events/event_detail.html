@@ -53,10 +53,12 @@
                 {% endif %}
             </div>
             <div>
-                {% if user == event.organiser or user.is_superuser %}
+                {% if user.is_authenticated and event.organiser == user or user.is_superuser %}
+                <button class="btn custom-button btn-delete" event_id="{{ event.id }}">Delete</button>
+                {% endif %}
+                {% if user.is_authenticated and event.organiser == user %}
                 <a href="{% url 'update_event' event.id %}"><button class="btn custom-button" type="submit">Update
                         Event</button></a>
-                <button class="btn custom-button btn-delete" event_id="{{ event.id }}">Delete</button>
                 {% endif %}
             </div>
         </div>
