@@ -188,5 +188,16 @@ def attend_event(request, event_id):
 	else:
 		messages.success(request, "Sorry, this run is full")
 	return redirect('event-list')
-    
+
+@login_required
+def cancel_attendance(request, event_id):
+    """
+    allows users to remove themselves
+    from an event they have said they
+    will attend
+    """
+    event = Event.objects.get(pk=event_id)
+    if request.method == 'POST':
+	    event.attendees.remove(request.user)
+	    return redirect('event-list')
     
