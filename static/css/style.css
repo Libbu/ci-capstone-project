@@ -30,6 +30,10 @@ body {
     color: #073b4c;
 }
 
+#hint_id_password {
+    display: none;
+}
+
 /*--------------------------------------------------------------------------------Navbar*/
 
 div.container-fluid.navalert-container {
