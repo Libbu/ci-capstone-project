@@ -32,10 +32,15 @@
                     {{ event.description | safe}}
                 </p>
                 <p> Location: {{ event.location }}</p>
+                <p> Max attendees: {{event.max_attendees}}</p>
+                <p> Attendees: {% for user in event.attendees.all %}
+                    {{user}} <br>
+                    {% endfor %}
+                <p> Total Going: {{ event.attendees }}</p>    
             </div>
             <div>
                 {% if user.is_authenticated %}
-                <form method="post" action="">
+                <form method="post" action="{% url 'attend-event' event.id %}">
                     {% csrf_token %}
                     <button type="submit" class="btn">Count me in!</button>
                 </form>
