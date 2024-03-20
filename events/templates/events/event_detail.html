@@ -32,18 +32,24 @@
                     {{ event.description | safe}}
                 </p>
                 <p> Location: {{ event.location }}</p>
+                <p> Total Going: {{ event.attendees.count }}</p>    
                 <p> Max attendees: {{event.max_attendees}}</p>
                 <p> Attendees: {% for user in event.attendees.all %}
                     {{user}} <br>
-                    {% endfor %}
-                <p> Total Going: {{ event.attendees }}</p>    
+                    {% endfor %}  
             </div>
             <div>
                 {% if user.is_authenticated %}
+                {% if user in event.attendees.all %}
+				<form method="post" action="">
+					{% csrf_token %}
+					<button type="submit" class="btn btn-primary">Cancel Run</button>
+				</form>
                 <form method="post" action="{% url 'attend-event' event.id %}">
                     {% csrf_token %}
                     <button type="submit" class="btn">Count me in!</button>
                 </form>
+                {% endif %}
                 {% endif %}
             </div>
             <div>
