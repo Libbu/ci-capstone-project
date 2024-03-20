@@ -34,8 +34,29 @@ class Event(models.Model):
         """
         calculates how many days left
         until the run is due to take place
+        and returns a string
         """
         today = date.today()
         days_left = self.event_date - today
         days_left_date = str(days_left).split(",",1)[0]
         return days_left_date
+
+
+class Comment(models.Model):
+    """
+    Stores a single comment entry related 
+    to :model:`auth.User`and :model:
+    `events.Event`.
+    """
+    event = models.ForeignKey(
+        Event, on_delete=models.CASCADE, related_name="comments")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter")
+    text = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.author}" 

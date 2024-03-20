@@ -10,13 +10,28 @@ from .forms import CreateEventForm
 
 
 class EventList(LoginRequiredMixin, generic.ListView):
+    """
+    Returns all the approved, future events in
+    :model: `events.Event` and displays
+    them in a page of six posts
+    **Context**
+    
+    ``queryset``
+        All approved, future event relative to today
+        instances of :model: `events.Event`
+    ``paginate_by``
+        Number of events per page.
+    
+    **Template**
+
+    :template: `events/event_list.html`
+    """
     model = Event
     template_name = "events/event_list.html"
     paginate_by = 6
     
     def get_queryset(self):
         queryset = Event.objects.filter(approved=True)
-        
         today = timezone.now().date()
         queryset = queryset.filter(event_date__gte=today)
 
