@@ -74,8 +74,8 @@
             {% for comment in comments %}
             <div class="p-2">
                 <p class="text"> {{ comment.author }} wrote:</p>
-                <div>
-                    <p class="text">{{ comment.text }}</p>
+                <div id="comment{{ comment.id }}">
+                    <p class="text" id="id-text">{{ comment.text }}</p>
                 </div>
                 {% if user.is_authenticated and comment.author == user %}
                 <button class="btn btn-delete-comment" data-comment_id="{{ comment.id }}">Delete</button>
@@ -91,10 +91,10 @@
         <div class="card-body">
             <h3>Leave a comment:</h3>
             <p>Posting as: {{request.user}} </p>
-            <form method="POST">
+            <form id="commentForm" method="POST">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
-                <button>Submit</button>
+                <button id="submitButton">Submit</button>
             </form>
         </div>
     </div>

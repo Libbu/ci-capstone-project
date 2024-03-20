@@ -4,6 +4,11 @@ const deleteButtons = document.getElementsByClassName("btn-delete");
 const deleteModalComment = new bootstrap.Modal(document.getElementById("deleteModalComment"));
 const deleteButtonComment = document.getElementsByClassName("btn-delete-comment");
 const deleteConfirm = document.getElementById("deleteConfirm");
+
+const editButtons = document.getElementsByClassName("btn-edit");
+const commentText = document.getElementById("id-text");
+const commentForm = document.getElementById("commentForm");
+const submitButton = document.getElementById("submitButton");
 /**
 * functionality for delete confirmation button and modal for Events.
 */
