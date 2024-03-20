@@ -5,7 +5,7 @@ const deleteModalComment = new bootstrap.Modal(document.getElementById("deleteMo
 const deleteButtonComment = document.getElementsByClassName("btn-delete-comment");
 const deleteConfirm = document.getElementById("deleteConfirm");
 /**
-* deletion functionality for delete confirmation button and modal for Events.
+* functionality for delete confirmation button and modal for Events.
 */
 
 for (let button of deleteButtons) {
