@@ -72,13 +72,13 @@
         <h3>Comments:</h3>
         <div class="card-body">
             {% for comment in comments %}
-            <div class="p-2 comments">
-                <span>
-                </span> wrote:
+            <div class="p-2">
+                <p class = "text"> {{ comment.author }} wrote:</p> 
                 <div>
-
+                   <p class = "text">{{ comment.text }}</p> 
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 
@@ -86,9 +86,10 @@
     <div class="col-md-4 card mb-4 mt-3">
         <div class="card-body">
             <h3>Leave a comment:</h3>
-            <p>Posting as: </p>
-            <form>
+            <p>Posting as: {{request.user}} </p>
+            <form method="POST">
                 {{ comment_form | crispy }}
+                {% csrf_token %}
                 <button>Submit</button>
             </form>
         </div>
