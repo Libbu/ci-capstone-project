@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.views import generic
 from django.contrib import messages
 from django.utils import timezone
-from .models import Event
+from .models import Event, Comment
 from .forms import CreateEventForm, CommentForm
 
 
@@ -63,6 +63,20 @@ def event_detail(request, id):
         'events/event_detail.html', {'event': event, "comments": comments,"comment_form": comment_form, },
     )
 
+@login_required
+def delete_comment(request, event_id, comment_id):
+
+    queryset = Event.objects.filter(approved = True)
+    event = get_object_or_404(queryset, id=event_id)
+    comment = get_object_or_404(Comment, pk=comment_id)
+
+    if comment.author == request.user:
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+
+    return redirect('event_detail', id=event_id)
 
 
 @login_required
