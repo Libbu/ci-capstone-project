@@ -80,6 +80,27 @@ def delete_comment(request, event_id, comment_id):
 
 
 @login_required
+def edit_comment(request, event_id, comment_id):
+
+    if request.method == "POST":
+
+        queryset = Event.objects.filter(approved = True)
+        event = get_object_or_404(queryset, id=event_id)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        comment_form = CommentForm(data=request.POST, instance=comment)
+
+        if comment_form.is_valid() and comment.author == request.user:
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+    return redirect('event_detail', id=event_id)
+
+@login_required
 def create_event(request):
     """
     Users who have registered and logged in
