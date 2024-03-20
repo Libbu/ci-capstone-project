@@ -34,6 +34,14 @@
                 <p> Location: {{ event.location }}</p>
             </div>
             <div>
+                {% if user.is_authenticated %}
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <button type="submit" class="btn">Count me in!</button>
+                </form>
+                {% endif %}
+            </div>
+            <div>
                 {% if user.is_authenticated and event.organiser == user %}
                 <a href="{% url 'update_event' event.id %}"><button class="btn custom-button" type="submit">Update
                         Event</button></a>

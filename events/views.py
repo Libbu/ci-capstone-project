@@ -67,8 +67,6 @@ def create_event(request):
     )
 
 
-#view for serving user own created events
-
 @login_required
 def user_events(request):
     """
@@ -88,9 +86,6 @@ def user_events(request):
 
     return render(request, 'events/user_events.html', {'events':events})
 
-
-
-#admin event approval page
 
 @login_required
 def admin_event_approval_list(request):
@@ -139,7 +134,6 @@ def admin_event_approval(request, event_id):
             messages.success(request, 'Event has been declined and deleted.')
 
     return HttpResponseRedirect(reverse('admin_event_approval'))
-
 
 
 
