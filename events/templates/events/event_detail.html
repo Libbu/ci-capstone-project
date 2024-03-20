@@ -32,19 +32,19 @@
                     {{ event.description | safe}}
                 </p>
                 <p> Location: {{ event.location }}</p>
-                <p> Total Going: {{ event.attendees.count }}</p>    
+                <p> Total Going: {{ event.attendees.count }}</p>
                 <p> Max attendees: {{event.max_attendees}}</p>
                 <p> Attendees: {% for user in event.attendees.all %}
                     {{user}} <br>
-                    {% endfor %}  
+                    {% endfor %}
             </div>
             <div>
                 {% if user.is_authenticated %}
                 {% if user in event.attendees.all %}
-				<form method="post" action="{% url 'cancel-attendance' event.id %}">
-					{% csrf_token %}
-					<button type="submit" class="btn btn-primary">Cancel Run</button>
-				</form>
+                <form method="post" action="{% url 'cancel-attendance' event.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary">Cancel Run</button>
+                </form>
                 {% endif %}
                 <form method="post" action="{% url 'attend-event' event.id %}">
                     {% csrf_token %}
@@ -65,7 +65,34 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="col-md-8 card mb-4  mt-3 ">
+        <h3>Comments:</h3>
+        <div class="card-body">
+            <div class="p-2 comments">
+                <span>
+                </span> wrote:
+                <div>
+                    Comment text here
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Comment Form -->
+    <div class="col-md-4 card mb-4 mt-3">
+        <div class="card-body">
+            <h3>Leave a comment:</h3>
+            <p>Posting as: </p>
+            <form>
+
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
 </div>
+
+
 <!-- Delete confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Event
+from .models import Event, Comment
 
 class CreateEventForm(forms.ModelForm):
     """
@@ -24,3 +24,4 @@ class CreateEventForm(forms.ModelForm):
             'event_date': forms.DateInput(attrs={'type': 'date'}),
             'event_time': forms.DateInput(attrs={'type': 'time'}),
          }
+
