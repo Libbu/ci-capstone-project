@@ -145,7 +145,7 @@ def delete_event(request, event_id):
     """
 
     event = get_object_or_404(Event, pk=event_id,)
-    if request.user == event.organiser:
+    if request.user == event.organiser or request.user.is_superuser:
         event.delete()
         messages.success(request, f"Event successfully deleted")
 
