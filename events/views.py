@@ -174,5 +174,19 @@ def update_event(request, event_id):
         else:
             form = CreateEventForm(instance=event)
         return render(request, 'events/update_event.html', {'form': form})
+
+@login_required
+def attend_event(request, event_id):
+	event = Event.objects.get(pk=event_id)
+	if event.max_attendees == 0 or event.attendees.count() < event.max_attendees:
+		if request.method == 'POST':
+			event.attendees.add(request.user)
+			return render(
+            request,
+            'events/event_detail.html', {'event': event},
+            )
+	else:
+		messages.success(request, "Sorry, this run is full")
+	return redirect('event-list')
     
     
