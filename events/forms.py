@@ -25,3 +25,12 @@ class CreateEventForm(forms.ModelForm):
             'event_time': forms.DateInput(attrs={'type': 'time'}),
          }
 
+class CommentForm(forms.ModelForm):
+    """
+    Form class for logged-in
+    users to comment on an event 
+    """
+    class Meta:
+      
+        model = Comment
+        fields = ('body',)
