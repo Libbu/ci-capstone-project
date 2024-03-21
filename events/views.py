@@ -54,7 +54,6 @@ def event_detail(request, id):
     :template: `events/event_detail.html`
     """
 
-
     queryset = Event.objects.all()
     event = get_object_or_404(queryset, id=id)
     comments = event.comments.all().order_by("-created_on")
@@ -104,7 +103,6 @@ def delete_comment(request, event_id, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return redirect('event_detail', id=event_id)
-
 
 @login_required
 def edit_comment(request, event_id, comment_id):
@@ -173,7 +171,6 @@ def create_event(request):
         },
     )
 
-
 @login_required
 def user_events(request):
     """
@@ -192,7 +189,6 @@ def user_events(request):
     events = Event.objects.filter(organiser=request.user) 
 
     return render(request, 'events/user_events.html', {'events':events})
-
 
 @login_required
 def admin_event_approval_list(request):
@@ -216,9 +212,7 @@ def admin_event_approval_list(request):
     if not request.user.is_superuser:
         return render(request, 'prohibited.html')
 
- 
     return render(request, 'events/admin_event_approval.html', {'pending_events': pending_events,})
-
 
 @login_required
 def admin_event_approval(request, event_id):
@@ -251,8 +245,6 @@ def admin_event_approval(request, event_id):
             messages.success(request, 'Event has been declined and removed.')
 
     return HttpResponseRedirect(reverse('admin_event_approval'))
-
-
 
 @login_required
 def delete_event(request, event_id):
@@ -294,7 +286,7 @@ def update_event(request, event_id):
 
     :template: `update_event.html`
     """
-
+    
     event = get_object_or_404(Event, pk=event_id,)
     if request.user == event.organiser:
         if request.method == 'POST':
