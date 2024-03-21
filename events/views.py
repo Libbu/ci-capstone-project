@@ -311,6 +311,10 @@ def update_event(request, event_id):
 
 @login_required
 def attend_event(request, event_id):
+    """
+    allows users to record their
+    intention to attend and event
+    """
 
     event = Event.objects.get(pk=event_id)
 
@@ -339,7 +343,8 @@ def cancel_attendance(request, event_id):
     else:
         messages.add_message(request, messages.SUCCESS, "you can only remove yourself from runs")
         return render(request, 'prohibited.html')
-    
+
+@login_required
 def user_attending_events(request):
     """
     A list of events in which the user
