@@ -309,7 +309,7 @@ def update_event(request, event_id):
             form = CreateEventForm(instance=event)
         return render(request, 'events/update_event.html', {'form': form})
 
-
+@login_required
 def attend_event(request, event_id):
 
     event = Event.objects.get(pk=event_id)
@@ -318,12 +318,12 @@ def attend_event(request, event_id):
         if request.method == 'POST':
             event.attendees.add(request.user)
             messages.add_message(request, messages.SUCCESS, "You're attending!")
-            return redirect('user_events')
+            return redirect('attending_events')
     else:
         messages.warning(request, "Sorry, this run is full")
         return redirect('event_list')
 
-
+@login_required
 def cancel_attendance(request, event_id):
     """
     allows users to remove themselves
@@ -332,9 +332,13 @@ def cancel_attendance(request, event_id):
     """
     event = Event.objects.get(pk=event_id)
     if request.method == 'POST':
-        event.attendees.remove(request.user)
-        messages.add_message(request, messages.SUCCESS, "You've cancelled your attendance.")
-        return redirect('event_list')
+        if request.user in event.attendees.all():
+            event.attendees.remove(request.user)
+            messages.add_message(request, messages.SUCCESS, "You've cancelled your attendance.")
+            return redirect('event_list')
+    else:
+        messages.add_message(request, messages.SUCCESS, "you can only remove yourself from runs")
+        return render(request, 'prohibited.html')
     
 def user_attending_events(request):
     """
