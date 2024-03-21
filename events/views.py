@@ -95,7 +95,7 @@ def edit_comment(request, event_id, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(request, messages.ERROR, 'Error updating comment')
 
     return redirect('event_detail', id=event_id)
 
@@ -207,7 +207,7 @@ def delete_event(request, event_id):
     event = get_object_or_404(Event, pk=event_id,)
     if request.user == event.organiser or request.user.is_superuser:
         event.delete()
-        messages.success(request, f"Event successfully deleted")
+        messages.success(request, f"Event successfully deleted.")
 
     return HttpResponseRedirect(reverse('user_events'))
 
@@ -230,6 +230,7 @@ def update_event(request, event_id):
                 form.save(commit=False)
                 event.organiser = request.user
                 event.save()
+                messages.add_message(request, messages.SUCCESS, 'Event Updated!')
                 return HttpResponseRedirect(reverse('user_events'))
         else:
             form = CreateEventForm(instance=event)
@@ -237,17 +238,18 @@ def update_event(request, event_id):
 
 @login_required
 def attend_event(request, event_id):
-	event = Event.objects.get(pk=event_id)
-	if event.max_attendees == 0 or event.attendees.count() < event.max_attendees:
-		if request.method == 'POST':
-			event.attendees.add(request.user)
-			return render(
+    event = Event.objects.get(pk=event_id)
+    if event.max_attendees == 0 or event.attendees.count() < event.max_attendees:
+        if request.method == 'POST':
+            event.attendees.add(request.user)
+            messages.add_message(request, messages.SUCCESS, "You're attending!")
+            return render(
             request,
             'events/event_detail.html', {'event': event},
             )
-	else:
-		messages.success(request, "Sorry, this run is full")
-	return redirect('event-list')
+    else:
+        messages.success(request, "Sorry, this run is full")
+        return redirect('event-list')
 
 @login_required
 def cancel_attendance(request, event_id):
@@ -258,8 +260,9 @@ def cancel_attendance(request, event_id):
     """
     event = Event.objects.get(pk=event_id)
     if request.method == 'POST':
-	    event.attendees.remove(request.user)
-	    return redirect('event_list')
+        event.attendees.remove(request.user)
+        messages.add_message(request, messages.SUCCESS, "You've cancelled your attendance.")
+        return redirect('event_list')
     
 def user_attending_events(request):
     user = request.user
