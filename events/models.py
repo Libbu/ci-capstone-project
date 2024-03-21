@@ -46,7 +46,8 @@ class Comment(models.Model):
     """
     Stores a single comment entry related 
     to :model:`auth.User`and :model:
-    `events.Event`.
+    `events.Event` through the use of
+    CommentForm in events/forms.py
     """
     event = models.ForeignKey(
         Event, on_delete=models.CASCADE, related_name="comments")

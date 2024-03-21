@@ -11,6 +11,12 @@ def home_view(request):
     instance of :model: MainAbout to the
     'about our community'section of the homepage
     using the template main/index.html
+
+    ``home``
+    an instance of :model: `main.MainAbout`
+
+    **Template**
+    :template: `main/index.html`
     """
     home = MainAbout.objects.all().order_by('-updated_on').first()
 
@@ -25,7 +31,15 @@ def admin_update_about(request):
     the about section of the website
     homepage
 
+    **Context**
+
+    ``about_form``
+    an instance of :form: `main.MainAbout`
+
+    **Template**
+    :template: `main/update_about.html`
     """
+
     if not request.user.is_superuser:
         return render(request, 'prohibited.html')
     
