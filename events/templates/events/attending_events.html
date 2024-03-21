@@ -6,11 +6,12 @@
 
 {% if events %}
 <div class="container-fluid viewport">
-    <h1 class ="sub-heading p-2">Events I'm a part of</h1>
+    <h1 class ="sub-heading p-2">Events I'm going to:</h1>
     <div class="row">
         <div class="col-12 mt-3">
             <div class="row center-content">
                 {% for event in events %}
+                {% if event.event_date >= current_date%}
                 <div class="col-sm-6 col-md-4 card-deck">
                     <div class="card mb-4">
                         <div class="card-body">
@@ -34,6 +35,7 @@
                         </div>
                     </div>
                 </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
@@ -43,6 +45,5 @@
 <div class="mt-3 text-center viewport">
     <h2 class="sub-heading p-2">No attending or attended events to show you!</h2>
 </div>
-
 {% endif %}
 {% endblock %}
