@@ -214,12 +214,15 @@ def delete_event(request, event_id):
 @login_required
 def update_event(request, event_id):
     """
-    allows a logged in user to delete
-    their own event by clicking on update
+    allows a logged in user to update
+    their own event by clicking on update event
     in the event detail. They will be taken
     to update_event.html which will prepopulate
     with the details of the event they wish to
     update
+
+    the event will be resubmitted for admin
+    approval after being updated.
     """
 
     event = get_object_or_404(Event, pk=event_id,)
@@ -228,9 +231,9 @@ def update_event(request, event_id):
             form = CreateEventForm(request.POST, instance=event)
             if form.is_valid():
                 form.save(commit=False)
-                event.organiser = request.user
+                event.approved = False
                 event.save()
-                messages.add_message(request, messages.SUCCESS, 'Event Updated!')
+                messages.add_message(request, messages.SUCCESS, 'Event has been updated and is awaiting approval.')
                 return HttpResponseRedirect(reverse('user_events'))
         else:
             form = CreateEventForm(instance=event)
