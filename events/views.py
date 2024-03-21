@@ -110,7 +110,7 @@ def create_event(request):
     """
     
     if request.method == 'POST':
-        event_form = CreateEventForm(request.POST)
+        event_form = CreateEventForm(request.POST, request.FILES)
         if event_form.is_valid():
             event = event_form.save(commit=False)
             event.organiser = request.user

@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% load cloudinary %}
+
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -15,7 +17,7 @@
 
     <div class="row pb-3">
         <div class="col-md-8 mt-3 offset-md-2">
-            <form class="form-container" method="POST">
+            <form class="form-container" enctype="multipart/form-data" method="POST">
                 {{form|crispy}}
                 {% csrf_token %}
                 <button class="btn" type="submit">Submit</button>

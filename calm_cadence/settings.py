@@ -23,6 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #to support copying allauth template files
 TEMPLATES_DIR = BASE_DIR / 'templates'
 
+#Cloudinary import
+
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -30,7 +36,7 @@ TEMPLATES_DIR = BASE_DIR / 'templates'
 SECRET_KEY = 'django-insecure-19a^##8oev@ov@9=0^&)(=wct-o#t33ba@s1=+%)xm7k3+0^9m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.gitpod.io', '.herokuapp.com']
 CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io', 'https://*.herokuapp.com']
@@ -146,7 +152,16 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Cloudinary - integration
+
+cloudinary.config (
+    cloud_name = os.environ.get("CLOUDINARY_NAME"),
+    api_key = os.environ.get("CLOUDINARY_API"),
+    api_secret = os.environ.get("CLOUDINARY_SECRET_KEY"),
+)
