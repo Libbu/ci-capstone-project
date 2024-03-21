@@ -55,7 +55,7 @@ def event_detail(request, id):
     """
 
 
-    queryset = Event.objects.filter(approved=True)
+    queryset = Event.objects.all()
     event = get_object_or_404(queryset, id=id)
     comments = event.comments.all().order_by("-created_on")
 
@@ -80,6 +80,18 @@ def event_detail(request, id):
 
 @login_required
 def delete_comment(request, event_id, comment_id):
+
+    """
+    A user can delete their own comment, superusers
+    can delete any comments.
+
+    **Context**
+
+    ``event``
+        An instance of :model:`events.Event`.
+    ``comment``
+        A single comment related to the event.
+    """
 
     queryset = Event.objects.filter(approved = True)
     event = get_object_or_404(queryset, id=event_id)
@@ -135,8 +147,15 @@ def create_event(request):
     using fields from :model: `events.Event`.
     The event must be approved by a site-admin
     (superuser) before showing in event_list.html
-    """
     
+    **Context**
+    ``EventCreateForm``
+    an instance of `:form: events.EventCreateForm`
+
+    **Template**
+    :template: `create_event.html`
+    """
+  
     if request.method == 'POST':
         event_form = CreateEventForm(request.POST, request.FILES)
         if event_form.is_valid():
@@ -180,6 +199,16 @@ def admin_event_approval_list(request):
     """
     For use by site admin (superusers)
     to see events pending approval
+
+    **Context**
+
+    ``pending_Event``
+        instances of :model:`events.Event`
+        where approved = False.
+    
+    **Template**
+
+    :template: `admin_event_approval.html`
 
     """
     pending_events = Event.objects.filter(approved=False).order_by('-event_date')
@@ -229,7 +258,10 @@ def admin_event_approval(request, event_id):
 def delete_event(request, event_id):
     """
     allows a logged in user to delete
-    their own event in the event_detail.
+    their own event in the event_detail
+    
+    also alows a superuser to delete any
+    event from the event_detail.
     """
 
     event = get_object_or_404(Event, pk=event_id,)
@@ -251,6 +283,16 @@ def update_event(request, event_id):
 
     the event will be resubmitted for admin
     approval after being updated.
+
+    **Context**
+
+    ``event``
+        An instance of :model:`events.Event`.
+    ``EventCreateForm`
+        An instance of :form:`events.EventCreateForm`
+    **Template**
+
+    :template: `update_event.html`
     """
 
     event = get_object_or_404(Event, pk=event_id,)
@@ -281,7 +323,7 @@ def attend_event(request, event_id):
         messages.warning(request, "Sorry, this run is full")
         return redirect('event_list')
 
-@login_required
+
 def cancel_attendance(request, event_id):
     """
     allows users to remove themselves
@@ -295,6 +337,10 @@ def cancel_attendance(request, event_id):
         return redirect('event_list')
     
 def user_attending_events(request):
+    """
+    A list of events in which the user
+    has said they will be attending
+    """
     user = request.user
     events = Event.objects.filter(attendees=user)
     return render(request, 'events/attending_events.html', {'events': events})
