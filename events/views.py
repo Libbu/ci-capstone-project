@@ -53,7 +53,7 @@ def event_detail(request, id):
             comment.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Comment published"'
+                'Comment published'
             )
 
     comment_form = CommentForm()
@@ -216,7 +216,7 @@ def update_event(request, event_id):
     """
     allows a logged in user to update
     their own event by clicking on update event
-    in the event detail. They will be taken
+    in the event_detail. They will be taken
     to update_event.html which will prepopulate
     with the details of the event they wish to
     update
@@ -239,20 +239,19 @@ def update_event(request, event_id):
             form = CreateEventForm(instance=event)
         return render(request, 'events/update_event.html', {'form': form})
 
-@login_required
+
 def attend_event(request, event_id):
+
     event = Event.objects.get(pk=event_id)
+
     if event.max_attendees == 0 or event.attendees.count() < event.max_attendees:
         if request.method == 'POST':
             event.attendees.add(request.user)
             messages.add_message(request, messages.SUCCESS, "You're attending!")
-            return render(
-            request,
-            'events/event_detail.html', {'event': event},
-            )
+            return redirect('user_events')
     else:
-        messages.success(request, "Sorry, this run is full")
-        return redirect('event-list')
+        messages.warning(request, "Sorry, this run is full")
+        return redirect('event_list')
 
 @login_required
 def cancel_attendance(request, event_id):
