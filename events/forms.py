@@ -25,6 +25,7 @@ class CreateEventForm(forms.ModelForm):
             'event_time': forms.DateInput(attrs={'type': 'time'}),
          }
 
+
 class CommentForm(forms.ModelForm):
     """
     Form class for logged-in

@@ -59,4 +59,3 @@ def admin_update_about(request):
         {'form': form,
         },
     )
- 
