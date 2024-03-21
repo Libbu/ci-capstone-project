@@ -8,36 +8,48 @@
 <div class="container-fluid viewport">
     <h1>admin event approval</h1>
     <div class="row">
-
-        <div class="col-12 mt-3 left">
-            <div class="row">
+        <div class="col-12 mt-3">
+            <div class="row center-content">
                 {% for event in pending_events %}
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4 card-deck">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <div class="image-flash">
-                                <p class="author">Organiser: {{ event.organiser }}</p>
+                            <div class="image-container">
+                                {% if "placeholder" in event.image.url %}
+                                <img class="card-img-top" src="{% static 'images/placeholder.webp' %}"
+                                    alt="placeholder image">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ event.image.url }}" alt="{{ event.title }}">
+                                {% endif %}
+                                <a href="{% url 'event_detail' event.id %}" class="event-link">
+                                    <div class="image-flash">
+                                        <p class="author">Organiser: {{ event.organiser }}</p>
+                                    </div>
+                                </a>
                             </div>
                             <h2 class="card-title">{{ event.name }}</h2>
                             <p class="card-text">{{ event.distance }}</p>
+                            <p class="card-text">Days until run: {{event.days_until}}</p>
                             <hr />
                             <p class="card-text h6">{{ event.event_date}}
                             </p>
                             <form method="POST" action="{% url 'admin_approval' event.id %}">
                                 {% csrf_token %}
-                                <button class="btn custom-button" type="submit" name="action" value="approve">Approve</button>
-                                <button class="btn btn-delete custom-button" type="submit" name="action" value="decline">Decline & Remove</button>
+                                <button class="btn custom-button" type="submit" name="action"
+                                    value="approve">Approve</button>
+                                <button class="btn btn-delete custom-button" type="submit" name="action"
+                                    value="decline">Decline & Remove</button>
                             </form>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>
 {% else %}
-<div class = "mt-3 text-center viewport">
+<div class="mt-3 text-center viewport">
     <h2 class="sub-heading p-2">No events awaiting approval.</h2>
 </div>
 
