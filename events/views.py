@@ -286,7 +286,7 @@ def update_event(request, event_id):
 
     :template: `update_event.html`
     """
-    
+
     event = get_object_or_404(Event, pk=event_id,)
     if request.user == event.organiser:
         if request.method == 'POST':
@@ -342,6 +342,9 @@ def user_attending_events(request):
     A list of events in which the user
     has said they will be attending
     """
+    current_date = timezone.now().date()
+    future_events = Event.objects.filter(event_date__gte=current_date)
+    past_events = Event.objects.filter(event__lt=current_date)
     user = request.user
     events = Event.objects.filter(attendees=user)
     return render(request, 'events/attending_events.html', {'events': events})

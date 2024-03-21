@@ -5,14 +5,13 @@
 {% block content %}
 
 {% if events %}
-<div class="container-fluid">
-    <h1>Events I'm a part of</h1>
+<div class="container-fluid viewport">
+    <h1 class ="sub-heading p-2">Events I'm a part of</h1>
     <div class="row">
-
-        <div class="col-12 mt-3 left">
-            <div class="row">
+        <div class="col-12 mt-3">
+            <div class="row center-content">
                 {% for event in events %}
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4 card-deck">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
@@ -22,11 +21,12 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ event.image.url }}" alt="{{ event.title }}">
                                 {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Organiser: {{ event.organiser }}</p>
-                                </div>
+                                <a href="{% url 'event_detail' event.id %}" class="event-link">
+                                    <div class="image-flash">
+                                        <p class="author">Organiser: {{ event.organiser }}</p>
+                                    </div>
+                                </a>
                             </div>
-                            <a href="{% url 'event_detail' event.id %}" class="event-link">
                                 <h2 class="card-title">{{ event.name }}</h2>
                                 <p class="card-text">{{ event.distance }}</p>
                                 <hr />
@@ -34,10 +34,14 @@
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
+</div>
+{% else %}
+<div class="mt-3 text-center viewport">
+    <h2 class="sub-heading p-2">No attending or attended events to show you!</h2>
 </div>
 
 {% endif %}
