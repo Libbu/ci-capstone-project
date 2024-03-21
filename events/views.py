@@ -17,7 +17,7 @@ class EventList(LoginRequiredMixin, generic.ListView):
     **Context**
     
     ``queryset``
-        All approved, future event relative to today
+        All approved, future events relative to today
         instances of :model: `events.Event`
     ``paginate_by``
         Number of events per page.
@@ -39,6 +39,21 @@ class EventList(LoginRequiredMixin, generic.ListView):
 
 @login_required
 def event_detail(request, id):
+
+    """ 
+    Displays an individual instance of
+    :model: `events.Event`
+
+    **Context**
+    ``event``
+    an instance of :model: `events.Event`
+    ``comments``
+    all comments related to the event
+
+    **Template**
+    :template: `events/event_detail.html`
+    """
+
 
     queryset = Event.objects.filter(approved=True)
     event = get_object_or_404(queryset, id=id)
@@ -81,6 +96,19 @@ def delete_comment(request, event_id, comment_id):
 
 @login_required
 def edit_comment(request, event_id, comment_id):
+    """
+    Displays a comment for edit by the user
+    who made it in the CommentForm.
+
+    **Context**
+
+    ``event``
+        An instance of :model:`events.Event`.
+    ``comment``
+        A single comment related to the event.
+    ``comment_form``
+        An instance of :form:`events.CommentForm`
+    """
 
     if request.method == "POST":
 
