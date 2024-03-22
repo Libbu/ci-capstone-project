@@ -6,11 +6,12 @@
 
 {% if events %}
 <div class="container-fluid">
-    <h1>Events you've created:</h1>
     <div class="row">
         <div class="col-12 mt-3">
+            <h1 class=sub-heading p-2>Future runs you've created:</h1>
             <div class="row center-content">
                 {% for event in events %}
+                {% if event.event_date >= current_date%}
                 <div class="col-sm-6 col-md-4 card-deck">
                     <div class="card custom-card mb-4">
                         <div class="card-body">
@@ -35,6 +36,33 @@
                         </div>
                     </div>
                 </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3">
+            <h1 class="sub-heading p-2">Past runs you've organised:</h1>
+            <div class="row center-content">
+                {% for event in events %}
+                {% if event.event_date < current_date%}
+                <div class="col-sm-6 col-md-4 card-deck">
+                    <div class="card custom-card mb-4">
+                        <div class="card-body">
+                            <a href="{% url 'event_detail' event.id %}" class="event-link">
+                                <div class="image-flash">
+                                    <p class="author">Organiser: {{ event.organiser }}</p>
+                                </div>
+                            </a>
+                            <h2 class="card-title">{{ event.name }}</h2>
+                            <p class="card-text">{{ event.distance }}</p>
+                            <hr />
+                            <p class="card-text h6">{{ event.event_date}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

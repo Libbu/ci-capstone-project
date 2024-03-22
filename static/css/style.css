@@ -30,6 +30,10 @@ body {
     color: #e5fcc2;
 }
 
+.modal-bg {
+background-color: #07384c;
+}
+
 #hint_id_password {
     display: none;
 }
