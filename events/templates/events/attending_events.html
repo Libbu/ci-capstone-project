@@ -6,9 +6,9 @@
 
 {% if events %}
 <div class="container-fluid viewport">
-    <h1 class ="sub-heading p-2">Events I'm going to:</h1>
     <div class="row">
         <div class="col-12 mt-3">
+            <h1 class="sub-heading p-2">Events I'm going to:</h1>
             <div class="row center-content">
                 {% for event in events %}
                 {% if event.event_date >= current_date%}
@@ -28,10 +28,44 @@
                                     </div>
                                 </a>
                             </div>
-                                <h2 class="card-title">{{ event.name }}</h2>
-                                <p class="card-text">{{ event.distance }}</p>
-                                <hr />
-                                <p class="card-text h6">{{ event.event_date}}</p>
+                            <h2 class="card-title">{{ event.name }}</h2>
+                            <p class="card-text">{{ event.distance }}</p>
+                            <hr />
+                            <p class="card-text h6">{{ event.event_date}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3">
+            <h1 class="sub-heading p-2">Events I've been at:</h1>
+            <div class="row center-content">
+                {% for event in events %}
+                {% if event.event_date < current_date%}
+                <div class="col-sm-6 col-md-4 card-deck">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if "placeholder" in event.image.url %}
+                                <img class="card-img-top" src="{% static 'images/placeholder.webp' %}"
+                                    alt="placeholder image">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ event.image.url }}" alt="{{ event.title }}">
+                                {% endif %}
+                                <a href="{% url 'event_detail' event.id %}" class="event-link">
+                                    <div class="image-flash">
+                                        <p class="author">Organiser: {{ event.organiser }}</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <h2 class="card-title">{{ event.name }}</h2>
+                            <p class="card-text">{{ event.distance }}</p>
+                            <hr />
+                            <p class="card-text h6">{{ event.event_date}}</p>
                         </div>
                     </div>
                 </div>
