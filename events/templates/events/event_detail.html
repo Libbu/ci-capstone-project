@@ -5,14 +5,11 @@
 
 
 {% block content %}
-
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-
                 <h1>{{ event.title }}</h1>
-
                 <p>{{ event.organiser}} | {{ event.event_date}}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
@@ -45,7 +42,7 @@
                 {% if user in event.attendees.all %}
                 <form method="post" action="{% url 'cancel-attendance' event.id %}">
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-primary">Cancel Run</button>
+                    <button type="submit" class="btn btn-primary">Cancel Attendance</button>
                 </form>
                 {% endif %}
                 <form method="post" action="{% url 'attend-event' event.id %}">
