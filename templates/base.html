@@ -90,7 +90,7 @@
     <!-- displaying Django messages -->
     <div class="container message-container">
         <div class="row message-container">
-            <div class="text-right mr-3 message-container">
+            <div class="text-center mr-3 message-container">
                 {% for message in messages %}
                 <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                     {{ message | safe }}

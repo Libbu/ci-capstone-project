@@ -17,10 +17,21 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+.viewport {
+    min-height: 100vh;
+}
+
+
 .sub-heading {
     font-family: "Raleway", sans-serif;
     margin: 0;
     color: #e5fcc2;
+}
+
+.sub-heading-dark {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    color:#07384c
 }
 
 .text{
@@ -168,7 +179,6 @@ div.container-fluid.navalert-container {
 
 .about-us-container {
     border-radius: 25px;
-    box-shadow: 0 2px 4px rgba(7, 59, 76, 0.3);
     margin: auto;
     margin-top: 1.8rem;
     margin-bottom: 0.5rem;
@@ -228,9 +238,6 @@ div.container-fluid.navalert-container {
 }
 
 /*-------------------------------------------------------------------general form styling */
-.viewport {
-    min-height: 100vh;
-}
 
 .form-container {
     background-color: #07384c;
@@ -289,15 +296,11 @@ div.container-fluid.navalert-container {
     align-items: stretch;
   }
 
-.card {
-    flex: 1 0 auto;
-  }
-
 .custom-card {
+    flex: 1 0 auto;
     border-radius: 20px;
     background-color: #e5fcc2;
     border: none;
-    border-radius: 20px;
     color:#07384c
 }
 
@@ -325,11 +328,8 @@ div.container-fluid.navalert-container {
 
 /*--------------------------------------------------------------------------------Event Detail*/
 
-
-.masthead-text {
-    background-color: #45ada8;
-    color: white;
-    position: relative;
+.card-detail {
+    background-color: #e5fcc2 !important;
 }
 
 .scale {

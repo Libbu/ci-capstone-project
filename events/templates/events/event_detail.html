@@ -5,90 +5,93 @@
 
 
 {% block content %}
-<main class="card container">
+<main class="card container mt-3 mb-3">
     <div class="row g-0">
-        <div class="col-md-6">
+        <div class="col-md-6 p-3">
             {% if "placeholder" in event.image.url %}
             <img src="{% static 'images/placeholder.webp' %}" class="scale" alt="placeholder image">
             {% else %}
             <img src="{{ event.image.url }}" class="scale" alt="{{ event.title }}">
             {% endif %}
         </div>
-        <div class="col-md-6 card-body">
-            <h1>{{ event.title }}</h1>
-            <p class="card-text">{{ event.organiser}} | {{ event.event_date}}</p>
-            <p class="card-text">
+        <div class="col-md-6">
+            <h1 class="sub-heading-dark mt-2">{{ event.title }}</h1>
+            <p class="dark-text">{{ event.organiser}} | {{ event.event_date}}</p>
+            <p class="dark-text">
                 {{ event.description | safe}}
             </p>
-            <p class="card-text"> Location: {{ event.location }}</p>
-            <p class="card-text"> Total Going: {{ event.attendees.count }}</p>
-            <p class="card-text"> Max attendees: {{event.max_attendees}}</p>
-            <p class="card-text"> Attendees: {% for user in event.attendees.all %}
+            <p class="dark-text"> Location: {{ event.location }}</p>
+            <p class="dark-text"> Total Going: {{ event.attendees.count }}</p>
+            <p class="dark-text"> Max attendees: {{event.max_attendees}}</p>
+            <p class="dark-text"> Attendees: {% for user in event.attendees.all %}
                 {{user}} <br>
                 {% endfor %}
         </div>
     </div>
-    <div class="row">
+    <div class="row mt-2 mb-2">
         <div class="col-md-6"></div>
         {% if user.is_authenticated %}
         {% if user in event.attendees.all %}
         <form method="post" action="{% url 'cancel-attendance' event.id %}">
             {% csrf_token %}
-            <button type="submit" class="btn custom-button">Cancel Attendance</button>
+            <button type="submit" class="btn custom-button m-1">Cancel Attendance</button>
         </form>
         {% endif %}
         <form method="post" action="{% url 'attend-event' event.id %}">
             {% csrf_token %}
-            <button type="submit" class="btn custom-button">Count me in!</button>
+            <button type="submit" class="btn custom-button m-1">Count me in!</button>
         </form>
         {% endif %}
 
         {% if user.is_authenticated and event.organiser == user or user.is_superuser %}
-        <button class="btn custom-button btn-delete" event_id="{{ event.id }}">Delete</button>
+        <button class="btn custom-button btn-delete m-1" event_id="{{ event.id }}">Delete</button>
         {% endif %}
         {% if user.is_authenticated and event.organiser == user %}
-        <a href="{% url 'update_event' event.id %}"><button class="btn custom-button" type="submit">Update
+        <a href="{% url 'update_event' event.id %}"><button class="btn custom-button m-1" type="submit">Update
                 Event</button></a>
         {% endif %}
     </div>
-</main >
+</main>
 
 
-<div class="card container">
+<div class="card container mb-3">
     <div class="row g-0 ">
-        <h3>Comments:</h3>
-        <div class="card-body">
-            {% for comment in comments %}
-            <div class="p-2">
-                <p class="dark-text"> {{ comment.author }} wrote:</p>
-                <div id="comment{{ comment.id }}">
-                    {{ comment.text }}
+        <div class="col-md-8">
+            <h3 class="sub-heading-dark mt-2">Comments:</h3>
+            <div class="card-body">
+                {% for comment in comments %}
+                <div class="p-2">
+                    <p class="dark-text"> {{ comment.author }} wrote:</p>
+                    <div id="comment{{ comment.id }}">
+                        {{ comment.text }}
+                    </div>
+                    {% if user.is_authenticated and comment.author == user or user.is_superuser %}
+                    <button class="btn custom-button btn-delete-comment"
+                        data-comment_id="{{ comment.id }}">Delete</button>
+                    {% endif %}
+                    {% if user.is_authenticated and comment.author == user %}
+                    <button class="btn custom-button btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+                    {% endif %}
                 </div>
-                {% if user.is_authenticated and comment.author == user or user.is_superuser %}
-                <button class="btn custom-button btn-delete-comment" data-comment_id="{{ comment.id }}">Delete</button>
-                {% endif %}
-                {% if user.is_authenticated and comment.author == user %}
-                <button class="btn custom-button btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
-                {% endif %}
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
-    </div>
-
-    <!-- New Comment Form -->
-    <div class="col-md-4 card mb-4 mt-3">
-        <div class="card-body">
-            <h3>Leave a comment:</h3>
-            <p>Posting as: {{request.user}} </p>
-            <form id="commentForm" method="POST">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button class = "btn custom-button" id="submitButton">Submit</button>
-            </form>
+        <!-- Create Comment Form -->
+        <div class="col-md-4">
+            <div class="card mb-4 mt-3">
+                <div class="card-body">
+                    <h3>Leave a comment:</h3>
+                    <p>Posting as: {{request.user}} </p>
+                    <form id="commentForm" method="POST">
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button class="btn custom-button" id="submitButton">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 
 <!-- Event Delete confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
