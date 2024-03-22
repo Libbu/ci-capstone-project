@@ -6,14 +6,13 @@
 
 {% if events %}
 <div class="container-fluid">
-    <h1>user event list</h1>
+    <h1>Events you've created:</h1>
     <div class="row">
-
-        <div class="col-12 mt-3 left">
-            <div class="row">
+        <div class="col-12 mt-3">
+            <div class="row center-content">
                 {% for event in events %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
+                <div class="col-sm-6 col-md-4 card-deck">
+                    <div class="card custom-card mb-4">
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in event.image.url %}
@@ -22,23 +21,28 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ event.image.url }}" alt="{{ event.title }}">
                                 {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Organiser: {{ event.organiser }}</p>
-                                </div>
+                                <a href="{% url 'event_detail' event.id %}" class="event-link">
+                                    <div class="image-flash">
+                                        <p class="author">Organiser: {{ event.organiser }}</p>
+                                    </div>
+                                </a>
                             </div>
-                            <a href="{% url 'event_detail' event.id %}" class="event-link">
-                                <h2 class="card-title">{{ event.name }}</h2>
-                                <p class="card-text">{{ event.distance }}</p>
-                                <hr />
-                                <p class="card-text h6">{{ event.event_date}}</p>
+                            <h2 class="card-title">{{ event.name }}</h2>
+                            <p class="card-text">{{ event.distance }}</p>
+                            <p class="card-text">Days until run: {{event.days_until}}</p>
+                            <hr />
+                            <p class="card-text h6">{{ event.event_date}}</p>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>
-
+{% else %}
+<div class="mt-3 text-center viewport">
+    <h2 class="sub-heading p-2">You haven't organised any events yet!</h2>
+</div>
 {% endif %}
 {% endblock %}

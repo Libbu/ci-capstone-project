@@ -186,9 +186,10 @@ def user_events(request):
     :template: `events/user_events.html`
     """
 
+    current_date = timezone.now().date()
     events = Event.objects.filter(organiser=request.user) 
 
-    return render(request, 'events/user_events.html', {'events':events})
+    return render(request, 'events/user_events.html', {'events':events, 'current_date':current_date,})
 
 @login_required
 def admin_event_approval_list(request):
@@ -340,7 +341,8 @@ def cancel_attendance(request, event_id):
 def user_attending_events(request):
     """
     A list of events in which the user
-    has said they will be attending
+    has said they will be attending, split
+    into past and future in the template
     """
     user = request.user
     events = Event.objects.filter(attendees=user)
