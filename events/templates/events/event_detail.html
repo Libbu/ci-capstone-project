@@ -5,23 +5,30 @@
 
 
 {% block content %}
-<div class="masthead">
-    <div class="container">
+    <div class="card container">
         <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <h1>{{ event.title }}</h1>
-                <p>{{ event.organiser}} | {{ event.event_date}}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
+            <div class="col-md-6">
                 {% if "placeholder" in event.image.url %}
                 <img src="{% static 'images/placeholder.webp' %}" class="scale" alt="placeholder image">
                 {% else %}
                 <img src="{{ event.image.url }}" class="scale" alt="{{ event.title }}">
                 {% endif %}
             </div>
+            <div class="col-md-6 card-body">
+                <h1>{{ event.title }}</h1>
+                <p class="card-text">{{ event.organiser}} | {{ event.event_date}}</p>
+                <p class="card-text">
+                    {{ event.description | safe}}
+                </p>
+                <p class="card-text"> Location: {{ event.location }}</p>
+                <p class="card-text"> Total Going: {{ event.attendees.count }}</p>
+                <p class="card-text"> Max attendees: {{event.max_attendees}}</p>
+                <p class="card-text"> Attendees: {% for user in event.attendees.all %}
+                    {{user}} <br>
+                    {% endfor %}
+            </div>
         </div>
     </div>
-</div>
 
 <div class="container">
     <div class="row">
