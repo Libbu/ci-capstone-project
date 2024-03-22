@@ -30,6 +30,12 @@ body {
     color: #e5fcc2;
 }
 
+.dark-text {
+    line-height: 1.6;
+    margin: 0;
+    color: #07384c;
+}
+
 .modal-bg {
 background-color: #07384c;
 }

@@ -5,87 +5,70 @@
 
 
 {% block content %}
-    <div class="card container">
-        <div class="row g-0">
-            <div class="col-md-6">
-                {% if "placeholder" in event.image.url %}
-                <img src="{% static 'images/placeholder.webp' %}" class="scale" alt="placeholder image">
-                {% else %}
-                <img src="{{ event.image.url }}" class="scale" alt="{{ event.title }}">
-                {% endif %}
-            </div>
-            <div class="col-md-6 card-body">
-                <h1>{{ event.title }}</h1>
-                <p class="card-text">{{ event.organiser}} | {{ event.event_date}}</p>
-                <p class="card-text">
-                    {{ event.description | safe}}
-                </p>
-                <p class="card-text"> Location: {{ event.location }}</p>
-                <p class="card-text"> Total Going: {{ event.attendees.count }}</p>
-                <p class="card-text"> Max attendees: {{event.max_attendees}}</p>
-                <p class="card-text"> Attendees: {% for user in event.attendees.all %}
-                    {{user}} <br>
-                    {% endfor %}
-            </div>
+<main class="card container">
+    <div class="row g-0">
+        <div class="col-md-6">
+            {% if "placeholder" in event.image.url %}
+            <img src="{% static 'images/placeholder.webp' %}" class="scale" alt="placeholder image">
+            {% else %}
+            <img src="{{ event.image.url }}" class="scale" alt="{{ event.title }}">
+            {% endif %}
+        </div>
+        <div class="col-md-6 card-body">
+            <h1>{{ event.title }}</h1>
+            <p class="card-text">{{ event.organiser}} | {{ event.event_date}}</p>
+            <p class="card-text">
+                {{ event.description | safe}}
+            </p>
+            <p class="card-text"> Location: {{ event.location }}</p>
+            <p class="card-text"> Total Going: {{ event.attendees.count }}</p>
+            <p class="card-text"> Max attendees: {{event.max_attendees}}</p>
+            <p class="card-text"> Attendees: {% for user in event.attendees.all %}
+                {{user}} <br>
+                {% endfor %}
         </div>
     </div>
-
-<div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <p class="card-text">
-                    {{ event.description | safe}}
-                </p>
-                <p> Location: {{ event.location }}</p>
-                <p> Total Going: {{ event.attendees.count }}</p>
-                <p> Max attendees: {{event.max_attendees}}</p>
-                <p> Attendees: {% for user in event.attendees.all %}
-                    {{user}} <br>
-                    {% endfor %}
-            </div>
-            <div>
-                {% if user.is_authenticated %}
-                {% if user in event.attendees.all %}
-                <form method="post" action="{% url 'cancel-attendance' event.id %}">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-primary">Cancel Attendance</button>
-                </form>
-                {% endif %}
-                <form method="post" action="{% url 'attend-event' event.id %}">
-                    {% csrf_token %}
-                    <button type="submit" class="btn">Count me in!</button>
-                </form>
-                {% endif %}
-            </div>
-            <div>
-                {% if user.is_authenticated and event.organiser == user or user.is_superuser %}
-                <button class="btn custom-button btn-delete" event_id="{{ event.id }}">Delete</button>
-                {% endif %}
-                {% if user.is_authenticated and event.organiser == user %}
-                <a href="{% url 'update_event' event.id %}"><button class="btn custom-button" type="submit">Update
-                        Event</button></a>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</div>
+        <div class="col-md-6"></div>
+        {% if user.is_authenticated %}
+        {% if user in event.attendees.all %}
+        <form method="post" action="{% url 'cancel-attendance' event.id %}">
+            {% csrf_token %}
+            <button type="submit" class="btn custom-button">Cancel Attendance</button>
+        </form>
+        {% endif %}
+        <form method="post" action="{% url 'attend-event' event.id %}">
+            {% csrf_token %}
+            <button type="submit" class="btn custom-button">Count me in!</button>
+        </form>
+        {% endif %}
 
-<div class="row">
-    <div class="col-md-8 card mb-4  mt-3 ">
+        {% if user.is_authenticated and event.organiser == user or user.is_superuser %}
+        <button class="btn custom-button btn-delete" event_id="{{ event.id }}">Delete</button>
+        {% endif %}
+        {% if user.is_authenticated and event.organiser == user %}
+        <a href="{% url 'update_event' event.id %}"><button class="btn custom-button" type="submit">Update
+                Event</button></a>
+        {% endif %}
+    </div>
+</main >
+
+
+<div class="card container">
+    <div class="row g-0 ">
         <h3>Comments:</h3>
         <div class="card-body">
             {% for comment in comments %}
             <div class="p-2">
-                <p class="text"> {{ comment.author }} wrote:</p>
+                <p class="dark-text"> {{ comment.author }} wrote:</p>
                 <div id="comment{{ comment.id }}">
                     {{ comment.text }}
                 </div>
                 {% if user.is_authenticated and comment.author == user or user.is_superuser %}
-                <button class="btn btn-delete-comment" data-comment_id="{{ comment.id }}">Delete</button>
+                <button class="btn custom-button btn-delete-comment" data-comment_id="{{ comment.id }}">Delete</button>
                 {% endif %}
                 {% if user.is_authenticated and comment.author == user %}
-                <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
+                <button class="btn custom-button btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
                 {% endif %}
             </div>
             {% endfor %}
@@ -100,7 +83,7 @@
             <form id="commentForm" method="POST">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
-                <button id="submitButton">Submit</button>
+                <button class = "btn custom-button" id="submitButton">Submit</button>
             </form>
         </div>
     </div>
