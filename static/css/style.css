@@ -332,10 +332,6 @@ div.container-fluid.navalert-container {
 
 /*--------------------------------------------------------------------------------Event Detail*/
 
-#main-container > div.card.container.mt-3.mt-b {
-    background-color: #e5fcc2 !important;
-}
-
 .scale {
     width: 100%;
     height: auto;
