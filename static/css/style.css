@@ -13,21 +13,21 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #e5fcc2;
+    background: linear-gradient(to bottom, #45ada8, #073b4c);
     font-family: "Lato", sans-serif;
 }
 
 .sub-heading {
     font-family: "Raleway", sans-serif;
     margin: 0;
-    color: #073b4c;
+    color: #e5fcc2;
 }
 
 .text{
     font-size: 1.2rem;
     line-height: 1.6;
     margin: 0;
-    color: #073b4c;
+    color: #e5fcc2;
 }
 
 #hint_id_password {
@@ -60,7 +60,7 @@ div.container-fluid.navalert-container {
     margin: 0;
     border: 0;
     width: 100%;
-    background-color: #45ada8;
+    background-color:#073b4c;
     color: #e5fcc2;
     z-index: 1;
 }
@@ -82,13 +82,13 @@ div.container-fluid.navalert-container {
 }
 
 .navbar-nav>li>.dropdown-menu {
-    background-color: #45ada8;
+    background-color: #073b4c;
 }
 
 /*--------------------------------------------------------------------------------Django Messages*/
 
 .message-container {
-    background-color: #45ada8;
+    background-color: #073b4c;
     color: #e5fcc2;
     margin: 0;
     width: 100vw;
@@ -101,7 +101,7 @@ div.container-fluid.navalert-container {
 .logged-in-notification {
     margin-bottom: 0;
     color: #e5fcc2;
-    background-color: #45ada8;
+    background-color:#073b4c;
 }
 
 /*--------------------------------------------------------------------------------Hero Image*/
@@ -163,16 +163,6 @@ div.container-fluid.navalert-container {
     margin-top: 1.8rem;
     margin-bottom: 0.5rem;
     width: 90%;
-}
-
-/*--------------------------------------------------------------------------------showcase*/
-
-.container-wrapper--green {
-    background-color: #e5fcc2;
-}
-
-.showcase-container {
-    text-align: center;
 }
 
 /*--------------------------------------------------------------------------------showcase overlay*/
@@ -294,8 +284,20 @@ div.container-fluid.navalert-container {
   }
 
 .custom-card {
-    border-radius: 20px; 
+    border-radius: 20px;
+    background-color: #e5fcc2;
+    border: none;
+    border-radius: 20px;
+    color:#07384c
+}
+
+.custom-card:hover {
+    transform: translateY(-5px); 
     box-shadow: 0 2px 4px rgba(7, 59, 76, 0.3);
+}
+
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .card .card-img-top {
@@ -305,9 +307,6 @@ div.container-fluid.navalert-container {
     border-top-right-radius: 20px; 
     object-fit: cover;
 }
-    
-
-
 
 .event-link {
     text-decoration: none;
@@ -359,7 +358,7 @@ div.container-fluid.navalert-container {
 /*--------------------------------------------------------------------------------Footer*/
 
 footer {
-    background-color: #45ada8;
+    background-color: #07384c;
     color: #e5fcc2;
     min-height: 120px;
     margin: 0;
@@ -386,12 +385,12 @@ footer {
     line-height: 7px;
     text-align: center;
     color: #e5fcc2;
-    background-color: #45ada8;
+    background-color: #07384c;
     transition: all 0.35s ease-in-out;
 }
 
 .social-links li a i:hover {
-    background: #073b4c;
+    background: #260c1a;
     color: #ffc6d9;
 }
 

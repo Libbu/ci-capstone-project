@@ -24,7 +24,7 @@ class Event(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ["-created_on"]
+        ordering = ["event_date"]
         
     def __str__(self):
         return f"{self.title} | created by {self.organiser}"

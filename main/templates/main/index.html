@@ -27,30 +27,29 @@
     </div>
 </div>
 
-<div class="container-wrapper--green showcase-container">
-    <div class="row">
-        <div class="col-12 col-lg-6">
-            <div>
-                <div class="slide-container">
-                    <img class="showcase-image" src="{% static 'images/index-signup.webp' %}" alt="">
-                    <div class="overlay">
-                        <div class="overlay-text"> <a href="{% url 'account_signup' %}">Join Us</a></div>
-                    </div>
+<div class="row">
+    <div class="col-12 col-lg-6">
+        <div>
+            <div class="slide-container">
+                <img class="showcase-image" src="{% static 'images/index-signup.webp' %}" alt="">
+                <div class="overlay">
+                    <div class="overlay-text"> <a href="{% url 'account_signup' %}">Join Us</a></div>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-6">
-            <div>
-                <div class="slide-container">
-                    <img class="showcase-image" src="{% static 'images/index-login.webp' %}" alt="">
-                    <div class="overlay">
-                        <div class="overlay-text"><a href="{% url 'account_login' %}">Login</a>
-                        </div>
+    </div>
+    <div class="col-12 col-lg-6">
+        <div>
+            <div class="slide-container">
+                <img class="showcase-image" src="{% static 'images/index-login.webp' %}" alt="">
+                <div class="overlay">
+                    <div class="overlay-text"><a href="{% url 'account_login' %}">Login</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 {% endblock %}
