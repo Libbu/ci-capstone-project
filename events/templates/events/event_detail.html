@@ -36,10 +36,12 @@
             <button type="submit" class="btn custom-button custom-delete m-1">Cancel Attendance</button>
         </form>
         {% endif %}
+        {% if user not in event.attendees.all %}
         <form method="post" action="{% url 'attend-event' event.id %}">
             {% csrf_token %}
             <button type="submit" class="btn custom-button m-1">Count me in!</button>
         </form>
+        {% endif %}
         {% endif %}
 
         {% if user.is_authenticated and event.organiser == user or user.is_superuser %}

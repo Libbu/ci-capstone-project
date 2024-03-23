@@ -7,7 +7,7 @@
 <div class="container-fluid viewport">
     <div class="row">
         <div class="col-12 mt-3">
-            <h1 class=" sub-heading mt-3 p-2">Future runs you've created:</h1>
+            <h1 class="sub-heading mt-3 p-2">Future runs you've created:</h1>
             <div class="row center-content">
                 {% for event in events %}
                 {% if event.event_date >= current_date%}
@@ -42,7 +42,7 @@
     </div>
     <div class="row">
         <div class="col-12 mt-3">
-            <h1 class="sub-heading p-2">Past runs you've organised:</h1>
+            <h1 class="sub-heading mt-3 p-2">Past runs you've organised:</h1>
             <div class="row center-content">
                 {% for event in events %}
                 {% if event.event_date < current_date%}
