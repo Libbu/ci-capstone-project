@@ -1,12 +1,25 @@
 from django import forms
+from django.core.exceptions import ValidationError
 from .models import Event, Comment
+
+class ImageTypeValidation:
+
+    def __call__(self, value):
+        if not value.name.lower().endswith(('.png', '.jpg', '.jpeg', '.webp', '.tiff',)):
+            raise ValidationError('Only image files are allowed.')
 
 class CreateEventForm(forms.ModelForm):
     """
     Form class for logged-in site
     users to create and submit an 
-    event for approval by admin
+    event for approval by admin,
+    it limits the type of image
+    that can be uploaded using
+    the class ImageTypeValidation
+    below
     """
+    image = forms.ImageField(validators=[ImageTypeValidation()])
+
     class Meta:
          model = Event
          fields = [
@@ -24,7 +37,6 @@ class CreateEventForm(forms.ModelForm):
             'event_date': forms.DateInput(attrs={'type': 'date'}),
             'event_time': forms.DateInput(attrs={'type': 'time'}),
          }
-
 
 class CommentForm(forms.ModelForm):
     """

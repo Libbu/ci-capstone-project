@@ -161,6 +161,8 @@ def create_event(request):
             event.organiser = request.user
             event.save()
             messages.success(request, "Your event has been submitted and is awaiting approval.")
+        else:
+            messages.success(request, "Your event has not been submitted, please make sure your image file type is one of png, jpg, jpeg, webp, or tiff, and try again.") 
 
     form = CreateEventForm()
 
