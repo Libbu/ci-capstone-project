@@ -104,7 +104,181 @@ ___
 
 ### Home Page
 
+![Calm Cadence](https://github.com/Libbu/ci-capstone-project/blob/main/media/amiresponsive.JPG)
 
+- Uses text and images to communicate the site purpose
+- Presents opportunities for further actions 
+
+    #### User Goals:
+    >   - Understand the main purpose of the website.
+    >   - Have access to registration.
+    >   - Be able to navigate publically available content.
+    >   - Connect with affiliated social media.
+
+    #### Website Goals:
+    >   - Communicate main purpose of the page.
+    >   - Engage users and interest potential memebers.
+    >   - Call to action.
+    >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
+
+### Sign Up Page
+
+![Calm Cadence](https://github.com/Libbu/ci-capstone-project/blob/main/media/amiresponsivesignup.JPG)
+
+- Allows users to register so that they can access site content
+
+    #### User Goal:
+    >   - Register
+
+    #### Website Goals:
+    >   - Allow user registration
+    >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
+
+
+### Sign In Page
+
+![Calm Cadence](https://github.com/Libbu/ci-capstone-project/blob/main/media/amirelogin.JPG)
+
+- Allows users to sign in
+
+    #### User Goal:
+    >   - Sign in.
+
+    #### Website Goals:
+    >   - Allows users to sign in so that they can access content.
+    >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
+
+### Event List Page
+
+IMAGE
+
+- Shows admin-approved, user-created events in order of the most recent first.
+- List of events is paginated by 6 so as not to overwhelm the user.
+- Each card has a link the user can click on for more details. 
+- Available only to view by authenticated users.
+
+    #### User Goals:
+    >   - Browse the events
+    >   - Open the events to see them in more detail.
+
+    #### Website Goals:
+    >   - Provide a list of events.
+    >   - Provide some information on each event in a preview.
+    >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
+
+### Event Detail Page
+ 
+IMAGE
+
+- Shows the details of the run such as how many people the organiser is looking to have join them, the location and what other users are going. 
+- Allows authenticated users to see and write comments on the event, as well as manage their own comments.
+- Allows authenticated users to say they will attend the event, also allows them the option of cancelling their own attendance.
+- Allows the event organiser to manage the event post.
+- Allows superusers/site admin to delete the post and/or any comments on it.
+- Available only for authenticated users.
+
+    #### User Goals:
+    >   - See the details of the event.
+    >   - Indicate attendance or cancel attendance.
+    >   - Leave comments on the event to ask questions if needed.
+    >   - Manage the event if you are the organiser.
+    >   - Delete the event and/or any comments on it if you are an administrator.
+
+    #### Website Goals:
+    >   - Show the detail of an event.
+    >   - Allows users to interact with the event.
+    >   - Allow users to record/cancel their attendance.
+    >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
+
+### Create/Update Post Page
+
+IMAGE
+
+- Allows authenticated users to create a new event
+- Allows event organisers to update their own event.
+- Validates image file input to prevent uploading of file-types outside of those specified.
+
+    #### User Goals:
+    >   - Create a new event.
+    >   - Update existing events.
+
+    #### Website Goals:
+    >   - Allow the user to create/update an event
+    >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
+
+___
+
+# Wireframes
+
+## Low-fidelity Mobile Wireframes:
+
+### Home Page  
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobhome.png>
+</details>
+
+
+### Registration and Sign In Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobreglogin.png>
+</details>
+
+### Event List and Event Detail Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmoblistdet.png>
+</details>
+
+
+### Create Event and Admin Event Approval Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobeventcreateadminapp.png>
+</details>
+
+
+### User Attendance and User-Created Events Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobuserevents.png>
+</details>
+
+### Admin Update 'About' Form and Logout Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobupdateaboutlogout.png>
+</details>
+
+## Low-fidelity Desktop Wireframes:
+
+### Home Page  
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobhome.png>
+</details>
+
+
+### Registration and Sign In Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobreglogin.png>
+</details>
+
+### Event List and Event Detail Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmoblistdet.png>
+</details>
+
+
+### Create Event and Admin Event Approval Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobeventcreateadminapp.png>
+</details>
+
+
+### User Attendance and User-Created Events Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobuserevents.png>
+</details>
+
+### Admin Update 'About' Form and Logout Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobupdateaboutlogout.png>
+</details>
 
 
 
