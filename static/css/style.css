@@ -186,6 +186,7 @@ div.container-fluid.navalert-container {
     margin: auto;
     margin-top: 1.8rem;
     margin-bottom: 0.5rem;
+    box-shadow: 0 2px 4px rgba(7, 59, 76, 0.3);
     width: 90%;
 }
 
@@ -287,6 +288,12 @@ div.container-fluid.navalert-container {
     border-color: #ffc6d9;
 }
 
+.custom-delete:hover {
+    background-color: #ffc6d9;
+    color: #260c1a;
+    border-color: #260c1a;
+}
+
 
 /*--------------------------------------------------------------------------------Event Listing Cards*/
 
@@ -332,6 +339,10 @@ div.container-fluid.navalert-container {
 }
 
 /*--------------------------------------------------------------------------------Event Detail*/
+
+.form-background {
+    background-color: #e5fcc2;
+}
 
 .scale {
     width: 100%;
