@@ -8,7 +8,7 @@ Calm Cadence is a website which aims to bring together runners of any and all ab
 
 This website has been built using the Django framework for backend and frontend functionality. 
 
-This website provides all essential features to meet its stated goal, such as allowing users to register, create events, attend events, see records of events they have created/attended, as well as administrator specific access to approve posts, delete comments, and update text on the homepage.
+This website provides all essential features to meet its stated goal, such as allowing users to register, create events, attend events, engage with the community through comments on events, see records of events they have created/attended, as well as administrator specific access to approve or decline user-created events, delete comments, and update text on the homepage.
 
 Taking the lead of other sport-related apps such as Strava and Spond; users must be registered in order to access the events on the site.
 
@@ -44,22 +44,22 @@ Target audience:
 - As a **site user** I can **create events** so that **other users can participate with me**.
 - As a **site user who has made an event** I can **edit my own event** so that I can **communicate changes/updates**.
 - As a **site user** I can **delete my event** so that I can **remove any unwanted events that I have made**.
-- As a **site user** I can **see a consolidated list of events I've said I will attend and those I have attended** so that **I can keep track of my activity**
-- As a **site user** I can **see a consolidated list of events I've organised** so that **I can keep track of my plans**
+- As a **site user** I can **see a consolidated list of events I've said I will attend and those I have attended** so that **I can keep track of my activity**.
+- As a **site user** I can **see a consolidated list of events I've organised** so that **I can keep track of my plans**.
 
 ### Epic: User Community Engagement
 
-- As a **site user** I can **say that I will attend an event** so that **the event creator knows I will be there**
-- As a **logged-in site user** I can **write comments on events** so that I can **engage with the community**
+- As a **site user** I can **say that I will attend an event** so that **the event creator knows I will be there**.
+- As a **logged-in site user** I can **write comments on events** so that I can **engage with the community**.
 
 ## Administrator user stories
 
 ### Epic: Site Administration
 
-- As a **site admin** I can **Delete any events on the site** so that **I can better control content**
-- As a **site admin** I can **approve events created by registered site users** so that **the events show for all site users**
-- As a **site admin** I can **update the about section on the homepage** so that **changes can be displayed to site users**
-- As a **site admin** all site users can **contact me through a form** so that I can **collaborate/answer questions**
+- As a **site admin** I can **Delete any events on the site** so that **I can better control content**.
+- As a **site admin** I can **approve events created by registered site users** so that **the events show for all site users**.
+- As a **site admin** I can **update the about section on the homepage** so that **changes can be displayed to site users**.
+- As a **site admin** all site users can **contact me through a form** so that I can **collaborate/answer questions**.
 
 ## UAC
 
@@ -218,7 +218,7 @@ ___
 </details>
 
 
-### Registration and Sign In Pages
+### Registration and Login Pages
 <details><summary>click to expand</summary>
 <img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobreglogin.png>
 </details>
@@ -249,36 +249,58 @@ ___
 
 ### Home Page  
 <details><summary>click to expand</summary>
-<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobhome.png>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpchome1.png>
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpchome2.png>
 </details>
 
 
-### Registration and Sign In Pages
+### Registration and Login Pages
 <details><summary>click to expand</summary>
-<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobreglogin.png>
+Registration:
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/registration.png>
+
+Login:
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpclogin.png>
 </details>
 
 ### Event List and Event Detail Pages
 <details><summary>click to expand</summary>
-<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmoblistdet.png>
+Event List:
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpceventlist.png>
+
+Event Detail:
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpceventdet.png>
 </details>
 
 
-### Create Event and Admin Event Approval Pages
+
+### Create Event Form
 <details><summary>click to expand</summary>
-<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobeventcreateadminapp.png>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpccreate.png>
 </details>
 
 
 ### User Attendance and User-Created Events Pages
 <details><summary>click to expand</summary>
-<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobuserevents.png>
+User Attendance:
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpcuserattend.png>
+
+User Events:
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpcuserevents.png>
 </details>
 
-### Admin Update 'About' Form and Logout Pages
+### Admin Event Approval and Admin Update 'About' Form 
 <details><summary>click to expand</summary>
-<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobupdateaboutlogout.png>
+Admin Event Approval:
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpcadminapp.png>
+
+Admin Update 'About Our Community' Form:
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpcadminupdateabout.png>
 </details>
 
+## High-fidelity Mobile Wireframes:
+
+## High-fidelity Desktop Wireframes:
 
 
