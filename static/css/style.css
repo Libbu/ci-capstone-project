@@ -54,9 +54,10 @@ background-color: #07384c;
     display: none;
 }
 
-#green {
-    background-color: #e5fcc2;
-}
+.plain-link {
+    text-decoration: none;
+    color:#e5fcc2;
+} 
 
 /*--------------------------------------------------------------------------------Navbar*/
 
