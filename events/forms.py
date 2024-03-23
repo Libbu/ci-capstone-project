@@ -4,7 +4,8 @@ from .models import Event, Comment
 
 class ImageTypeValidation:
 
-    def __call__(self, value):
+   def __call__(self, value):
+      if value:
         if not value.name.lower().endswith(('.png', '.jpg', '.jpeg', '.webp', '.tiff',)):
             raise ValidationError('Only image files are allowed.')
 
@@ -18,7 +19,7 @@ class CreateEventForm(forms.ModelForm):
     the class ImageTypeValidation
     below
     """
-    image = forms.ImageField(validators=[ImageTypeValidation()])
+    image = forms.ImageField(validators=[ImageTypeValidation()], required=False)
 
     class Meta:
          model = Event
