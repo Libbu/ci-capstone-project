@@ -3,6 +3,11 @@ from django.core.exceptions import ValidationError
 from .models import Event, Comment
 
 class ImageTypeValidation:
+   """
+   Validator to check that uploaded files
+   are one of .png', '.jpg', '.jpeg', '.webp',
+   '.tiff', image types.
+   """
 
    def __call__(self, value):
       if value:
