@@ -308,14 +308,15 @@ div.container-fluid.navalert-container {
     color:#07384c
 }
 
-.custom-card:hover {
+.card-hover:hover {
     transform: translateY(-5px); 
     box-shadow: 0 2px 4px rgba(7, 59, 76, 0.3);
 }
 
-.custom-card {
+.card-hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
+
 
 .card .card-img-top {
     width: 100%; 
