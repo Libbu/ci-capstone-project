@@ -1,7 +1,6 @@
 /*Google fonts import*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Lato:wght@200;300;400;500;600;700&display=swap');
 
-
 /* General Styling */
 
 /*remove any default vertical white space from bootstrap classes */
@@ -130,6 +129,7 @@ div.container-fluid.navalert-container {
 }
 
 /*--------------------------------------------------------------------------------Hero Image*/
+
 .hero-container {
     height: 75vh;
     width: 100%;
@@ -294,7 +294,6 @@ div.container-fluid.navalert-container {
     border-color: #260c1a;
 }
 
-
 /*--------------------------------------------------------------------------------Event Listing Cards*/
 
 .center-content {
@@ -305,7 +304,7 @@ div.container-fluid.navalert-container {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-  }
+}
 
 .custom-card {
     flex: 1 0 auto;
