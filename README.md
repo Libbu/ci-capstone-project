@@ -54,6 +54,8 @@ Target audience:
 
 ## Administrator user stories
 
+### Epic: Site Administration
+
 - As a **site admin** I can **Delete any events on the site** so that **I can better control content**
 - As a **site admin** I can **approve events created by registered site users** so that **the events show for all site users**
 - As a **site admin** I can **update the about section on the homepage** so that **changes can be displayed to site users**
@@ -61,6 +63,46 @@ Target audience:
 
 ## UAC
 
+### User Acceptance Criteria Derived From User Stories
+
+1. The website should be responsive on any device.
+
+2. The website should have a homepage that makes it's purpose clear.
+
+3. Website navigation should be clear and intuitive for users.
+
+4. Website navigation bar should be accessible from any page on the site.
+
+5. A registration form allowing users to create an account is present.
+
+6. The website should have a list of events the user can view after logging in.
+
+7. Each event should link to a separate page where more detail can be viewed.
+
+8. Users can access a form enabling them to create their own events. 
+
+9. Each event should have the option for users to attend it via clicking a button.
+
+10. Users are able to edit or delete their own events.
+
+11. Users can easily keep track of their planned/past attendance.
+
+12. Users can easily keep track of events they have planned themselves.
+
+13. Users are able to leave comments on events.
+
+14. The website allows administrators to approve or decline all event posts.
+
+15. The website allows administrators to delete any event or comment as necessary.
+
+16. The website allows administrators to update the "about" section text on the homepage.
+
+17. Website administrators are contactable through a contact form. 
+___
+
+## Structure
+
+### Home Page
 
 
 
