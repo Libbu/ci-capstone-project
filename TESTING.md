@@ -204,26 +204,104 @@ It is ordered from runs that will occur soon first, to those that are scheduled 
 
 - As a **site user** I can **click on an event in the list of events** so that **I can see more information**.
 
+Users can click on the title of a single responsive event card to open a page with more detail about the event
+
+![Event card PC](https://github.com/Libbu/ci-capstone-project/blob/main/media/eventcard.JPG)
+
+The event detail page contains details of the run the organiser is wishing to schedule, any images they have uploaded (a placeholder image appears if they choose none), as well as the options to register attendance, cancel attendance, leave a comment, edit the event (if the event organiser is visiting an event detail page of their own) or delete the event (for the event organiser and also for site administrators.)
+
+![Event detail PC](https://github.com/Libbu/ci-capstone-project/blob/main/media/eventdetailpc.JPG)
+
+![Event detail mobile](https://github.com/Libbu/ci-capstone-project/blob/main/media/eventdetailmob1.png)
+
+![Event detail mobile](https://github.com/Libbu/ci-capstone-project/blob/main/media/eventdetailmob2.png)
 
 - As a **site user** I can **expect that events will be removed from the listing page when expired** so that **the page doesn't become cluttered**.
+
+Events disappear from the Event List page once the event date has passed.
+
 - As a **site user** I can **create events** so that **other users can participate with me**.
+
+The Create an Event option under Events in the Navigation Bar allows registered users to access a form that they can submit to schedule their own run on which they want some company. The event they wish to create will not show to other users through the Event List until administrators have approved it. 
+
+![Create event form](https://github.com/Libbu/ci-capstone-project/blob/main/media/createevent.JPG)
+
+![Create event mobile](https://github.com/Libbu/ci-capstone-project/blob/main/media/createeventmob1.png)
+
+![Create event mobile](https://github.com/Libbu/ci-capstone-project/blob/main/media/createeventmob2.png)
+
 - As a **site user who has made an event** I can **edit my own event** so that I can **communicate changes/updates**.
+
+Site users are able to edit their events using the same form as above through the "Update Event" button on the event detail page. The option to edit an event will show on events the site user has created for themselves only, editing an event will cause the event to return to administrators for approval before it reappears under Event Listing.
+
+![Buttons](https://github.com/Libbu/ci-capstone-project/blob/main/media/buttonseventdetail.JPG)
+
+
 - As a **site user** I can **delete my event** so that I can **remove any unwanted events that I have made**.
+
+Site users are able to delete their events through the "Delete Event" button on the event detail page. The option to delete an event will show on events the site user has created for themselves only, A modal notification will appear to confirm the user's wishes to delete their event, and make them aware that it cannot be reversed.
+
+![Buttons](https://github.com/Libbu/ci-capstone-project/blob/main/media/buttonseventdetail.JPG)
+
+![Delete Modal](https://github.com/Libbu/ci-capstone-project/blob/main/media/deletemodal.JPG)
+
 - As a **site user** I can **see a consolidated list of events I've said I will attend and those I have attended** so that **I can keep track of my activity**.
+
+Under the Events drop-down menu users are able to navigate to a section of the website called Attendance. Here they will find two sections; "Events I'm going to:" lists events they are going to, "Events I've been at:" lists events they have been at. The design aesthetic of this page is consistent with that used in the Event List, with the exception that it is not intended to paginate.
+
+![Attendance PC](https://github.com/Libbu/ci-capstone-project/blob/main/media/attendancepc.JPG)
+
+![Attendance mob](https://github.com/Libbu/ci-capstone-project/blob/main/media/attendancemob.png)
+
 - As a **site user** I can **see a consolidated list of events I've organised** so that **I can keep track of my plans**.
 
-### Epic: User Community Engagement
+Under the Events drop-down menu users are able to navigate to a section of the website called My Events. Here they will find two sections; "Future runs you've created:" lists events they have organised which have not yet happened, "Past runs you've organised:" lists past events they have organised. The design aesthetic of this page is consistent with that used in the Event List, with the exception that it is not intended to paginate.
+
+![My Events PC](https://github.com/Libbu/ci-capstone-project/blob/main/media/myeventspc.JPG)
+
+![My Events mob](https://github.com/Libbu/ci-capstone-project/blob/main/media/usereventsmob.png)
 
 - As a **site user** I can **say that I will attend an event** so that **the event creator knows I will be there**.
+
+On the Event Detail of an individual event registered, logged-in users can click or tap the "Count me in!" button to register their attendance. They can then cancel this with the "Cancel Attendance" button. If the run is already full they will be redirected to the Event List page with a message informing them that the run is full.
+
+Count me in!
+
+![attendance pc](https://github.com/Libbu/ci-capstone-project/blob/main/media/attendpc.JPG)
+
+![cancel attendance](https://github.com/Libbu/ci-capstone-project/blob/main/media/cancelattendmob.JPG)
+
 - As a **logged-in site user** I can **write comments on events** so that I can **engage with the community**.
 
-## Administrator user stories
+A responsive comment form and comment section is present on all Event Detail pages. Users can create comments, edit and delete their own comments, and site administrators can delete any comment.
 
-### Epic: Site Administration
+![Comments pc](https://github.com/Libbu/ci-capstone-project/blob/main/media/commentsectionpc.JPG)
+
+![Comments mobile](https://github.com/Libbu/ci-capstone-project/blob/main/media/commentsectionmobile.JPG)
+
+#### Administrator user stories
 
 - As a **site admin** I can **Delete any events on the site** so that **I can better control content**.
+
+Site administrators will always have acess to a delete button under Event Detail, and they will always be allowed to delete events regardless of whether they are the organiser or not.
+
 - As a **site admin** I can **approve events created by registered site users** so that **the events show for all site users**.
+ 
+ Site administrators have access to the role-specific Admin navigation dropdown menu, from which they can access the Admin Approval page. Styled consistently with the Event Detail page, events created by users come here first for approval before they will show on the Event List page. The Event Cards here feature the option to Approve the event or Decline and Remove it.
+
+![Admin approval pane pc](https://github.com/Libbu/ci-capstone-project/blob/main/media/adminapprovepc.JPG)
+
+![Admin approval pane mobile](https://github.com/Libbu/ci-capstone-project/blob/main/media/adminapprovemob.png)
+
 - As a **site admin** I can **update the about section on the homepage** so that **changes can be displayed to site users**.
+
+Site administrators have access to the role-specific Admin navigation dropdown menu, from which they can access the Update About form. This allows them to publish an updated about us section to the homepage.
+
+![Update about pc](https://github.com/Libbu/ci-capstone-project/blob/main/media/updateaboutpc.JPG)
+
+![Update about mobile](https://github.com/Libbu/ci-capstone-project/blob/main/media/updateaboutmob.JPG)
+
+
 - As a **site admin** all site users can **contact me through a form** so that I can **collaborate/answer questions**.
 
-
+Due to prioritisation this feature was not implemented in the current release. It will be looked at for future releases. 
