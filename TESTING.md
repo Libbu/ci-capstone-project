@@ -11,7 +11,7 @@ HTML code stripped of Django template tags was accessed by viewing the page sour
 Unremedied errors consisted of the behaviour of Django template elements which I was unable to change.
 
 ### Results for HTML URI Testing:
-<details><summary>click to expand</summary>
+<details><summary>Click to expand</summary>
 
 Home page:
 
@@ -69,7 +69,7 @@ There were 26 warnings associated with variable names (const and let ) and their
 
 ## Python Validation
 
-Python was validated using the ![CI Python Linter](https://pep8ci.herokuapp.com/)
+Python was validated using the ![CI Python Linter](pep8ci.herokuapp.com)
 
 Only files in which I wrote my own code were validated. The rest of the python code in the project was part of thje Django installation package.
 
@@ -99,10 +99,39 @@ From the `events` app:
 | `forms.py` |pass |
 | `views.py` | pass w/noqa*|
 
-    *due to limitations of the linter line 170 of views is split over two lines of display inside the linter within one line of code; meaning a trailing white space error (W291) persists in the linter where no trailing white space is present and despite #noqa.
+    *due to limitations of the linter line 170 of event/views.py is split over two lines of display inside the linter within one line of code; meaning a trailing white space error (W291) persists in the linter where no trailing white space is present and despite #noqa.
 
 From the `calm_cadence` project directory:
 
 | File | Grade |
 | -----| ------|
 | `urls.py` | pass |
+
+## Site Testing
+
+### User-Acceptance-Criteria (UAC) Derived Manual Unit Testing
+
+Test cases were grouped into logical units of site functionality for this task:
+
+- TC001 Site responsiveness.
+- TC002 Site purpose on landing (home) page.
+- TC003 Navigation and authentication.
+- TC004 Viewing events.
+- TC005 User create, edit, delete own events.
+- TC006 Attending and cancelling attendance.
+- TC007 Users can see own attending/attended events.
+- TC008 Users can see own organising/organised events.
+- TC009 User create, edit and delete own comments.
+- TC010 Site admin functionality and admin role-specific access.
+
+![Unit Testing 1](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting1.JPG)
+
+![Unit Testing 2](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting2.JPG)
+
+![Unit Testing 3](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting3.JPG)
+
+![Unit Testing 4](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting4.JPG)
+
+
+
+
