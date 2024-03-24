@@ -107,9 +107,12 @@ From the `calm_cadence` project directory:
 | -----| ------|
 | `urls.py` | pass |
 
-## Site Testing
 
-### User-Acceptance-Criteria (UAC) Derived Manual Unit Testing
+## Site Lighthouse Testing
+
+## Manual Site Testing
+
+### User-Acceptance-Criteria (UAC) Derived Unit Testing
 
 Test cases were grouped into logical units of site functionality for this task:
 
@@ -132,6 +135,95 @@ Test cases were grouped into logical units of site functionality for this task:
 
 ![Unit Testing 4](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting4.JPG)
 
+### User Story Testing
 
+- As a **site user** I can **easily navigate through the site** so that I can **view the content I want to**.
+
+Calm Cadence has all information organised in correct areas with a clear, responsive navigation bar across the top of all pages in the website.
+
+The navigation bar has all the links correctly connected so that users can easily find the information and functionality they need.
+
+Drop-down menus prevent clutter in the navigation pane and contain logically organised links within
+
+Below is a sample of what unregistered or logged out users will see, and what administrators see; regular site users will not see the option for an Admin drop down, and users who have yet to register or who have logged out will only be able to see the options to Register or Login.
+
+For unregistered users:
+
+![Unregistered User Nav Bar](https://github.com/Libbu/ci-capstone-project/blob/main/media/navbarloggedout.JPG)
+
+For registered site users (admin access also displayed)
+
+![Admin Nav Bar](https://github.com/Libbu/ci-capstone-project/blob/main/media/adminnav.JPG)
+
+![Admin Nav Bar Mobile](https://github.com/Libbu/ci-capstone-project/blob/main/media/adminnavmob.JPG)
+
+
+- As a **site user** I can **access an about section** so that **I can understand the purpose of the page**.
+
+The "About our Community" section in Calm Cadence in prominently displayed on the home page. The text can be updated by site administrators as an when needed.
+
+![About Us](https://github.com/Libbu/ci-capstone-project/blob/main/media/aboutpc.JPG)
+
+![About Us Mobile](https://github.com/Libbu/ci-capstone-project/blob/main/media/aboutmob.png)
+
+- As a **site user** I can **register/login** so that I can **access content only for logged-in users**.
+
+For site-users who are not logged in, the only links in the nav bar available to them will be the home page, registration, and login pages. The registration and login pages provide a seamless aesthetic experience for first time users and those returning to the site on both large and small screens
+
+![Registration](https://github.com/Libbu/ci-capstone-project/blob/main/media/register.JPG)
+
+![Login](https://github.com/Libbu/ci-capstone-project/blob/main/media/loginpc.JPG)
+
+The forms are responsive on mobile;
+
+![Registration](https://github.com/Libbu/ci-capstone-project/blob/main/media/registermob.png)
+
+![Login](https://github.com/Libbu/ci-capstone-project/blob/main/media/signinmob.png)
+
+Calm Cadence provides user feedback so that users know they are logged in, and who they are logged in as.
+
+![Registration](https://github.com/Libbu/ci-capstone-project/blob/main/media/loginconf.JPG)
+
+- As a **site user** I can **logout** so that I can **disconnect from the app**.
+
+Logged in site users are able to logout by navigating to the logout page, and clicking the logout button
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/logoutpc.JPG)
+
+![Logoutmob](https://github.com/Libbu/ci-capstone-project/blob/main/media/logoutmob.JPG)
+
+- As a **site user** I can **see a paginated list of run events** so that **I can join in**.
+
+The Event List page is accessible to logged in site users under the Events dropdown menu. The Events List page is paginated by 6, and lists upcoming runs organised by others users.
+
+It is ordered from runs that will occur soon first, to those that are scheduled a long time from today. Cards featuring images are used to display the event along with some summary detail. Given the nature of the page, runners may choose to use the image field to upload a proposed route. These cards hover slightly when moused over.
+
+![Event List PC](https://github.com/Libbu/ci-capstone-project/blob/main/media/eventlistpc.JPG)
+
+![Event List Mobile](https://github.com/Libbu/ci-capstone-project/blob/main/media/eventlistmob.png)
+
+- As a **site user** I can **click on an event in the list of events** so that **I can see more information**.
+
+
+- As a **site user** I can **expect that events will be removed from the listing page when expired** so that **the page doesn't become cluttered**.
+- As a **site user** I can **create events** so that **other users can participate with me**.
+- As a **site user who has made an event** I can **edit my own event** so that I can **communicate changes/updates**.
+- As a **site user** I can **delete my event** so that I can **remove any unwanted events that I have made**.
+- As a **site user** I can **see a consolidated list of events I've said I will attend and those I have attended** so that **I can keep track of my activity**.
+- As a **site user** I can **see a consolidated list of events I've organised** so that **I can keep track of my plans**.
+
+### Epic: User Community Engagement
+
+- As a **site user** I can **say that I will attend an event** so that **the event creator knows I will be there**.
+- As a **logged-in site user** I can **write comments on events** so that I can **engage with the community**.
+
+## Administrator user stories
+
+### Epic: Site Administration
+
+- As a **site admin** I can **Delete any events on the site** so that **I can better control content**.
+- As a **site admin** I can **approve events created by registered site users** so that **the events show for all site users**.
+- As a **site admin** I can **update the about section on the homepage** so that **changes can be displayed to site users**.
+- As a **site admin** all site users can **contact me through a form** so that I can **collaborate/answer questions**.
 
 
