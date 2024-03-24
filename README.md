@@ -91,7 +91,7 @@ Target audience:
 
 13. Users are able to leave comments on events.
 
-14. The website allows administrators to approve or decline all event posts.
+14. The website allows administrators to approve or decline event posts.
 
 15. The website allows administrators to delete any event or comment as necessary.
 
@@ -117,7 +117,7 @@ ___
 | **Home Page**   | **Event List**   | **Event Details** | **Website as a whole** |
 |---|---|---|---|
 | Purpose of website | List of Events | Event Content | Site nav bar |
-| Calls to action | Posts load on click | Comment Section| Footer with social media links |
+| Calls to action |Event detail loads on click | Comment Section| Footer with social media links |
 | Admin can update 'About Us' | | Ability to attend/cancel attendance| Sign-in/up/out options |
 | | |Role-specific access to edit/delete |Ability to create event |
 | | | Messages confirming user actions|Messages confirming user actions|
@@ -185,13 +185,66 @@ The following categories were applied as custom labels to project user-stories:
 
 ![User Story MosCoW](https://github.com/Libbu/ci-capstone-project/blob/main/media/moscow.JPG)
 
-- Note: As a primary feature of MVP for Calm Cadence is to deliver full database CRUD (create, read, update and delete) functionality for events to the end-user; the implementation of end-user features connected to this has priority over other common event-management features.
+- Note: As a primary feature of MVP for Calm Cadence is to deliver full database CRUD (create, read, update and delete) functionality for events to the end-user; the implementation of end-user features connected to this has priority over other common event-management features such as registering attendence.
 ___
+
 # Design
 
-## Design
+Calm Cadence is intended to have a simple layout, with a colour--scheme and aesthetic drawing from both Holistic Wellness and Fitness marketing schemes.
+
+The home page is intended to give a professional impression, soothing the viewer with calming hues and a subtle background gradient, while hints of energy are present in the colour used to render text as well as through the use of images.
+
+The colour aesthetic is kept consistent throughout the website; from registration and login pages, to the form users use in order to create events, and the admin approval page for site administrators.
 
 ### Colour Scheme
+
+![Palette](https://github.com/Libbu/ci-capstone-project/blob/main/media/palatte.JPG)
+
+Deep blue-green hues are the dominant feature of the website; with tea-green selected for text colour against this background on account of the contrast it provides.
+
+A light pink and deep purple which each coordinate well with the dominant colours are in use in hover effects on site buttons.
+
+Overall, this colour palette creates a sense of calm with a touch of energy. The blue shades are associated with tranquility and the natural world, while the tea-green injects the element of physical exertion running entails. The abrput shift in colour when the users hover over site button elements contributes to feedback that an action is possible.
+
+### Typography
+
+[Raleway](https://fonts.google.com/specimen/Raleway) is elegant, in use on many websites with a focus on physical activity, and forms part of a clean, minimalistic design. This font is used in headings and subheadings.
+
+[Lato](https://fonts.google.com/specimen/Lato) is lightweight, minimalistic, and often found used in websites promoting wellness or health. All other text on the website uses Lato.
+
+### Images
+
+The images in this project were all sourced from [Unsplash](https://unsplash.com/)
+
+Sammple event posts with routes as images are using screen-shots from the route-planner on [MapMyRun](https://www.mapmyrun.com/)
+
+The favicon was edited from the file at the following URL using [Favicon Generator](https://www.favicon.cc/?action=edit_image&file_id=856421)
+
+## Visual Effects
+
+#### Shadows
+
+A shadow is used on the "About Our Community" section on the home page to give a sense of depth to the text present. Combined with the background gradient, as the user scrolls to this section it seems to appear from the page and occupy physical space within their area of sight.
+
+#### Image-Overlays
+
+As the user mouses over either the two images beneath the "About Our Community" section on the home page, a translucent overlay drops down containing a link to register or log in to the site respectively. On mobile devices this overlay appears if the users tap the images. This perhaps unexpected but nonetheless unbotrusive visual stimulation is intended to engage the user in the website as a whole.
+
+#### Hover Effect
+
+Hover effects are present in many areas of the webpage.
+
+The navbar links, as well as event links and all buttons include a hover effect in order to promote interactivity. When a user hovers over a link or button, its colour or background colour changes. This feature has also been used to provide feedback to the user, for example on hovering over the delete button the background becomes fairytale-pink and the text deep-purple; this abrupt change from the website aesthetic of light-on-dark to dark-on-light alerts the user that they are about to take a certain type of action.
+
+A hover effect which causes the event card to lift slightly on the event listing page has been used to further promote interactivity as users browse events.
+
+#### Confirmation Modals
+
+Modals have been used to display confirmation messages to users when they select either an event or comment to delete. The aprupt change in the visual pane is intended to draw user attention to the stated consequences and irreversible nature of the deletion action.
+___
+
+# Database Design
+
 
 ## Structure
 
