@@ -97,7 +97,9 @@ From the `events` app:
 | `models.py` | pass w/noqa |
 | `urls.py` | pass w/noqa |
 | `forms.py` |pass |
-| `views.py` |  |
+| `views.py` | pass w/noqa*|
+
+    *due to limitations of the linter line 170 of views is split over two lines meaning a trailing white space error (W291) persists where no trailing white space is present and despite #noqa.
 
 From the `calm_cadence` project directory:
 
