@@ -1,5 +1,4 @@
 from django import forms
-from django_summernote.widgets import SummernoteWidget
 from .models import MainAbout
 
 class MainAboutForm(forms.ModelForm):
@@ -11,6 +10,3 @@ class MainAboutForm(forms.ModelForm):
     class Meta:
         model = MainAbout
         fields = ['content',]
-        widgets = {
-            'content': SummernoteWidget(),
-        }
