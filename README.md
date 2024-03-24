@@ -304,7 +304,7 @@ ___
 
 ### Event List Page
 
-IMAGE
+![Event List](https://github.com/Libbu/ci-capstone-project/blob/main/media/amiresevent_list.JPG)
 
 - Shows admin-approved, user-created events in order of the most recent first.
 - List of events is paginated by 6 so as not to overwhelm the user.
@@ -322,7 +322,7 @@ IMAGE
 
 ### Event Detail Page
  
-IMAGE
+![Event List](https://github.com/Libbu/ci-capstone-project/blob/main/media/amireseventdetail.JPG)
 
 - Shows the details of the run such as how many people the organiser is looking to have join them, the location and what other users are going. 
 - Allows authenticated users to see and write comments on the event, as well as manage their own comments.
