@@ -14,7 +14,7 @@ Taking the lead of other sport-related apps such as Strava and Spond; users must
 
 This website was developed for the capstone project at the conclusion of the Code Institute Bootcamp through Coleg Gwent.
 
-The live website can be accessed here.
+The live website can be accessed [here](https://calm-cadence-4a2a00c3b627.herokuapp.com/).
 ___
 
 # UX Design
@@ -167,6 +167,8 @@ ___
 
 Prioritisation of user stories and tasks to develop Calm Cadence has followed an Agile methodology, using GitHub's projects to prioritize and track user stories and high-level development tasks. This approach enables the implementation and testing of ideas based on their importance to the project, ensuring that MVP (minimum viable product) functionality for the project's purpose is reached as soon as it can be. 
 
+The Project Board for Calm Cadence can be found [here](https://github.com/users/Libbu/projects/7).
+
 The following categories were applied as custom labels to project user-stories:
 
 - Must Have
@@ -174,12 +176,20 @@ The following categories were applied as custom labels to project user-stories:
 - Could Have
 - Won't Have
 
+### User Story Breakdown
+
+![User Story Breakdown](https://github.com/Libbu/ci-capstone-project/blob/main/media/userstorybreakdown.JPG)
+
+
+### User Story MoSCoW
+
+![User Story MosCoW](https://github.com/Libbu/ci-capstone-project/blob/main/media/moscow.JPG)
+
+- Note: As a primary feature of MVP for Calm Cadence is to deliver full database CRUD (create, read, update and delete) functionality for events to the end-user; the implementation of end-user features connected to this has priority over other common event-management features.
 ___
 # Design
 
 ## Design
-
-The website is meant to have a simple layout and a clean design. The home page is aimed at giving a professional and informative impression, whilst cosy and friendly as you log in, which is achieved by little details, such as a cheerful logo and a footer image. A main frame for design, mainly composition and alignment-wise, was a template [One Page](https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/), which was heavily modified with unique imagery and "Ukrainian twist".
 
 ### Colour Scheme
 
