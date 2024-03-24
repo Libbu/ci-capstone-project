@@ -73,6 +73,12 @@ Python was validated using the ![CI Python Linter](https://pep8ci.herokuapp.com/
 
 Only files in which I wrote my own code were validated. The rest of the python code in the project was part of thje Django installation package.
 
+#noqa comments were used on lengthy lines of code (E501), but which I was not able to shorten without disrupting site functionality.
+
+- For the main app this includes line 54 of views.py
+
+- For the events app this includes lines 16 and 23 of models.py; lines 9 - 11 and 13-17 of urls.py
+
 From the `main` app:
 
 | File | Grade |
@@ -81,15 +87,16 @@ From the `main` app:
 | `models.py` | pass |
 | `urls.py` | pass |
 | `forms.py` |pass |
-| `views.py` |  |
+| `views.py` | pass w/noqa |
 
 From the `events` app:
 
 | File | Grade |
 | ---- | ----- |
-| `admin.py` |  |
-| `models.py` |  |
-| `urls.py` |  |
+| `admin.py` | pass |
+| `models.py` | pass w/noqa |
+| `urls.py` | pass w/noqa |
+| `forms.py` |pass |
 | `views.py` |  |
 
 From the `calm_cadence` project directory:

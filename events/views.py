@@ -15,13 +15,13 @@ class EventList(LoginRequiredMixin, generic.ListView):
     :model: `events.Event` and displays
     them in a page of six posts
     **Context**
-    
+
     ``queryset``
         All approved, future events relative to today
         instances of :model: `events.Event`
     ``paginate_by``
         Number of events per page.
-    
+
     **Template**
 
     :template: `events/event_list.html`
@@ -29,7 +29,7 @@ class EventList(LoginRequiredMixin, generic.ListView):
     model = Event
     template_name = "events/event_list.html"
     paginate_by = 6
-    
+
     def get_queryset(self):
         queryset = Event.objects.filter(approved=True)
         today = timezone.now().date()
@@ -37,10 +37,11 @@ class EventList(LoginRequiredMixin, generic.ListView):
 
         return queryset
 
+
 @login_required
 def event_detail(request, id):
 
-    """ 
+    """
     Displays an individual instance of
     :model: `events.Event`
 
@@ -74,8 +75,10 @@ def event_detail(request, id):
 
     return render(
         request,
-        'events/event_detail.html', {'event': event, "comments": comments,"comment_form": comment_form, },
+        'events/event_detail.html',
+        {'event': event, "comments": comments, "comment_form": comment_form, },
     )
+
 
 @login_required
 def delete_comment(request, event_id, comment_id):
@@ -92,7 +95,7 @@ def delete_comment(request, event_id, comment_id):
         A single comment related to the event.
     """
 
-    queryset = Event.objects.filter(approved = True)
+    queryset = Event.objects.filter(approved=True)
     event = get_object_or_404(queryset, id=event_id)
     comment = get_object_or_404(Comment, pk=comment_id)
 
@@ -100,9 +103,10 @@ def delete_comment(request, event_id, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')  # noqa
 
     return redirect('event_detail', id=event_id)
+
 
 @login_required
 def edit_comment(request, event_id, comment_id):
@@ -122,7 +126,7 @@ def edit_comment(request, event_id, comment_id):
 
     if request.method == "POST":
 
-        queryset = Event.objects.filter(approved = True)
+        queryset = Event.objects.filter(approved=True)
         event = get_object_or_404(queryset, id=event_id)
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
@@ -133,9 +137,10 @@ def edit_comment(request, event_id, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment')
+            messages.add_message(request, messages.ERROR, 'Error updating comment')  # noqa
 
     return redirect('event_detail', id=event_id)
+
 
 @login_required
 def create_event(request):
@@ -145,7 +150,7 @@ def create_event(request):
     using fields from :model: `events.Event`.
     The event must be approved by a site-admin
     (superuser) before showing in event_list.html
-    
+
     **Context**
     ``EventCreateForm``
     an instance of `:form: events.EventCreateForm`
@@ -153,45 +158,49 @@ def create_event(request):
     **Template**
     :template: `create_event.html`
     """
-  
+
     if request.method == 'POST':
         event_form = CreateEventForm(request.POST, request.FILES)
         if event_form.is_valid():
             event = event_form.save(commit=False)
             event.organiser = request.user
             event.save()
-            messages.success(request, "Your event has been submitted and is awaiting approval.")
+            messages.success(request, "Your event has been submitted and is awaiting approval.")  # noqa
         else:
-            messages.success(request, "Your event has not been submitted, please make sure your image file type is one of png, jpg, jpeg, webp, or tiff, and try again.") 
+            messages.success(request, "Your event has not been submitted, please make sure your image file type is one of png, jpg, jpeg, webp, or tiff, and try again.")  # noqa 
 
     form = CreateEventForm()
 
     return render(
-        request, 
+        request,
         'events/create_event.html',
-        {'form': form,
-        },
+        {'form': form, },
     )
+
 
 @login_required
 def user_events(request):
     """
-    this view serves the user a 
+    this view serves the user a
     list of all events they have created
     **Context**
-    
+
     All instances of :model: `events.Event`
     created by the request.uer
-    
+
     **Template**
 
     :template: `events/user_events.html`
     """
 
     current_date = timezone.now().date()
-    events = Event.objects.filter(organiser=request.user) 
+    events = Event.objects.filter(organiser=request.user)
 
-    return render(request, 'events/user_events.html', {'events':events, 'current_date':current_date,})
+    return render(
+        request,
+        'events/user_events.html',
+        {'events': events, 'current_date': current_date, },)
+
 
 @login_required
 def admin_event_approval_list(request):
@@ -204,18 +213,22 @@ def admin_event_approval_list(request):
     ``pending_Event``
         instances of :model:`events.Event`
         where approved = False.
-    
+
     **Template**
 
     :template: `admin_event_approval.html`
 
     """
-    pending_events = Event.objects.filter(approved=False).order_by('-event_date')
+    pending_events = Event.objects.filter(approved=False).order_by('-event_date')  # noqa
 
     if not request.user.is_superuser:
         return render(request, 'prohibited.html')
 
-    return render(request, 'events/admin_event_approval.html', {'pending_events': pending_events,})
+    return render(
+        request,
+        'events/admin_event_approval.html',
+        {'pending_events': pending_events, })
+
 
 @login_required
 def admin_event_approval(request, event_id):
@@ -228,7 +241,7 @@ def admin_event_approval(request, event_id):
     event it will be deleted.
     """
 
-    pending_events = Event.objects.filter(approved=False).order_by('-event_date')
+    pending_events = Event.objects.filter(approved=False).order_by('-event_date')  # noqa
 
     if not request.user.is_superuser:
         return render(request, 'prohibited.html')
@@ -241,7 +254,7 @@ def admin_event_approval(request, event_id):
         if action == 'approve':
             event.approved = True
             event.save()
-            messages.success(request, f'Event {event.title} has been approved.')
+            messages.success(request, f'Event {event.title} has been approved.')  # noqa
 
         elif action == 'decline':
             event.delete()
@@ -249,12 +262,13 @@ def admin_event_approval(request, event_id):
 
     return HttpResponseRedirect(reverse('admin_event_approval'))
 
+
 @login_required
 def delete_event(request, event_id):
     """
     allows a logged in user to delete
     their own event in the event_detail
-    
+
     also alows a superuser to delete any
     event from the event_detail.
     """
@@ -265,8 +279,9 @@ def delete_event(request, event_id):
         messages.success(request, f"Event successfully deleted.")
     else:
         messages.success(request, f"Event not deleted.")
-        
+
     return HttpResponseRedirect(reverse('user_events'))
+
 
 @login_required
 def update_event(request, event_id):
@@ -291,7 +306,7 @@ def update_event(request, event_id):
 
     :template: `update_event.html`
     """
-    
+
     event = get_object_or_404(Event, pk=event_id,)
     if request.user == event.organiser:
         if request.method == 'POST':
@@ -300,11 +315,12 @@ def update_event(request, event_id):
                 form.save(commit=False)
                 event.approved = False
                 event.save()
-                messages.add_message(request, messages.SUCCESS, 'Event has been updated and is awaiting approval.')
+                messages.add_message(request, messages.SUCCESS, 'Event has been updated and is awaiting approval.')  # noqa
                 return HttpResponseRedirect(reverse('user_events'))
         else:
             form = CreateEventForm(instance=event)
         return render(request, 'events/update_event.html', {'form': form})
+
 
 @login_required
 def attend_event(request, event_id):
@@ -315,14 +331,15 @@ def attend_event(request, event_id):
 
     event = Event.objects.get(pk=event_id)
 
-    if event.max_attendees == 0 or event.attendees.count() < event.max_attendees:
+    if event.max_attendees == 0 or event.attendees.count() < event.max_attendees:  # noqa
         if request.method == 'POST':
             event.attendees.add(request.user)
-            messages.add_message(request, messages.SUCCESS, "You're attending!")
+            messages.add_message(request, messages.SUCCESS, "You're attending!")  # noqa
             return redirect('attending_events')
     else:
         messages.warning(request, "Sorry, this run is full")
         return redirect('event_list')
+
 
 @login_required
 def cancel_attendance(request, event_id):
@@ -335,11 +352,12 @@ def cancel_attendance(request, event_id):
     if request.method == 'POST':
         if request.user in event.attendees.all():
             event.attendees.remove(request.user)
-            messages.add_message(request, messages.SUCCESS, "You've cancelled your attendance.")
+            messages.add_message(request, messages.SUCCESS, "You've cancelled your attendance.")  # noqa
             return redirect('event_list')
     else:
-        messages.add_message(request, messages.SUCCESS, "you can only remove yourself from runs")
+        messages.add_message(request, messages.SUCCESS, "you can only remove yourself from runs")  # noqa
         return render(request, 'prohibited.html')
+
 
 @login_required
 def user_attending_events(request):
@@ -351,4 +369,7 @@ def user_attending_events(request):
     user = request.user
     events = Event.objects.filter(attendees=user)
     current_date = timezone.now().date()
-    return render(request, 'events/attending_events.html', {'events': events, 'current_date': current_date,})
+    return render(
+        request,
+        'events/attending_events.html',
+        {'events': events, 'current_date': current_date, })
