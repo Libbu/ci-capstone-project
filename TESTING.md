@@ -73,11 +73,11 @@ Python was validated using the ![CI Python Linter](https://pep8ci.herokuapp.com/
 
 Only files in which I wrote my own code were validated. The rest of the python code in the project was part of thje Django installation package.
 
-#noqa comments were used on lengthy lines of code (E501), but which I was not able to shorten without disrupting site functionality.
+ #noqa comments were used on lengthy lines of code (E501), which I was not able to shorten without disrupting site functionality.
 
 - For the main app this includes line 54 of views.py
 
-- For the events app this includes lines 16 and 23 of models.py; lines 9 - 11 and 13-17 of urls.py
+- For the events app this includes lines 16 and 23 of models.py; lines 9 - 11 and 13-17 of urls.py; lines 15 and 29 of forms.py; and lines 106, 140, 168, 170, 222, 254, 257, 318, 334, 337, 355, and 358 of views.py;
 
 From the `main` app:
 
@@ -99,10 +99,10 @@ From the `events` app:
 | `forms.py` |pass |
 | `views.py` | pass w/noqa*|
 
-    *due to limitations of the linter line 170 of views is split over two lines meaning a trailing white space error (W291) persists where no trailing white space is present and despite #noqa.
+    *due to limitations of the linter line 170 of views is split over two lines of display inside the linter within one line of code; meaning a trailing white space error (W291) persists in the linter where no trailing white space is present and despite #noqa.
 
 From the `calm_cadence` project directory:
 
 | File | Grade |
 | -----| ------|
-| `urls.py` | |
+| `urls.py` | pass |
