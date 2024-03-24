@@ -23,11 +23,11 @@
                                 {% endif %}
                                 <a href="{% url 'event_detail' event.id %}" class="event-link">
                                     <div class="image-flash">
-                                        <p class="author">Organiser: {{ event.organiser }}</p>
+                                        <h5 class="card-title p-2">{{ event.title }}</h5>
                                     </div>
                                 </a>
                             </div>
-                            <h2 class="card-title">{{ event.name }}</h2>
+                            <p class="author">Organiser: {{ event.organiser }}</p>
                             <p class="card-text">{{ event.distance }}</p>
                             <p class="card-text">Days until run: {{event.days_until}}</p>
                             <hr />
@@ -51,10 +51,10 @@
                         <div class="card-body">
                             <a href="{% url 'event_detail' event.id %}" class="event-link">
                                 <div class="image-flash">
-                                    <p class="author">Organiser: {{ event.organiser }}</p>
+                                    <h5 class="card-title p-2">{{ event.title }}</h5>
                                 </div>
                             </a>
-                            <h2 class="card-title">{{ event.name }}</h2>
+                            <p class="author">Organiser: {{ event.organiser }}</p>
                             <p class="card-text">{{ event.distance }}</p>
                             <hr />
                             <p class="card-text h6">{{ event.event_date}}</p>
