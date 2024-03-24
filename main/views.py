@@ -4,6 +4,7 @@ from django.contrib import messages
 from .models import MainAbout
 from .forms import MainAboutForm
 
+
 # Create your views here.
 def home_view(request):
     """
@@ -22,7 +23,8 @@ def home_view(request):
 
     return render(
         request,
-        "main/index.html",{'home': home})
+        "main/index.html", {'home': home})
+
 
 @login_required
 def admin_update_about(request):
@@ -42,20 +44,18 @@ def admin_update_about(request):
 
     if not request.user.is_superuser:
         return render(request, 'prohibited.html')
-    
+
     if request.method == 'POST':
         about_form = MainAboutForm(request.POST)
         if about_form.is_valid():
             about = about_form.save(commit=True)
             about.save()
 
-            messages.success(request, "Your update to the homepage has been published") 
-    
+            messages.success(request, "Your update to the homepage has been published")  # noqa
     form = MainAboutForm()
 
     return render(
-        request, 
+        request,
         'main/update_about.html',
-        {'form': form,
-        },
+        {'form': form, },
     )

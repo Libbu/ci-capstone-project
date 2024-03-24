@@ -66,3 +66,34 @@ Javascript was validated with the [JSHint Validator](https://jshint.com)
 There were 26 warnings associated with variable names (const and let ) and their availability on different browsers. Bootstrap was flagged as an undefined variable however it is imported elsewhere in the project, outside of script.js.
 
 ![JavaScript validation](https://github.com/Libbu/ci-capstone-project/blob/main/media/jsvalid.JPG)
+
+## Python Validation
+
+Python was validated using the ![CI Python Linter](https://pep8ci.herokuapp.com/)
+
+Only files in which I wrote my own code were validated. The rest of the python code in the project was part of thje Django installation package.
+
+From the `main` app:
+
+| File | Grade |
+| ---- | ----- |
+| `admin.py` | pass |
+| `models.py` | pass |
+| `urls.py` | pass |
+| `forms.py` |pass |
+| `views.py` |  |
+
+From the `events` app:
+
+| File | Grade |
+| ---- | ----- |
+| `admin.py` |  |
+| `models.py` |  |
+| `urls.py` |  |
+| `views.py` |  |
+
+From the `calm_cadence` project directory:
+
+| File | Grade |
+| -----| ------|
+| `urls.py` | |
