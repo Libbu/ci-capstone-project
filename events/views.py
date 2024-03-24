@@ -263,6 +263,9 @@ def delete_event(request, event_id):
     if request.user == event.organiser or request.user.is_superuser:
         event.delete()
         messages.success(request, f"Event successfully deleted.")
+    else:
+        messages.success(request, f"Event not deleted.")
+
 
     return HttpResponseRedirect(reverse('user_events'))
 
