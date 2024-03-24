@@ -3,6 +3,14 @@
 
 {% load crispy_forms_tags %}
 
+{% block extra_css %}
+{{ form.media.css }}
+{% endblock extra_css %}
+
+{% block extra_js %}
+{{ form.media.js }}
+{% endblock extra_js %}
+
 {% block content %}
 
 {% if user.is_superuser %}
@@ -13,9 +21,9 @@
         </div>
     </div>
     <div class="row pb-3">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <div class="col-md-8 mt-3 offset-md-2 summernote-rt-form">
             <form class = "form-container" method="POST">
-                {{form|crispy}}
+                {{ form.content | as_crispy_field }}
                 {% csrf_token %}
                 <button class="btn" type="submit">Submit</button>
             </form>
