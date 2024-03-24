@@ -2,7 +2,7 @@
 
 Click [Here](README.md) to return back to the README.
 
-### HTML5 Validation
+## HTML Validation
 
 [W3C Markup Validation](https://validator.w3.org/) was used to validate HTML code for all templates used in the project.
 
@@ -51,11 +51,18 @@ Logout:
 
 <img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/htmllogout.JPG>
 
-
-
-
-
-
-
 </details>
 
+## CSS Validation
+
+Calm Cadence has passed CSS validation using [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+
+![CSS validation](https://github.com/Libbu/ci-capstone-project/blob/main/media/cssvalid.JPG)
+
+## JavaScript Validation
+
+Javascript was validated with the [JSHint Validator](https://jshint.com)
+
+There were 26 warnings associated with variable names (const and let ) and their availability on different browsers. Bootstrap was flagged as an undefined variable however it is imported elsewhere in the project, outside of script.js.
+
+![JavaScript validation](https://github.com/Libbu/ci-capstone-project/blob/main/media/jsvalid.JPG)
