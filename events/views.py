@@ -265,8 +265,7 @@ def delete_event(request, event_id):
         messages.success(request, f"Event successfully deleted.")
     else:
         messages.success(request, f"Event not deleted.")
-
-
+        
     return HttpResponseRedirect(reverse('user_events'))
 
 @login_required
