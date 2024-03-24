@@ -100,6 +100,89 @@ Target audience:
 17. Website administrators are contactable through a contact form. 
 ___
 
+## Scope
+
+### High-level Essential Features
+
+ - A home page
+ - A navigation menu
+ - Authentication-dependent access
+ - An event list page
+ - An event detail page
+ - Front-end add, read, edit and delete (CRUD) functionality for events
+ - Admin-specific approval and deletion rights
+ - Registration, login and logout pages
+
+
+| **Home Page**   | **Event List**   | **Event Details** | **Website as a whole** |
+|---|---|---|---|
+| Purpose of website | List of Events | Event Content | Site nav bar |
+| Calls to action | Posts load on click | Comment Section| Footer with social media links |
+| Admin can update 'About Us' | | Ability to attend/cancel attendance| Sign-in/up/out options |
+| | |Role-specific access to edit/delete |Ability to create event |
+| | | Messages confirming user actions|Messages confirming user actions|
+| | | |Admin have site-wite delete access|
+| | | |Consistent Site Aesthetic |
+
+
+|  **Feature** | **Value**  |  **Effort** |
+|---|---|---|
+| Home Page |  High |  Medium |
+| Paginated List of Events  | High  |  Medium |
+| User Registration | High  | Low  |
+| User Login/Logout| High  | Low  |
+| Navbar|  High | Low  |
+| Footer | Medium  |Low   |
+| Users Can Create Events | High | High |
+| Users Can Edit Own Events| High  |High |
+| Users Can Delete Own Events | High | High |
+| Users Can Can Attend Events | Medium | High |
+| Users Can Cancel Attendance| Medium | High |
+| Admin Can Approve Events | High | Medium |
+| Admin Can Delete User-Created Content | High | Medium |
+| Users Can Comment | Medium | High |
+
+
+| Feature  |  Priority |
+|---|---|
+| Home Page | 1 |
+| Paginated List of Events  | 1  |
+| User Registration | 1  |
+| User Login/Logout| 1  |
+| Navbar|  1 |
+| Footer | 3 |
+| Users Can Create Events | 1 |
+| Users Can Edit Own Events| 1  |
+| Users Can Delete Own Events | 1 |
+| Users Can Can Attend Events | 2 |
+| Users Can Cancel Attendance| 2 |
+| Admin Can Approve Events | 1 |
+| Admin Can Delete User-Created Content | 4 |
+| Users Can Comment | 4|
+
+___
+# Development Plan
+
+## Agile design
+
+Prioritisation of user stories and tasks to develop Calm Cadence has followed an Agile methodology, using GitHub's projects to prioritize and track user stories and high-level development tasks. This approach enables the implementation and testing of ideas based on their importance to the project, ensuring that MVP (minimum viable product) functionality for the project's purpose is reached as soon as it can be. 
+
+The following categories were applied as custom labels to project user-stories:
+
+- Must Have
+- Should Have
+- Could Have
+- Won't Have
+
+___
+# Design
+
+## Design
+
+The website is meant to have a simple layout and a clean design. The home page is aimed at giving a professional and informative impression, whilst cosy and friendly as you log in, which is achieved by little details, such as a cheerful logo and a footer image. A main frame for design, mainly composition and alignment-wise, was a template [One Page](https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/), which was heavily modified with unique imagery and "Ukrainian twist".
+
+### Colour Scheme
+
 ## Structure
 
 ### Home Page
@@ -302,5 +385,3 @@ Admin Update 'About Our Community' Form:
 ## High-fidelity Mobile Wireframes:
 
 ## High-fidelity Desktop Wireframes:
-
-
