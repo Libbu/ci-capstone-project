@@ -190,7 +190,7 @@ ___
 
 # Design
 
-Calm Cadence is intended to have a simple layout, with a colour--scheme and aesthetic drawing from both Holistic Wellness and Fitness marketing schemes.
+Calm Cadence is intended to have a simple layout, with a colour-scheme and aesthetic drawing from both common Holistic Wellness and Fitness marketing schema.
 
 The home page is intended to give a professional impression, soothing the viewer with calming hues and a subtle background gradient, while hints of energy are present in the colour used to render text as well as through the use of images.
 
@@ -198,7 +198,7 @@ The colour aesthetic is kept consistent throughout the website; from registratio
 
 ### Colour Scheme
 
-![Palette](https://github.com/Libbu/ci-capstone-project/blob/main/media/palatte.JPG)
+![Palette](https://github.com/Libbu/ci-capstone-project/blob/main/media/palatte2.JPG)
 
 Deep blue-green hues are the dominant feature of the website; with tea-green selected for text colour against this background on account of the contrast it provides.
 
@@ -228,7 +228,7 @@ A shadow is used on the "About Our Community" section on the home page to give a
 
 #### Image-Overlays
 
-As the user mouses over either the two images beneath the "About Our Community" section on the home page, a translucent overlay drops down containing a link to register or log in to the site respectively. On mobile devices this overlay appears if the users tap the images. This perhaps unexpected but nonetheless unbotrusive visual stimulation is intended to engage the user in the website as a whole.
+As the user mouses over either of the two images beneath the "About Our Community" section on the home page, a translucent overlay drops down containing a link to register or log in to the site respectively. On mobile devices this overlay appears if the users tap the images. This perhaps unexpected but nonetheless unbotrusive visual stimulation is intended to engage the user in the website as a whole.
 
 #### Hover Effect
 
@@ -245,6 +245,9 @@ ___
 
 # Database Design
 
+- note: the User model displayed below refers to that provided by Django package functionality; selected fields have been included to demonstrate how they relate to the custom models created for Calm Cadence.
+
+![ERD](https://github.com/Libbu/ci-capstone-project/blob/main/media/ERD.png)
 
 ## Structure
 
