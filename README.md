@@ -141,6 +141,7 @@ ___
 | Admin Can Approve Events | High | Medium |
 | Admin Can Delete User-Created Content | High | Medium |
 | Users Can Comment | Medium | High |
+| Form to Contact Site Admin | Low | High |
 
 
 | Feature  |  Priority |
@@ -159,6 +160,10 @@ ___
 | Admin Can Approve Events | 1 |
 | Admin Can Delete User-Created Content | 4 |
 | Users Can Comment | 4|
+| Form to Contact Site Admin | 5 |
+
+
+
 
 ___
 # Development Plan
