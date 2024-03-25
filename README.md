@@ -162,35 +162,6 @@ ___
 | Users Can Comment | 4|
 | Form to Contact Site Admin | 5 |
 
-
-
-
-___
-# Development Plan
-
-## Agile design
-
-Prioritisation of user stories and tasks to develop Calm Cadence has followed an Agile methodology, using GitHub's projects to prioritize and track user stories and high-level development tasks. This approach enables the implementation and testing of ideas based on their importance to the project, ensuring that MVP (minimum viable product) functionality for the project's purpose is reached as soon as it can be. 
-
-The Project Board for Calm Cadence can be found [here](https://github.com/users/Libbu/projects/7).
-
-The following categories were applied as custom labels to project user-stories:
-
-- Must Have
-- Should Have
-- Could Have
-- Won't Have
-
-### User Story Breakdown
-
-![User Story Breakdown](https://github.com/Libbu/ci-capstone-project/blob/main/media/userstorybreakdown.JPG)
-
-
-### User Story MoSCoW
-
-![User Story MosCoW](https://github.com/Libbu/ci-capstone-project/blob/main/media/moscow.JPG)
-
-- Note: As a primary feature of MVP for Calm Cadence is to deliver full database CRUD (create, read, update and delete) functionality for events to the end-user; the implementation of end-user features connected to this has priority over other common event-management features such as registering attendence.
 ___
 
 # Design
@@ -258,7 +229,7 @@ ___
 
 ### Home Page
 
-![Calm Cadence](https://github.com/Libbu/ci-capstone-project/blob/main/media/amiresponsive.JPG)
+![Home Page](https://github.com/Libbu/ci-capstone-project/blob/main/media/amiresponsive.JPG)
 
 - Uses text and images to communicate the site purpose
 - Presents opportunities for further actions 
@@ -277,7 +248,7 @@ ___
 
 ### Sign Up Page
 
-![Calm Cadence](https://github.com/Libbu/ci-capstone-project/blob/main/media/amiresponsivesignup.JPG)
+![Sign Up](https://github.com/Libbu/ci-capstone-project/blob/main/media/amiresponsivesignup.JPG)
 
 - Allows users to register so that they can access site content
 
@@ -289,9 +260,9 @@ ___
     >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
 
 
-### Sign In Page
+### Login Page
 
-![Calm Cadence](https://github.com/Libbu/ci-capstone-project/blob/main/media/amirelogin.JPG)
+![Login](https://github.com/Libbu/ci-capstone-project/blob/main/media/amirelogin.JPG)
 
 - Allows users to sign in
 
@@ -322,7 +293,7 @@ ___
 
 ### Event Detail Page
  
-![Event List](https://github.com/Libbu/ci-capstone-project/blob/main/media/amireseventdetail.JPG)
+![Event Detail](https://github.com/Libbu/ci-capstone-project/blob/main/media/amireseventdetail.JPG)
 
 - Shows the details of the run such as how many people the organiser is looking to have join them, the location and what other users are going. 
 - Allows authenticated users to see and write comments on the event, as well as manage their own comments.
@@ -346,7 +317,7 @@ ___
 
 ### Create/Update Post Page
 
-IMAGE
+![Create Post](https://github.com/Libbu/ci-capstone-project/blob/main/media/createevent.JPG)
 
 - Allows authenticated users to create a new event
 - Allows event organisers to update their own event.
@@ -360,6 +331,102 @@ IMAGE
     >   - Allow the user to create/update an event
     >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
 
+### User Events Page
+
+![User Events ](https://github.com/Libbu/ci-capstone-project/blob/main/media/myeventspc.JPG)
+
+- Allows authenticated users to see a list of events they've organised.
+- Is separated into Future and Past sections.
+
+    #### User Goals:
+    >   - Keep track of events they've organised.
+    >   - See a record of what they have organised in the past.
+
+    #### Website Goals:
+    >   - Keep the user engaged in the community by consolidating information.
+    >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
+
+### User Attendance Page
+
+![User Attendance](https://github.com/Libbu/ci-capstone-project/blob/main/media/attendancepc.JPG)
+
+- Allows authenticated users to see a list of events where they are in the attendees
+- Is separated into Future and Past sections.
+
+    #### User Goals:
+    >   - Keep track of events they intend to participate in.
+    >   - See a record of what they have attended in the past.
+
+    #### Website Goals:
+    >   - Keep the user engaged in the community by consolidating information.
+    >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
+
+### User Attendance Page
+
+![Admin Approval](https://github.com/Libbu/ci-capstone-project/blob/main/media/adminapprovepc.JPG)
+
+- Allows Site Administrators to see a list of events to approve
+- Allows Site Administrators to Approve or Decline user-created Events
+
+    #### Admin Goals:
+    >   - Control user-created site content
+
+    #### Website Goals:
+    >   - Provide a moderation mechanism through which events must pass so that inappropriate content can be hidden.
+    >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
+
+
+![Admin Update](https://github.com/Libbu/ci-capstone-project/blob/main/media/updateaboutpc.JPG)
+
+- Allows Site Administrators to update the About section on the homepage.
+
+
+    #### Admin Goals:
+    >   - Keep site content on the landing page relevant.
+
+    #### Website Goals:
+    >   - Allow some updates to landing page to be made in response to feedback by admin users.
+    >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
+
+### Logout Page
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/logoutbig.JPG)
+
+- Allows users to Logout
+
+    #### User Goal:
+    >   - Logout.
+
+    #### Website Goals:
+    >   - Allows users to logout after confirming they wish to do so.
+    >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
+    
+___
+# Development Plan
+
+## Agile design
+
+Prioritisation of user stories and tasks to develop Calm Cadence has followed an Agile methodology, using GitHub's projects to prioritize and track user stories and high-level development tasks. This approach enables the implementation and testing of ideas based on their importance to the project, ensuring that MVP (minimum viable product) functionality for the project's purpose is reached as soon as it can be. 
+
+The Project Board for Calm Cadence can be found [here](https://github.com/users/Libbu/projects/7).
+
+The following categories were applied as custom labels to project user-stories:
+
+- Must Have
+- Should Have
+- Could Have
+- Won't Have
+
+### User Story Breakdown
+
+![User Story Breakdown](https://github.com/Libbu/ci-capstone-project/blob/main/media/userstorybreakdown.JPG)
+
+
+### User Story MoSCoW
+
+![User Story MosCoW](https://github.com/Libbu/ci-capstone-project/blob/main/media/moscow.JPG)
+
+- Note: As a primary feature of MVP for Calm Cadence is to deliver full database CRUD (create, read, update and delete) functionality for events to the end-user; the implementation of end-user features connected to this has priority over other common event-management features such as registering attendence.
 ___
 
 # Wireframes
