@@ -456,3 +456,113 @@ Admin Update 'About Our Community' Form:
 ## High-fidelity Mobile Wireframes:
 
 ## High-fidelity Desktop Wireframes:
+
+## Technologies Used
+
+- [HTML](https://en.wikipedia.org/wiki/HTML) is used for the main site content.
+- [CSS](https://en.wikipedia.org/wiki/CSS) is used for the main site design and layout.
+- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) is used in places for an enhanced responsive layout.
+- [JavaScript](https://www.javascript.com) used for displaying delete confirmation modals, and delete and edit comment functions.
+- [Python](https://www.python.org) is the back-end programming language.
+- [Git](https://git-scm.com) used for version control. (`git add .`, `git commit -m "commit message here`, `git push`)
+- [GitHub](https://github.com) is where my repo is hosted.
+- [Heroku](https://www.heroku.com) is used for hosting the deployed site.
+- [Gitpod](https://gitpod.io) was my cloud-based IDE for development.
+- [Bootstrap 4.3](https://getbootstrap.com) was used as a frontend framework for modern responsiveness and pre-built components.
+- [Django](https://www.djangoproject.com) is the Python framework for the site.
+- [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/) was used for registration, login and logout.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) for for forms.
+- [Crispy Bootstrap](https://pypi.org/project/crispy-bootstrap5/) for simple styling on forms.
+- [Google Fonts](https://fonts.google.com/) for typography.
+- [Coolors](https://coolors.co/)for palette generation.
+- [ElephantSQL](https://www.elephantsql.com) Is the database management service used.
+- [Cloudinary](https://cloudinary.com/) Is the image-hosting service used to host user-uploaded images.
+- [W3C HTML Markup Validator](https://validator.w3.org/) to validate HTML code.
+- [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS code.
+- [JS Hint](https://jshint.com/) to validate JS code.
+- [CI Python Linter](https://pep8ci.herokuapp.com) to validate python code.
+- [LucidChart](https://lucid.app/documents#/dashboard) for ERD.
+- [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) Template to generate the workspace for the project.
+
+
+# Testing
+
+For all testing, including UAC and User Story testing, please refer to the [TESTING.md](TESTING.md) file.
+
+# Deployment
+
+## Github
+
+The base environment for this project was created by navigating to the ![gitpod CI template](https://github.com/Code-Institute-Org/gitpod-full-template) and clicking 'Use this template'. 
+
+After making a new respository for my capstone project from the CI template, I created a workspace in gitpod where all of my development took place.
+
+## Development Environment Set-Up
+
+Calm Cadence makes use of many Django packages. For ease of set-up I pasted the contents of the requirements.txt file from our ![third hackathon](https://github.com/Libbu/Full-Craic) into my workspace and used the following command to install all base packages I believed I needed at the start of the project:
+
+`pip3 install -r requirements.txt`
+
+I then created a Procfile and added a line of code for Heroku deployment: `web: gunicorn calm_cadence.wsgi`
+
+After doing this I set up external services(covered below) in gitignored env.py, added any packages to INSTALLED_APPS in settings.py where necessary and then used the following commands to perform any database migrations:
+
+`python3 manage.py makemigrations`
+
+`python3 manage.py migrate`
+
+To commit the changes to my Github repo I used the following terminal commands:
+
+`git add .`
+`git commit -m "commit message here"`
+`git push`
+
+I had my basic project and app structure in place before preparing for early Heroku deployment
+
+## Heroku
+
+Heroku is used to host Calm Cadence. Heroku is a container-based cloud Platform for building, deploying and managing apps. This project was first deployed to Heroku in the very early stages following app structure setup
+
+1. Login or create an account on [Heroku](https://www.heroku.com/). 
+
+Click `new` in the top right corner and choose `create new app`.
+
+Choose a unique app name and your region and click `create app`.
+
+2. Navigate to the `Settings` tab, and click `Reveal Config Vars`.
+
+**Setup External Services:**
+
+*   1.  Log in or create an account on [Cloudinary](https://cloudinary.com/).
+    2.  Navigate to the `Dashboard` on Cloudinary, copy and store the value of the 'API Environment Variable" ( begins with cloudinary:// ) and paste it into your config vars `CLOUDINARY_URL` = `cloudinary://<your_value>`
+___
+  * 1. Log in or create an account on [ElephantSQL](https://www.elephantsql.com/).
+    2. Create a new instance. Select the free plan Tiny Turtle and leave the tags blank.
+    3. Select the region and choose the nearest data centre to your location or the one that works.
+    4. Click 'review' and check the details and click the button to create the instance.
+    5. Click on the instance you created copy the ElephantSQL database URL from the instance details and paste it into your config vars `DATABASE_URL` = `postgres://<your_value>`
+
+    1. Navigate to the `Deploy` tab and select GitHub as a deployment method.
+    2. Find the repository to connect to and choose the branch to deploy.
+    3. Wait for the app to build, click on `View`.
+
+____
+ Towards the end of the project I regenerated the SECRET_KEY and did the following;
+
+    1. Add Django secret key to config vars `SECRET_KEY`
+
+I redeployed to Heroku roughly once a day.
+
+Prior to submitting the finished project I ensured I had `DEBUG=False` in settings.py
+
+## Personal Acknowledgements
+
+- I would like to thank my amazing bootcamp cohort for being some of the best, most interesting people I could ever expect to meet. I don't know what I'm going to do now that I won't be seeing your faces (or at least your avatars) on a daily basis. I hope that each and every one of us finds the future we are searching for.
+
+- I would like to thank our facilitator Iris Smok, and our two coding coaches amd SMEs Martin McInerney and Kevin Loughrey for their patience, encouragement, humour and clear instruction.
+
+- I would like to thank my partner James, without his encouragement I might have "wussed out" so to speak before even starting. 
+
+- I would also like to thank the CI admissions officer who pushed me to take up the place when I wavered. I never could have anticipated such an enjoyable four months.
+
+- Lastly, I would like to thank my CodeInstitute mentor, Ronan McClelland for his insight and encouragement during the final capstone project.
