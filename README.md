@@ -1015,15 +1015,16 @@ ___
 - [Heroku](https://www.heroku.com) is used for hosting the deployed site.
 - [Gitpod](https://gitpod.io) was my cloud-based IDE for development.
 - [Bootstrap 4.3](https://getbootstrap.com) was used as a frontend framework for modern responsiveness and pre-built components.
-- [Font Awesome](https://fontawesome.com/) - was used for icons.
+- [Font Awesome](https://fontawesome.com/) was used for icons.
 - [Django](https://www.djangoproject.com) is the Python framework for the site.
 - [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/) was used for registration, login and logout.
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) for for forms.
 - [Crispy Bootstrap](https://pypi.org/project/crispy-bootstrap5/) for simple styling on forms.
 - [Google Fonts](https://fonts.google.com/) for typography.
-- [Coolors](https://coolors.co/)for palette generation.
-- [ElephantSQL](https://www.elephantsql.com) Is the database management service used.
-- [Cloudinary](https://cloudinary.com/) Is the image-hosting service used to host user-uploaded images.
+- [Coolors](https://coolors.co/) for palette generation.
+- [PostgreSQL](https://www.postgresql.org/) is the relational database management used.
+- [ElephantSQL](https://www.elephantsql.com) is the database service used.
+- [Cloudinary](https://cloudinary.com/) is the image-hosting service used to host user-uploaded images.
 - [W3C HTML Markup Validator](https://validator.w3.org/) to validate HTML code.
 - [W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) to validate CSS code.
 - [JS Hint](https://jshint.com/) to validate JS code.
