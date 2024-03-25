@@ -2,6 +2,10 @@
 
 Click [Here](README.md) to return back to the README.
 
+Calm Cadence was tested thoroughly throughout development as new features were added; and bugs remedied as they arose. 
+
+Additional code validation, structured user acceptabce testing and user story testing has also been carried out an is detailed below.
+
 ## HTML Validation
 
 [W3C Markup Validation](https://validator.w3.org/) was used to validate HTML code for all templates used in the project.
@@ -126,6 +130,20 @@ Mobile:
 
 ![Lighthouse Desktop](https://github.com/Libbu/ci-capstone-project/blob/main/media/lighthousefinalmob.JPG)
 
+## Cross-Browser Testing
+
+[Browserling](https://www.browserling.com/edge-testing) was used to test Calm Cadence across common web browsers:
+
+Microsoft Edge
+Mozilla Firefox
+Opera
+
+No bugs in display were found during this test.
+
+The site was tested manually on my own devices for:
+
+Google Chrome
+Safari
 
 ## Manual Site Testing
 
@@ -321,3 +339,10 @@ Site administrators have access to the role-specific Admin navigation dropdown m
 - As a **site admin** all site users can **contact me through a form** so that I can **collaborate/answer questions**.
 
 Due to prioritisation this feature was not implemented in the current release. It will be looked at for future releases. 
+
+
+
+https://www.browserling.com/edge-testing
+
+
+Click [Here](README.md) to return back to the README.

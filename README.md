@@ -214,6 +214,8 @@ The navbar links, as well as event links and all buttons include a hover effect 
 
 A hover effect which causes the event card to lift slightly on the event listing page has been used to further promote interactivity as users browse events.
 
+Hover effects are also present on the social media icons in the footer, reinforcing to the user that further engagement with the community is just a click away.
+
 #### Confirmation Modals
 
 Modals have been used to display confirmation messages to users when they select either an event or comment to delete. The aprupt change in the visual pane is intended to draw user attention to the stated consequences and irreversible nature of the deletion action.
@@ -426,7 +428,6 @@ The following categories were applied as custom labels to project user-stories:
 
 ![User Story Breakdown](https://github.com/Libbu/ci-capstone-project/blob/main/media/userstorybreakdown.JPG)
 
-
 ### User Story MoSCoW
 
 ![User Story MosCoW](https://github.com/Libbu/ci-capstone-project/blob/main/media/moscow.JPG)
@@ -625,15 +626,90 @@ ___
 For all testing, including UAC and User Story testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ___
-# Features
+# Implemented Features
 
 ## Home Page
 
+The fully responsive Home Page has three distinct sections which reveal themselves to the user as they scroll down.
+
+- __The landing page__
+
+  - The landing page image is a high quality photograph depicting the activity around which Calm Cadence is centered.
+  - It introduces the brand name and aesthetic, as well as featuring a brief statement of purpose.
+
+- __The about section__
+
+ - This section describes the purpose of the community.
+
+- __The Join Us and Login Images__
+
+ - Featuring dynamic overlays as the user mouses over these images or taps, this area furthers the call to action from the About section to join us or log in.
+
+Desktop:
+
+![HomePage](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureshome.png)
+
+![HomePage](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureshome2.png)
+
+Tablet:
+
+![HomePage](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureshometablet.png)
+
+![HomePage](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureshometablet2.png)
+
+Mobile:
+
+![HomePage](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureshomemob.png)
+
+![HomePage](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureshomemob2.png)
+
 ## Navbar
+
+Featured site-wide, the links in the fully responsive navigation bar change based on whether the user is logged-in or not, and whether the user is an administrator.
+
+  - The navigatopn bar allows the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button.
+  - It features drop-down functionality to keep links organised and prevent unecessary visual clutter in the navigation pane.
+  - The current page is underlined, so that users are never in any doubt as to where they are in the website.
+  - Although the links present in the navigation bar will change in accordance with role-based access, the look and feel is consistent no matter what role the user is in when they interact with it.
+
+Desktop:
+
+![NavBar](https://github.com/Libbu/ci-capstone-project/blob/main/media/adminnav.JPG)
+
+Tablet:
+
+![NavBar](https://github.com/Libbu/ci-capstone-project/blob/main/media/tabletnav.JPG)
+
+Mobile:
+
+![NavBar](https://github.com/Libbu/ci-capstone-project/blob/main/media/adminnavmob.JPG)
 
 ## Footer
 
+ - The footer includes links the user can follow to access our social media content on different platforms, encouraging them to stay connected with our brand and community.
+ - The footer displays consistently across all pages and is fully responsive.
+ - Although not directly referenced by a user story, this feature has been included as it is unbiquitous across modern websites
+ - Icons on the footer have a hover-effect which sees them turn light-pink against a dark-purple backgroun, providing further visual delight to the user.
+
+Desktop:
+
+![Footer](https://github.com/Libbu/ci-capstone-project/blob/main/media/footerdesk.JPG)
+
+Tablet:
+
+![Footer](https://github.com/Libbu/ci-capstone-project/blob/main/media/footertab.JPG)
+
+Mobile
+
+![Footer](https://github.com/Libbu/ci-capstone-project/blob/main/media/footermob.JPG)
+
 ## Paginated List of Events 
+
+ The fully responsive paginated list of events allows users to see what other people have scheduled across the site, each event card can be clicked on to get more information.
+ 
+ - The event cards feature an image which can be uploaded by the user who created the event, or populated with a default placeholder image from Unsplash.
+ - Events are organised in the list based on those closest in time today first.
+ - Six events will show before the user needs to naviate to the next page in order to see more. 
 
 ## Event Detail
 
