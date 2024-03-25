@@ -457,7 +457,13 @@ Admin Update 'About Our Community' Form:
 
 ## High-fidelity Desktop Wireframes:
 
-## Technologies Used
+# Technologies
+
+## Languages
+
+- Python+Django, JavaScript, HTML, CSS
+
+## Programs, Frameworks and Libraries;
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) is used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) is used for the main site design and layout.
@@ -484,7 +490,6 @@ Admin Update 'About Our Community' Form:
 - [LucidChart](https://lucid.app/documents#/dashboard) for ERD.
 - [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) Template to generate the workspace for the project.
 
-
 # Testing
 
 For all testing, including UAC and User Story testing, please refer to the [TESTING.md](TESTING.md) file.
@@ -493,13 +498,13 @@ For all testing, including UAC and User Story testing, please refer to the [TEST
 
 ## Github
 
-The base environment for this project was created by navigating to the ![gitpod CI template](https://github.com/Code-Institute-Org/gitpod-full-template) and clicking 'Use this template'. 
+The base environment for this project was created by navigating to the [gitpod CI template](https://github.com/Code-Institute-Org/gitpod-full-template) and clicking 'Use this template'. 
 
 After making a new respository for my capstone project from the CI template, I created a workspace in gitpod where all of my development took place.
 
 ## Development Environment Set-Up
 
-Calm Cadence makes use of many Django packages. For ease of set-up I pasted the contents of the requirements.txt file from our ![third hackathon](https://github.com/Libbu/Full-Craic) into my workspace and used the following command to install all base packages I believed I needed at the start of the project:
+Calm Cadence makes use of many Django packages. For ease of set-up I pasted the contents of the requirements.txt file from our [third hackathon](https://github.com/Libbu/Full-Craic) into my workspace and used the following command to install all base packages I believed I needed at the start of the project:
 
 `pip3 install -r requirements.txt`
 
