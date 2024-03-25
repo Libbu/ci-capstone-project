@@ -872,7 +872,7 @@ Chosing to delete an event will cause a confirmation modal to appear, the event 
 ![Delete Event](https://github.com/Libbu/ci-capstone-project/blob/main/media/featdeleteevent.JPG)
 
 
-## Users Attendance
+## User's Attendance
 
 Registered site users can attend events by clicking "count me in!" or they can cancel their attendance. The options available changes based on whether or not the user has said they will attend.
 
@@ -1126,4 +1126,4 @@ ___
 
 - I would also like to thank the CI admissions officer who pushed me to take up the place when I wavered. I never could have anticipated such an enjoyable four months.
 
-- Lastly, I would like to thank my CodeInstitute mentor, Ronan McClelland for his insight and encouragement during the final capstone project.
+- Lastly, I would like to thank my Code Institute mentor, Ronan McClelland for his insight and encouragement during the final capstone project.
