@@ -921,18 +921,51 @@ Mobile:
 
 Logged-in users are able to leave comments on the Event Detail page using the Comment form:
 
-Desktop and Large Tablet:
+Desktop:
 
 ![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/commentsectionpc.JPG)
 
-Mobile and Small Tablet:
+Tablet: 
+
+![Event Detail](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventdetailtablet2.JPG)
+
+Mobile:
 
 ![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/commentsectionmobile.JPG)
 
-## Site Admin Specific Functionality 
+Users are able to edit and delete their own comments; Site Admin are able to delete any comment.
 
+## Site Admin Specific Functionality
 
+Administrators have specific access to enable them to control content on the site. This inlcudes the ability to approve or decline events, and the ability to update the About Our Community section on the homepage.
 
+### Admin Approval Page for Events:
+
+Desktop:
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/adminapprovepc.JPG)
+
+Tablet: 
+
+![Event Detail](https://github.com/Libbu/ci-capstone-project/blob/main/media/adminapprovetablet.JPG)
+
+Mobile:
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/adminapprovemob.png)
+
+### Admin Update About Form:
+
+Desktop:
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/updateaboutpc.JPG)
+
+Tablet: 
+
+![Event Detail](https://github.com/Libbu/ci-capstone-project/blob/main/media/updateabouttablet.JPG)
+
+Mobile:
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/updateaboutmob.JPG)
 
 
 # Future Features:
