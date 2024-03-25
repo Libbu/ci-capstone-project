@@ -69,7 +69,7 @@ There were 26 warnings associated with variable names (const and let ) and their
 
 ## Python Validation
 
-Python was validated using the ![CI Python Linter](pep8ci.herokuapp.com)
+Python was validated using the **[CI Python Linter](https://pep8ci.herokuapp.com)**
 
 Only files in which I wrote my own code were validated. The rest of the python code in the project was part of thje Django installation package.
 
@@ -170,7 +170,7 @@ The "About our Community" section in Calm Cadence in prominently displayed on th
 
 For site-users who are not logged in, the only links in the nav bar available to them will be the home page, registration, and login pages. The registration and login pages provide a seamless aesthetic experience for first time users and those returning to the site on both large and small screens
 
-![Registration](https://github.com/Libbu/ci-capstone-project/blob/main/media/register.JPG)
+![Registration](https://github.com/Libbu/ci-capstone-project/blob/main/media/registerpc.JPG)
 
 ![Login](https://github.com/Libbu/ci-capstone-project/blob/main/media/loginpc.JPG)
 
@@ -194,7 +194,7 @@ Logged in site users are able to logout by navigating to the logout page, and cl
 
 - As a **site user** I can **see a paginated list of run events** so that **I can join in**.
 
-The Event List page is accessible to logged in site users under the Events dropdown menu. The Events List page is paginated by 6, and lists upcoming runs organised by others users.
+The Event List page is accessible to logged in site users under the Events dropdown menu. The Events List page is paginated by 6, and lists upcoming runs organised by other users.
 
 It is ordered from runs that will occur soon first, to those that are scheduled a long time from today. Cards featuring images are used to display the event along with some summary detail. Given the nature of the page, runners may choose to use the image field to upload a proposed route. These cards hover slightly when moused over.
 
@@ -222,7 +222,7 @@ Events disappear from the Event List page once the event date has passed.
 
 - As a **site user** I can **create events** so that **other users can participate with me**.
 
-The Create an Event option under Events in the Navigation Bar allows registered users to access a form that they can submit to schedule their own run on which they want some company. The event they wish to create will not show to other users through the Event List until administrators have approved it. 
+The Create Event option under Events in the Navigation Bar allows registered users to access a form that they can submit to schedule their own run on which they want some company. The event they wish to create will not show to other users through the Event List until administrators have approved it. 
 
 ![Create event form](https://github.com/Libbu/ci-capstone-project/blob/main/media/createevent.JPG)
 
