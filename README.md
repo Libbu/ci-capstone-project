@@ -1108,7 +1108,6 @@ ___
 - [Django Docs](https://docs.djangoproject.com/en/5.0/) for detailed explanations and help with troubleshooting.
 - [Geeks for Geeks - Django](https://www.geeksforgeeks.org/getting-started-with-django/) for developing my understanding of MVT logic.
 - [W3Schools](https://www.w3schools.com/) for providing guidance on the custom 404 page.
-- [Lucidchart](lucidchart.com) for creating my ERD.
 - [Am I Responsive](https://ui.dev/amiresponsive) for the responsive test screenshot.
 - [Code Institute LMS walkthrough project: I think therefore I blog](https://github.com/Libbu/django-blog), from which I sourced the Comment JS logic (linked repo is my following of this walkthrough).
 - [Django Wednesdays YouTube Playlist – Codemy.com](https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy) - for helping me get started with event management in Django.

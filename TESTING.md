@@ -134,16 +134,16 @@ Mobile:
 
 [Browserling](https://www.browserling.com/edge-testing) was used to test Calm Cadence across common web browsers:
 
-Microsoft Edge
-Mozilla Firefox
-Opera
+- Microsoft Edge
+- Mozilla Firefox
+- Opera
 
 No bugs in display were found during this test.
 
-The site was tested manually on my own devices for:
+The site was tested extensively on my own devices for:
 
-Google Chrome
-Safari
+- Google Chrome
+- Safari
 
 ## Manual Site Testing
 
@@ -339,10 +339,6 @@ Site administrators have access to the role-specific Admin navigation dropdown m
 - As a **site admin** all site users can **contact me through a form** so that I can **collaborate/answer questions**.
 
 Due to prioritisation this feature was not implemented in the current release. It will be looked at for future releases. 
-
-
-
-https://www.browserling.com/edge-testing
 
 
 Click [Here](README.md) to return back to the README.
