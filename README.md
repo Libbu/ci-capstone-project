@@ -521,7 +521,69 @@ Admin Update 'About Our Community' Form:
 <img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpcadminupdateabout.png>
 </details>
 
-## High-fidelity Mobile Wireframes:
+## High-fidelity Mobile Wireframes from site Screenshots:
+
+### Home Page  
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/mobhomewf.png>
+</details>
+
+### Registration and Login Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/mobreglogin.png>
+</details>
+
+### Event List and Event Detail Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/mobeventlistdetail.png>
+</details>
+
+### Create Event and Admin Event Approval Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/mobcreateadmin.png>
+</details>
+
+### Admin Update 'About' Form and Logout Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/mobupdatelogout.png>
+</details>
+
+## High-fidelity Tablet Wireframes from site Screenshots:
+
+### Home Page  
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/tablet1.png>
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/tablet2.png>
+</details>
+
+### Registration and Login Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/tabletreg.png>
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/tabletlogin.png>
+</details>
+
+### Event List and Event Detail Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/tableteventlist.png>
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/tableteventdetail.png>
+</details>
+
+### Create Event and Admin Event Approval Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/tableteventcreate.png>
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/tabletadminapprove.png>
+</details>
+
+### Admin Update 'About' Form and Logout Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/tabletupdateabout.png>
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/tabletlogout.png>
+</details>
 
 ## High-fidelity Desktop Wireframes:
 
