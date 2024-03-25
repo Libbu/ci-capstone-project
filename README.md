@@ -164,7 +164,7 @@ ___
 
 ___
 
-# Design
+## Design
 
 Calm Cadence is intended to have a simple layout, with a colour-scheme and aesthetic drawing from both common Holistic Wellness and Fitness marketing schema.
 
@@ -219,13 +219,17 @@ A hover effect which causes the event card to lift slightly on the event listing
 Modals have been used to display confirmation messages to users when they select either an event or comment to delete. The aprupt change in the visual pane is intended to draw user attention to the stated consequences and irreversible nature of the deletion action.
 ___
 
-# Database Design
+## Database Design
 
 - note: the User model displayed below refers to that provided by Django package functionality; selected fields have been included to demonstrate how they relate to the custom models created for Calm Cadence.
 
 ![ERD](https://github.com/Libbu/ci-capstone-project/blob/main/media/ERD.png)
 
-## Structure
+# Structure
+
+Page flow:
+
+![PageFlow](https://github.com/Libbu/ci-capstone-project/blob/main/media/pageflow.png)
 
 ### Home Page
 

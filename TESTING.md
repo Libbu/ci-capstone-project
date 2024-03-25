@@ -31,7 +31,11 @@ Event List:
 
 Event Detail:
 
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/htmleventdetail.JPG>
+
 Create Event/Update Event:
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/htmlcreateevent.JPG>
 
 User Events: 
 
@@ -46,6 +50,8 @@ Admin Approval Page:
 <img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/htmladminapp.JPG>
 
 Update About Page:
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/htmlupdate.JPG>
 
 Logout:
 
