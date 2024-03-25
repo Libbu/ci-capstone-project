@@ -706,16 +706,120 @@ Mobile
 ## Paginated List of Events 
 
  The fully responsive paginated list of events allows users to see what other people have scheduled across the site, each event card can be clicked on to get more information.
- 
+
  - The event cards feature an image which can be uploaded by the user who created the event, or populated with a default placeholder image from Unsplash.
  - Events are organised in the list based on those closest in time today first.
  - Six events will show before the user needs to naviate to the next page in order to see more. 
 
+Desktop:
+
+![Event_List](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventlist.JPG)
+
+Tablet:
+
+![Event_List](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventlisttablet.JPG)
+
+Mobile
+
+![Event_List](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventlistmob.JPG)
+
+### Event Cards:
+
+Summary details of the event are visible on cards styled in accordance with the site aesthetic, on desktop the cards hover as the user mouses over them.
+
+Desktop:
+
+![Event_List](https://github.com/Libbu/ci-capstone-project/blob/main/media/eventcard.JPG)
+
+Tablet:
+
+![Event_List](https://github.com/Libbu/ci-capstone-project/blob/main/media/featurestableteventcard.JPG)
+
+Mobile
+
+![Event_List](https://github.com/Libbu/ci-capstone-project/blob/main/media/featuresmobeventcard.JPG)
+
 ## Event Detail
+
+The event detail contains additional information about the run that the event organiser has added when they created the event.
+
+ - This page provides the opportunity for community members to engage with each other through attending runs and leaving comments
+ - The buttons which show against the event detail are role-specific and determined by the users relationship to the event; Site administrators can always delete events; otherwise regular users are able to delete or update their own events, but not those of others; all logged-in site users can register or cancel their attendance for a run.
+
+ Desktop:
+
+![Event Detail](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventdetail.JPG)
+
+Tablet:
+
+![Event Detail](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventdetailtablet.JPG)
+
+![Event Detail](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventdetailtablet2.JPG)
+
+Mobile
+
+![Event Detail](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventdetailmobile.JPG)
+
+![Event Detail](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventdetailmobile2.JPG)
 
 ## User Registration
 
+- __Authentication - Django AllAuth__
+
+[Django AllAuth](https://docs.allauth.org/en/latest/) provides one of the most popular libraries for managing user authentication, and has been used in this project to manage the registration, login and logout features.
+
+Using this library means that users are able to register for the website with minimal barriers, and that there is plenty of scope in the future to allow users to sign in with their social media accounts, reset passwords, and sent email confirmation of registration.
+
+Django AllAuth HTML templates have been styled with custom CSS and Crispy forms bootstrap to match the look and feel of Calm Cadence, as well as to ensure that they are fully responsive.
+
+Authenticating users before allowing them to view events or activities scheduled is a common feature of many fitness-focussed apps on the market. 
+
+Desktop:
+
+![Registration](https://github.com/Libbu/ci-capstone-project/blob/main/media/registerpc.JPG)
+
+Tablet:
+
+![Registration](https://github.com/Libbu/ci-capstone-project/blob/main/media/registertablet.JPG)
+
+Mobile
+
+![Registration](https://github.com/Libbu/ci-capstone-project/blob/main/media/registermob.JPG)
+
+
 ## User Login/Logout
+
+Django AllAuth HTML templates for login and logout functions have been styled with custom CSS and Crispy forms bootstrap to match the look and feel of Calm Cadence, as well as to ensure that they are fully responsive.
+
+- __Login__
+
+Desktop:
+
+![Login](https://github.com/Libbu/ci-capstone-project/blob/main/media/loginpc.JPG)
+
+Tablet:
+
+![Login](https://github.com/Libbu/ci-capstone-project/blob/main/media/logintablet.JPG)
+
+Mobile
+
+![Login](https://github.com/Libbu/ci-capstone-project/blob/main/media/loginmob.JPG)
+
+- __Logout__
+
+Desktop:
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/logoutbig.JPG)
+
+Tablet:
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/tabletlogout.JPG)
+
+Mobile
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/logoutmob.JPG)
+
+
 
 ## Users Can Create, Edit and Delete Own Events
 
