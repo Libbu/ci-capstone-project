@@ -433,7 +433,6 @@ The following categories were applied as custom labels to project user-stories:
 
 - Note: As a primary feature of MVP for Calm Cadence is to deliver full database CRUD (create, read, update and delete) functionality for events to the end-user; the implementation of end-user features connected to this has priority over other common event-management features such as registering attendence.
 ___
-
 # Wireframes
 
 ## Low-fidelity Mobile Wireframes:
@@ -620,10 +619,47 @@ Admin Update 'About Our Community' Form:
 <img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/wflogout.png>
 </details>
 
-
+___
 # Testing
 
 For all testing, including UAC and User Story testing, please refer to the [TESTING.md](TESTING.md) file.
+
+___
+# Features
+
+## Home Page
+
+## Navbar
+
+## Footer
+
+## Paginated List of Events 
+
+## Event Detail
+
+## User Registration
+
+## User Login/Logout
+
+## Users Can Create, Edit and Delete Own Events
+
+## Users Can Attend, Cancel Attendance
+
+## Users Can Keep Track of Their Activity
+
+### User Events
+
+### Attendance
+
+## Users Can Comment 
+
+## Admin Can Approve Events, Update Homepage Content
+
+## Admin Can Delete User-Created Content
+
+
+
+
 
 # Future Features:
 
@@ -649,6 +685,7 @@ Categories either for types of runs, whether they are lead by a licensed running
 
 - The loading performance on mobile leaves much to be desired. This is likely due to image size and future site versions will be deployed with smaller image resolution.
 
+___
 # Technologies
 
 ## Languages
@@ -684,6 +721,7 @@ Categories either for types of runs, whether they are lead by a licensed running
 - [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) Template to generate the workspace for the project.
 - [Balsamiq](https://balsamiq.com/) was the wireframing tool.
 
+___
 # Deployment
 
 ## Github
@@ -716,7 +754,9 @@ I had my basic project and app structure in place before preparing for early Her
 
 ## Heroku
 
-Heroku is used to host Calm Cadence. Heroku is a container-based cloud Platform for building, deploying and managing apps. This project was first deployed to Heroku in the very early stages following app structure setup
+Heroku is used to host Calm Cadence. Heroku is a container-based cloud Platform for building, deploying and managing apps. This project was first deployed to Heroku in the very early stages following app structure setup.
+
+The steps are as follows:
 
 Login or create an account on [Heroku](https://www.heroku.com/). 
 
@@ -730,7 +770,7 @@ Navigate to the `Settings` tab, and click `Reveal Config Vars`.
 
 Log in or create an account on [Cloudinary](https://cloudinary.com/).
 Navigate to the `Dashboard` on Cloudinary, copy and store the value of the 'API Environment Variable" ( begins with cloudinary:// ) and paste it into your config vars `CLOUDINARY_URL` = `cloudinary://<your_value>`
-___
+
 Log in or create an account on [ElephantSQL](https://www.elephantsql.com/).
 Create a new instance. Select the free plan Tiny Turtle and leave the tags blank.
 Select the region and choose the nearest data centre to your location or the one that works.
@@ -741,7 +781,6 @@ Navigate to the `Deploy` tab and select GitHub as a deployment method.
 Find the repository to connect to and choose the branch to deploy.
 Wait for the app to build, click on `View`.
 
-____
 Towards the end of the project I regenerated the SECRET_KEY and did the following;
 
 Add Django secret key to config vars `SECRET_KEY`
@@ -750,6 +789,7 @@ I redeployed to Heroku roughly once a day.
 
 Prior to submitting the finished project I ensured I had `DEBUG=False` in settings.py
 
+___
 # Credits 
 
 - [Stack Overflow](https://stackoverflow.com/) for helping debug more difficult issues.
@@ -763,7 +803,7 @@ Prior to submitting the finished project I ensured I had `DEBUG=False` in settin
 - [Django Wednesdays YouTube Playlist – Codemy.com](https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy) - for helping me get started with event management in Django.
 - [Chat GPT](https://chat.openai.com/) for simple debugging.
 - [doctypeKieran](https://github.com/doctypeKieran/ci-capstone-project) whose previous work developing an events booking system for CI Bootcamp I was able to draw on when developing mine.
-- [Oksana Erm](https://github.com/oks-erm) whose fantastic project [Help U](https://github.com/oks-erm/help-u) helped me structure my README.
+- [Oksana Erm](https://github.com/oks-erm) whose fantastic project [Help U](https://github.com/oks-erm/help-u) helped me with the structure and content of my README.
 
 ## Personal Acknowledgements
 
