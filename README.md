@@ -439,7 +439,6 @@ ___
 <img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobhome.png>
 </details>
 
-
 ### Registration and Login Pages
 <details><summary>click to expand</summary>
 <img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobreglogin.png>
@@ -450,12 +449,10 @@ ___
 <img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmoblistdet.png>
 </details>
 
-
 ### Create Event and Admin Event Approval Pages
 <details><summary>click to expand</summary>
 <img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidmobeventcreateadminapp.png>
 </details>
-
 
 ### User Attendance and User-Created Events Pages
 <details><summary>click to expand</summary>
@@ -476,7 +473,6 @@ ___
 <img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpchome2.png>
 </details>
 
-
 ### Registration and Login Pages
 <details><summary>click to expand</summary>
 Registration:
@@ -494,8 +490,6 @@ Event List:
 Event Detail:
 <img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/lowfidpceventdet.png>
 </details>
-
-
 
 ### Create Event Form
 <details><summary>click to expand</summary>
@@ -629,6 +623,8 @@ For all testing, including UAC and User Story testing, please refer to the [TEST
 
 # Future Features:
 
+The contact form which was classed as a "Won't Have" for this release is still a needed site feature and should be implemented in the future.
+
 Ideally a platform such as this would enable users to message one another, support comment threads, notifications, likes and automatic emails. I think that these featuers, inbuilt already to major social-media platforms, are part of why I see much of this activity happening in the comment sections of Facebook posts in running groups.
 
 The event booking system is heavily influenced by blog aesthetics; in the future it would be nice to have an actual blog function attached to Calm Cadence.
@@ -646,6 +642,8 @@ Categories either for types of runs, whether they are lead by a licensed running
 - Currently users can upload image files of any size, this could slow the website down in future and compression or cropping of user-uploaded images should be implemented to solve this.
 
 - Currently users are unable to add alt-text to images that they upload. This presents an accessibility problem and should be remedied to ensure the website reflecting an inclusive community is truly inclusive in it's own design.
+
+- The loading performance on mobile leaves much to be desired. This is likely due to image size and future site versions will be deployed with smaller image resolution.
 
 # Technologies
 
@@ -680,6 +678,7 @@ Categories either for types of runs, whether they are lead by a licensed running
 - [CI Python Linter](https://pep8ci.herokuapp.com) to validate python code.
 - [LucidChart](https://lucid.app/documents#/dashboard) for ERD.
 - [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) Template to generate the workspace for the project.
+- [Balsamiq](https://balsamiq.com/) was the wireframing tool.
 
 # Deployment
 
@@ -697,7 +696,7 @@ Calm Cadence makes use of many Django packages. For ease of set-up I pasted the 
 
 I then created a Procfile and added a line of code for Heroku deployment: `web: gunicorn calm_cadence.wsgi`
 
-After doing this I set up external services(covered below) in gitignored env.py, added any packages to INSTALLED_APPS in settings.py where necessary and then used the following commands to perform any database migrations:
+After doing this I set up external services(covered below) in gitignored env.py, added any packages to INSTALLED_APPS in settings.py where necessary and then used the following commands to perform any database migrations (these steps were repeated later in development as I developed my own models):
 
 `python3 manage.py makemigrations`
 
@@ -715,33 +714,33 @@ I had my basic project and app structure in place before preparing for early Her
 
 Heroku is used to host Calm Cadence. Heroku is a container-based cloud Platform for building, deploying and managing apps. This project was first deployed to Heroku in the very early stages following app structure setup
 
-1. Login or create an account on [Heroku](https://www.heroku.com/). 
+Login or create an account on [Heroku](https://www.heroku.com/). 
 
 Click `new` in the top right corner and choose `create new app`.
 
 Choose a unique app name and your region and click `create app`.
 
-2. Navigate to the `Settings` tab, and click `Reveal Config Vars`.
+Navigate to the `Settings` tab, and click `Reveal Config Vars`.
 
 **Setup External Services:**
 
-*   1.  Log in or create an account on [Cloudinary](https://cloudinary.com/).
-    2.  Navigate to the `Dashboard` on Cloudinary, copy and store the value of the 'API Environment Variable" ( begins with cloudinary:// ) and paste it into your config vars `CLOUDINARY_URL` = `cloudinary://<your_value>`
+Log in or create an account on [Cloudinary](https://cloudinary.com/).
+Navigate to the `Dashboard` on Cloudinary, copy and store the value of the 'API Environment Variable" ( begins with cloudinary:// ) and paste it into your config vars `CLOUDINARY_URL` = `cloudinary://<your_value>`
 ___
-  * 1. Log in or create an account on [ElephantSQL](https://www.elephantsql.com/).
-    2. Create a new instance. Select the free plan Tiny Turtle and leave the tags blank.
-    3. Select the region and choose the nearest data centre to your location or the one that works.
-    4. Click 'review' and check the details and click the button to create the instance.
-    5. Click on the instance you created copy the ElephantSQL database URL from the instance details and paste it into your config vars `DATABASE_URL` = `postgres://<your_value>`
+Log in or create an account on [ElephantSQL](https://www.elephantsql.com/).
+Create a new instance. Select the free plan Tiny Turtle and leave the tags blank.
+Select the region and choose the nearest data centre to your location or the one that works.
+Click 'review' and check the details and click the button to create the instance.
+Click on the instance you created copy the ElephantSQL database URL from the instance details and paste it into your config vars `DATABASE_URL` = `postgres://<your_value>`
 
-    1. Navigate to the `Deploy` tab and select GitHub as a deployment method.
-    2. Find the repository to connect to and choose the branch to deploy.
-    3. Wait for the app to build, click on `View`.
+Navigate to the `Deploy` tab and select GitHub as a deployment method.
+Find the repository to connect to and choose the branch to deploy.
+Wait for the app to build, click on `View`.
 
 ____
- Towards the end of the project I regenerated the SECRET_KEY and did the following;
+Towards the end of the project I regenerated the SECRET_KEY and did the following;
 
-    1. Add Django secret key to config vars `SECRET_KEY`
+Add Django secret key to config vars `SECRET_KEY`
 
 I redeployed to Heroku roughly once a day.
 
