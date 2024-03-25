@@ -585,7 +585,43 @@ Admin Update 'About Our Community' Form:
 <img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/tabletlogout.png>
 </details>
 
-## High-fidelity Desktop Wireframes:
+## High-fidelity Desktop Wireframes from Site Screenshots:
+
+### Home Page  
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/homepage.png>
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/homepage2.png>
+</details>
+
+### Registration and Login Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/wfregistration.png>
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/wflogin.png>
+</details>
+
+### Event List and Event Detail Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/wfeventlist.png>
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/wfeventdetails.png>
+</details>
+
+### Create Event and Admin Event Approval Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/wfcreate.png>
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/wfadminapp.png>
+</details>
+
+### Admin Update 'About' Form and Logout Pages
+<details><summary>click to expand</summary>
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/wfupdateabout.png>
+
+<img src=https://github.com/Libbu/ci-capstone-project/blob/main/media/wflogout.png>
+</details>
+
 
 # Testing
 
