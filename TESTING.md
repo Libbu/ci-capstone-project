@@ -112,7 +112,7 @@ From the `calm_cadence` project directory:
 
 ## Manual Site Testing
 
-### User-Acceptance-Criteria (UAC) Derived Unit Testing
+### User-Acceptance-Criteria (UAC) Derived Testing
 
 Test cases were grouped into logical units of site functionality for this task:
 
@@ -300,7 +300,6 @@ Site administrators have access to the role-specific Admin navigation dropdown m
 ![Update about pc](https://github.com/Libbu/ci-capstone-project/blob/main/media/updateaboutpc.JPG)
 
 ![Update about mobile](https://github.com/Libbu/ci-capstone-project/blob/main/media/updateaboutmob.JPG)
-
 
 - As a **site admin** all site users can **contact me through a form** so that I can **collaborate/answer questions**.
 

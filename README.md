@@ -457,6 +457,30 @@ Admin Update 'About Our Community' Form:
 
 ## High-fidelity Desktop Wireframes:
 
+# Testing
+
+For all testing, including UAC and User Story testing, please refer to the [TESTING.md](TESTING.md) file.
+
+# Future Features:
+
+Ideally a platform such as this would enable users to message one another, support comment threads, notifications, likes and automatic emails. I think that these featuers, inbuilt already to major social-media platforms, are part of why I see much of this activity happening in the comment sections of Facebook posts in running groups.
+
+The event booking system is heavily influenced by blog aesthetics; in the future it would be nice to have an actual blog function attached to Calm Cadence.
+
+Categories either for types of runs, whether they are lead by a licensed running coach and the exact location within South Wales would also enhance the usability of the site.
+
+## Known Issues and Bugs
+
+- Ideally once an event has passed users would no longer be able to say they were attending and numbers would be frozen, however this is not currently implemented.
+
+- The 'Update About' section for admin is currently plain text due to insurmountable obstacles integrating SummerNoteAdmin fields in the project. Ideally administrators would not have to utilise HTML tags for linebreaks etc in writing updates, however currently this is what they must do.
+
+- Mobile view in chrome dev tools places a lot of empty space at the bottom of some pages, however in testing this was not replicated on an actual mobile device. This was noted in UAC logs.
+
+- Currently users can upload image files of any size, this could slow the website down in future and compression or cropping of user-uploaded images should be implemented to solve this.
+
+- Currently users are unable to add alt-text to images that they upload. This presents an accessibility problem and should be remedied to ensure the website reflecting an inclusive community is truly inclusive in it's own design.
+
 # Technologies
 
 ## Languages
@@ -475,6 +499,7 @@ Admin Update 'About Our Community' Form:
 - [Heroku](https://www.heroku.com) is used for hosting the deployed site.
 - [Gitpod](https://gitpod.io) was my cloud-based IDE for development.
 - [Bootstrap 4.3](https://getbootstrap.com) was used as a frontend framework for modern responsiveness and pre-built components.
+- [Font Awesome](https://fontawesome.com/) - was used for icons.
 - [Django](https://www.djangoproject.com) is the Python framework for the site.
 - [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/) was used for registration, login and logout.
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) for for forms.
@@ -489,10 +514,6 @@ Admin Update 'About Our Community' Form:
 - [CI Python Linter](https://pep8ci.herokuapp.com) to validate python code.
 - [LucidChart](https://lucid.app/documents#/dashboard) for ERD.
 - [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template) Template to generate the workspace for the project.
-
-# Testing
-
-For all testing, including UAC and User Story testing, please refer to the [TESTING.md](TESTING.md) file.
 
 # Deployment
 
@@ -559,6 +580,21 @@ ____
 I redeployed to Heroku roughly once a day.
 
 Prior to submitting the finished project I ensured I had `DEBUG=False` in settings.py
+
+# Credits 
+
+- [Stack Overflow](https://stackoverflow.com/) for helping debug more difficult issues.
+- [She Codes](https://www.shecodes.io/) for help with bootstrap styling.
+- [Django Docs](https://docs.djangoproject.com/en/5.0/) for detailed explanations and help with troubleshooting.
+- [Geeks for Geeks - Django](https://www.geeksforgeeks.org/getting-started-with-django/) for developing my understanding of MVT logic.
+- [W3Schools](https://www.w3schools.com/) for providing guidance on the custom 404 page.
+- [Lucidchart](lucidchart.com) for creating my ERD.
+- [Am I Responsive](https://ui.dev/amiresponsive) for the responsive test screenshot.
+- [Code Institute LMS walkthrough project: I think therefore I blog](https://github.com/Libbu/django-blog), from which I sourced the Comment JS logic (linked repo is my following of this walkthrough).
+- [Django Wednesdays YouTube Playlist – Codemy.com](https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy) - for helping me get started with event management in Django.
+- [Chat GPT](https://chat.openai.com/) for simple debugging.
+- [doctypeKieran](https://github.com/doctypeKieran/ci-capstone-project) whose previous work developing an events booking system for CI Bootcamp I was able to draw on when developing mine.
+- [Oksana Erm](https://github.com/oks-erm) whose fantastic project [Help U](https://github.com/oks-erm/help-u) helped me structure my README.
 
 ## Personal Acknowledgements
 
