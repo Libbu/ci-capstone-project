@@ -699,7 +699,7 @@ Tablet:
 
 ![Footer](https://github.com/Libbu/ci-capstone-project/blob/main/media/footertab.JPG)
 
-Mobile
+Mobile:
 
 ![Footer](https://github.com/Libbu/ci-capstone-project/blob/main/media/footermob.JPG)
 
@@ -719,7 +719,7 @@ Tablet:
 
 ![Event_List](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventlisttablet.JPG)
 
-Mobile
+Mobile:
 
 ![Event_List](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventlistmob.JPG)
 
@@ -735,7 +735,7 @@ Tablet:
 
 ![Event_List](https://github.com/Libbu/ci-capstone-project/blob/main/media/featurestableteventcard.JPG)
 
-Mobile
+Mobile:
 
 ![Event_List](https://github.com/Libbu/ci-capstone-project/blob/main/media/featuresmobeventcard.JPG)
 
@@ -756,7 +756,7 @@ Tablet:
 
 ![Event Detail](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventdetailtablet2.JPG)
 
-Mobile
+Mobile:
 
 ![Event Detail](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventdetailmobile.JPG)
 
@@ -782,9 +782,9 @@ Tablet:
 
 ![Registration](https://github.com/Libbu/ci-capstone-project/blob/main/media/registertablet.JPG)
 
-Mobile
+Mobile:
 
-![Registration](https://github.com/Libbu/ci-capstone-project/blob/main/media/registermob.JPG)
+![Registration](https://github.com/Libbu/ci-capstone-project/blob/main/media/registermob.png)
 
 
 ## User Login/Logout
@@ -801,7 +801,7 @@ Tablet:
 
 ![Login](https://github.com/Libbu/ci-capstone-project/blob/main/media/logintablet.JPG)
 
-Mobile
+Mobile:
 
 ![Login](https://github.com/Libbu/ci-capstone-project/blob/main/media/loginmob.JPG)
 
@@ -815,27 +815,121 @@ Tablet:
 
 ![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/tabletlogout.JPG)
 
-Mobile
+Mobile:
 
 ![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/logoutmob.JPG)
 
 
-
 ## Users Can Create, Edit and Delete Own Events
 
-## Users Can Attend, Cancel Attendance
+- __Create__
+
+Users are able to create events using the Create Event option in navigation after logging in, and submitting the Create Event Form;
+
+Desktop:
+
+![Create Event](https://github.com/Libbu/ci-capstone-project/blob/main/media/createevent.JPG)
+
+Tablet:
+
+![Create Event](https://github.com/Libbu/ci-capstone-project/blob/main/media/featurescreatetablet.JPG)
+
+Mobile:
+
+![Create Event](https://github.com/Libbu/ci-capstone-project/blob/main/media/createeventmob1.png)
+
+![Create Event](https://github.com/Libbu/ci-capstone-project/blob/main/media/createeventmob2.png)
+
+Events users create need to be approved by admin before they will show on the Event List page.
+
+- __Edit and Delete__
+
+Users have access to edit and delete their own events, but not other people's. Site Admin have access to delete any event on the site.
+
+On all devices can find the option to update their events on the Event Detail page:
+
+Desktop:
+
+![Update](https://github.com/Libbu/ci-capstone-project/blob/main/media/featureseventdetail.JPG)
+
+Tablet:
+
+![Update Event](https://github.com/Libbu/ci-capstone-project/blob/main/media/featuresuserowneventtablet.JPG)
+
+Mobile:
+
+![Update Event](https://github.com/Libbu/ci-capstone-project/blob/main/media/featuresuserowneventmob.JPG)
+
+Chosing to Update the Event will cause the Create Event form to pre-populate with the current event details. Updated events need to be approved by a site admin before they will show on the Event List once more.
+
+![Update Event](https://github.com/Libbu/ci-capstone-project/blob/main/media/updateevent.JPG)
+
+Users have access to delete their own events, and Site Admin have access to delete any event. 
+
+Chosing to delete an event will cause a confirmation modal to appear, the event will only be deleted after the the Delete button on the confirmation has been selected.
+
+
+![Delete Event](https://github.com/Libbu/ci-capstone-project/blob/main/media/featdeleteevent.JPG)
+
+
+## Users Attendance
+
+Registered site users can attend events by clicking "count me in!" or they can cancel their attendance. The options available changes based on whether or not the user has said they will attend.
+
+![attend](https://github.com/Libbu/ci-capstone-project/blob/main/media/attendbutton.JPG)
+
+![cancel](https://github.com/Libbu/ci-capstone-project/blob/main/media/cancelattendbutton.JPG)
+
 
 ## Users Can Keep Track of Their Activity
 
+There are two areas of the site where users can keep track of their activity, User Events which lists past and future events the user has organised, and Attendance which lists past and future events the user has registered their attendance for.
+
+To maintain stylistic consistency both of these areas are styled similarly to the Event List page both in terms of the use of Event Cards and responsiveness.
+
+Past events show without the image on the card so as not to clutter the visual field, though this can still be accessed by clicking on the card which will take the user to event detail.
+
 ### User Events
+
+Desktop:
+
+![User Events](https://github.com/Libbu/ci-capstone-project/blob/main/media/featusereventspc.JPG)
+
+Tablet:
+
+![User Events](https://github.com/Libbu/ci-capstone-project/blob/main/media/featusereventstablet.JPG)
+
+Mobile:
+
+![User Events](https://github.com/Libbu/ci-capstone-project/blob/main/media/featusereventsmob.JPG)
 
 ### Attendance
 
-## Users Can Comment 
+Desktop:
 
-## Admin Can Approve Events, Update Homepage Content
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/featattendpc.JPG)
 
-## Admin Can Delete User-Created Content
+Tablet:
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/featattendtablet.JPG)
+
+Mobile:
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/featattendmob.JPG)
+
+## Comments
+
+Logged-in users are able to leave comments on the Event Detail page using the Comment form:
+
+Desktop and Large Tablet:
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/commentsectionpc.JPG)
+
+Mobile and Small Tablet:
+
+![Logout](https://github.com/Libbu/ci-capstone-project/blob/main/media/commentsectionmobile.JPG)
+
+## Site Admin Specific Functionality 
 
 
 
@@ -864,6 +958,10 @@ Categories either for types of runs, whether they are lead by a licensed running
 - Currently users are unable to add alt-text to images that they upload. This presents an accessibility problem and should be remedied to ensure the website reflecting an inclusive community is truly inclusive in it's own design.
 
 - The loading performance on mobile leaves much to be desired. This is likely due to image size and future site versions will be deployed with smaller image resolution.
+
+- Ideally event organisers would be automatically added to event attendees, this can be implemented in view logic for an upcoming release.
+
+- Event Organisers can continue to edit the details of the event they scheduled after it has passed. Preventing this may need looking at in the future.
 
 ___
 # Technologies
