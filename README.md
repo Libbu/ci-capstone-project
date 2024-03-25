@@ -192,7 +192,7 @@ Overall, this colour palette creates a sense of calm with a touch of energy. The
 
 The images in this project were all sourced from [Unsplash](https://unsplash.com/)
 
-Sammple event posts with routes as images are using screen-shots from the route-planner on [MapMyRun](https://www.mapmyrun.com/)
+Sample event posts with routes as images are using screen-shots from the route-planner on [MapMyRun](https://www.mapmyrun.com/)
 
 The favicon was edited from the file at the following URL using [Favicon Generator](https://www.favicon.cc/?action=edit_image&file_id=856421)
 
@@ -361,7 +361,7 @@ ___
     >   - Keep the user engaged in the community by consolidating information.
     >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
 
-### User Attendance Page
+### Admin Approval Page
 
 ![Admin Approval](https://github.com/Libbu/ci-capstone-project/blob/main/media/adminapprovepc.JPG)
 
@@ -375,6 +375,7 @@ ___
     >   - Provide a moderation mechanism through which events must pass so that inappropriate content can be hidden.
     >   - Provide an aesthetically pleasing user experience with site-wide consistent styling.
 
+### Admin Update homepage "About" Section
 
 ![Admin Update](https://github.com/Libbu/ci-capstone-project/blob/main/media/updateaboutpc.JPG)
 

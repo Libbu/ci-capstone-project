@@ -110,6 +110,17 @@ From the `calm_cadence` project directory:
 
 ## Site Lighthouse Testing
 
+The website was tested for load times using Lighthouse, the results are below. 
+
+Desktop:
+
+![Lighthouse Desktop](https://github.com/Libbu/ci-capstone-project/blob/main/media/lighthousefinal.JPG)
+
+Mobile:
+
+![Lighthouse Desktop](https://github.com/Libbu/ci-capstone-project/blob/main/media/lighthousefinalmob.JPG)
+
+
 ## Manual Site Testing
 
 ### User-Acceptance-Criteria (UAC) Derived Testing
@@ -127,13 +138,13 @@ Test cases were grouped into logical units of site functionality for this task:
 - TC009 User create, edit and delete own comments.
 - TC010 Site admin functionality and admin role-specific access.
 
-![Unit Testing 1](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting1.JPG)
+![Testing 1](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting1.JPG)
 
-![Unit Testing 2](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting2.JPG)
+![Testing 2](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting2.JPG)
 
-![Unit Testing 3](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting3.JPG)
+![Testing 3](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting3.JPG)
 
-![Unit Testing 4](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting4.JPG)
+![Testing 4](https://github.com/Libbu/ci-capstone-project/blob/main/media/unittesting4.JPG)
 
 ### User Story Testing
 
