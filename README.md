@@ -1122,8 +1122,6 @@ ___
 
 - I would like to thank our facilitator Iris Smok, and our two coding coaches amd SMEs Martin McInerney and Kevin Loughrey for their patience, encouragement, humour and clear instruction.
 
-- I would like to thank my partner James, without his encouragement I might have "wussed out" so to speak before even starting. 
-
 - I would also like to thank the CI admissions officer who pushed me to take up the place when I wavered. I never could have anticipated such an enjoyable four months.
 
 - Lastly, I would like to thank my Code Institute mentor, Ronan McClelland for his insight and encouragement during the final capstone project.
